@@ -27,10 +27,8 @@ def start_call(called_ident, skicall):
 
 @use_submit_list
 def submit_data(skicall):
-    """This function is called when a Responder wishes to submit data for processing in some manner
-       Typically you would create a PageData object containing widget,field values and call the
-       skicall.update method, where the data will be applied to the page returned"""
-    return
+    """The use_submit_list decorator redirects calls to othe packages, modules and functions"""
+    raise ServerError(message=f"Responder {skicall.ident_list[-1][1]} does not have a correct submit list set")
 
 
 def end_call(page_ident, page_type, skicall):
