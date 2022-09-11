@@ -2,7 +2,6 @@
 
 import os
 
-
 ########### uses development version of skipole###
 #import sys
 #sys.path.insert(0, "/home/bernard/git/skipole")
@@ -18,24 +17,19 @@ PROJECT = "skiwidgets"
 
 PROJ_DATA={}
 
-
-
 def start_call(called_ident, skicall):
     """When a call is initially received this function is called."""
     return called_ident
-
 
 @use_submit_list
 def submit_data(skicall):
     """The use_submit_list decorator redirects calls to othe packages, modules and functions"""
     raise ServerError(message=f"Responder {skicall.ident_list[-1][1]} does not have a correct submit list set")
 
-
 def end_call(page_ident, page_type, skicall):
     """This function is called prior to returning a page,
        it can also be used to return an optional session cookie string."""
     return
-
 
 # create the wsgi application
 application = WSGIApplication(project=PROJECT,
@@ -44,52 +38,55 @@ application = WSGIApplication(project=PROJECT,
                               start_call=start_call,
                               submit_data=submit_data,
                               end_call=end_call,
-                              url="/")
+                              url="/skiwidgets")
 
 
 # Add the 'skis' application which serves javascript and css files required by
 # the framework widgets.
 
 skis_application = skis.makeapp()
-application.add_project(skis_application, url='/lib')
+application.add_project(skis_application, url='/skiwidgets/lib')
 
-# The above shows the main application served at "/" and the skis library
-# project served at "/lib"
-
-
-#############################################################################
-#
-# You should remove everything below here when deploying and serving your
-# finished application. The following lines are used to serve the project
-# locally and add the skiadmin project for development.
-
-# Normally, when deploying on a web server, you would follow the servers
-# own documentation which should describe how to load a wsgi application.
-# for example, using gunicorn3 by command line
-
-# gunicorn3 -w 4 skiwidgets:application
-
-# Where gunicorn3 is the python3 version of gunicorn
+# The above shows the main application served at "/skiwidgets" and the skis library
+# project served at "/skiwidgets/lib"
 
 
 if __name__ == "__main__":
 
+    # If called as a script, this portion runs the python waitress server
+    # and serves the project.
 
-    ############### THESE LINES ADD THE SKIADMIN SUB-PROJECT FOR DEVELOPMENT #
-    ################# AND SHOULD BE REMOVED WHEN YOU DEPLOY YOUR APPLICATION #
+    ###############################################################################
+    #
+    # you could add the 'skiadmin' sub project
+    # which can be used to develop pages for your project
+    #
+    ############################### THESE LINES ADD SKIADMIN ######################
+    #                                                                             #
+    from skipole import skiadmin, set_debug                                       #
+    set_debug(True)                                                               #
+    skiadmin_application = skiadmin.makeapp(editedprojname=PROJECT)               #
+    application.add_project(skiadmin_application, url='/skiwidgets/skiadmin')     #
+    #                                                                             #
+    ###############################################################################
 
+    # if using the waitress server
+    #from waitress import serve
 
-    from skipole import skiadmin, set_debug, skilift
-    set_debug(True)
-    skiadmin_application = skiadmin.makeapp(editedprojname=PROJECT)
-    application.add_project(skiadmin_application, url='/skiadmin')
+    # or the skilift development server
+    from skipole import skilift
 
-    # serve the application with the development server from skilift
+    # serve the application, note host 0.0.0.0 rather than
+    # 127.0.0.1 - so this will be available externally
 
-    host = "127.0.0.1"
+    host = "0.0.0.0"
     port = 8000
-    print("Serving %s on port %s. Call http://localhost:%s/skiadmin to edit." % (PROJECT, port, port))
+
+    # using waitress
+    #serve(application, host=host, port=port)
+
+    # or skilift
+    print(f"Serving {PROJECT} on port {port}")
     skilift.development_server(host, port, application)
- 
 
 
