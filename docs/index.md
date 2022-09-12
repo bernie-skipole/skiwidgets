@@ -12,7 +12,7 @@ lxc launch ubuntu:20.04 skiwidgets
 
 lxc list
 
-This gives container ip address 10.105.192.??
+This gives container ip address 10.105.192.130
 
 lxc exec skiwidgets -- /bin/bash
 
