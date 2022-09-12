@@ -48,6 +48,8 @@ copy /home/bernard/skiwidgets to /home/bernard/www without the .git and .gitigno
 
 rsync -ua --exclude=".*" ~/skiwidgets/ ~/www/
 
+The file ~/www/skiwidgets.py should be edited to remove skiadmin, and enable waitress rather than the development server.
+
 The skiwidgets Python program requires the skipole package
 and waitress
 
@@ -58,10 +60,6 @@ python3 -m pip install --user waitress
 It should now be possible to run skiwidgets
 
 python3 ~/www/skiwidgets.py
-
-And you should get the message
-
-Serving skiwidgets on port 8000
 
 Use ctrl-c to exit, and set up a service to run this automatically
 
