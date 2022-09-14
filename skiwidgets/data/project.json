@@ -1086,7 +1086,75 @@
 "parts": [
 [
 "Text",
-"This is a ShowCallData widget."
+"Below is a SubmitTextInput4 widget, which sends the text data input to an AllowStore responder, which inserts the data received into the skicall.call_data dictionary."
+]
+]
+}
+],
+[
+"Part",
+{
+"tag_name": "p",
+"brief": "Further paragraph describing page contents",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"The SubmitTextInput4 widget has been given the name 'setcalldata', and the field containing the sent data has name 'input_text'. Press Submit to send the text, which should then appear in the call_data dictionary."
+]
+]
+}
+],
+[
+"Widget",
+{
+"class": "inputtext.SubmitTextInput4",
+"name": "setcalldata",
+"brief": "A form to send text data",
+"fields": {
+"action": "6005",
+"action_json": "",
+"button_class": "w3-button w3-theme-d4",
+"button_text": "Submit",
+"buttondiv_class": "w3-container w3-cell",
+"buttondiv_style": "",
+"clear_error": false,
+"error_class": "w3-panel w3-red",
+"formdiv_class": "w3-cell-row",
+"formdiv_style": "",
+"hidden_field1": "",
+"hidden_field2": "",
+"hidden_field3": "",
+"hidden_field4": "",
+"hide": false,
+"input_accepted_class": "w3-pale-green",
+"input_class": "",
+"input_errored_class": "w3-pale-red",
+"input_style": "padding:8px;border:2px solid #ccc;width:100%",
+"input_text": "Set any text here",
+"inputdiv_class": "w3-container w3-cell",
+"inputdiv_style": "width : 32%;",
+"left_class": "w3-right-align",
+"left_style": "font-weight : bold;",
+"left_text": "Your input:",
+"leftdiv_class": "w3-container w3-cell",
+"leftdiv_style": "width : 32%;",
+"maxlength": "",
+"pattern": "",
+"required": false,
+"set_input_accepted": false,
+"set_input_errored": false,
+"show": true,
+"show_error": "",
+"size": "",
+"target": "",
+"title": "",
+"type": "text",
+"widget_class": "w3-section",
+"widget_style": ""
+}
+}
 ],
 [
 "Widget",
@@ -1100,13 +1168,10 @@
 "para_class": "w3-section",
 "show": true,
 "show_error": "",
-"toptext": "DEBUG MODE IS ON",
+"toptext": "This is a ShowCallData widget, which displays the contents of the skicall.call_data dictionary.",
 "widget_class": "w3-section",
 "widget_style": ""
 }
-}
-]
-]
 }
 ]
 ]
@@ -1139,6 +1204,25 @@
 "target_ident": 6004
 },
 "original_fields": {}
+}
+},
+"setcalldata": {
+"ident": 6005,
+"brief": "Called to set contents into skicall.call_data",
+"RespondPage": {
+"class": "AllowStore",
+"original_args": {
+"allowed_callers": [],
+"alternate_ident": "home",
+"fail_ident": null,
+"submit_option": false,
+"target_ident": 6002,
+"validate_fail_ident": null,
+"validate_option": false
+},
+"original_fields": {
+"setcalldata:input_text": ""
+}
 }
 }
 }
