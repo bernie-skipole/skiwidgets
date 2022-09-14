@@ -63,12 +63,14 @@ if __name__ == "__main__":
     #
     ############################### THESE LINES ADD SKIADMIN ######################
     #                                                                             #
-    from skipole import skiadmin, set_debug                                       #
-    set_debug(True)                                                               #
+    from skipole import skiadmin                                                  #
     skiadmin_application = skiadmin.makeapp(editedprojname=PROJECT)               #
     application.add_project(skiadmin_application, url='/skiwidgets/skiadmin')     #
     #                                                                             #
     ###############################################################################
+
+    from skipole import set_debug
+    set_debug(True) 
 
     # if using the waitress server
     #from waitress import serve
@@ -79,7 +81,8 @@ if __name__ == "__main__":
     # serve the application, note host 0.0.0.0 rather than
     # 127.0.0.1 - so this will be available externally
 
-    host = "0.0.0.0"
+    # host = "0.0.0.0"
+    host = "127.0.0.1"
     port = 8000
 
     # using waitress
