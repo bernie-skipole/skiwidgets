@@ -1,15 +1,26 @@
+import os
+
 from skipole import FailPage, GoTo, ValidateError, ServerError, ServeFile, PageData, SectionData
 
 
 def index(skicall):
     "Sets up the page"
 
-    sd = SectionData('header')
-    sd['title', 'large_text'] = 'ConfirmBox1'
+    # the title and widget decription is in section 'header'
+    headersection = SectionData('header')
+    headersection['title', 'large_text'] = 'ConfirmBox1'
+    # A textblock contains the widget description
     ref = "widgets.confirm.ConfirmBox1"
-    sd['widgetdesc','textblock_ref'] = ref
-    sd['widgetdesc','text_refnotfound'] = 'Textblock reference %s not found' % ref
-    skicall.update(sd)
+    headersection['widgetdesc','textblock_ref'] = ref
+    headersection['widgetdesc','text_refnotfound'] = f'Textblock reference {ref} not found'
+    skicall.update(headersection)
+
+    # this code file contents is placed in a pre tag, set in section 'codefile'
+    codesection = SectionData('codefile')
+    code = os.path.realpath(__file__)
+    with open(code) as f:
+        codesection['pretext', 'pre_text'] = f.read()
+    skicall.update(codesection)
 
 
 
@@ -23,7 +34,6 @@ def show_widget(skicall):
 
     pd = PageData()
     pd['confirmbox1', 'hide'] = False
-
     skicall.update(pd)
 
 
@@ -32,9 +42,7 @@ def cancel(skicall):
 
     pd = PageData()
     pd['confirmbox1', 'hide'] = True
-
     pd['result', 'para_text'] = "The operation has been cancelled"
-        
     skicall.update(pd)
 
 
@@ -43,7 +51,6 @@ def confirm(skicall):
 
     pd = PageData()
     pd['confirmbox1', 'hide'] = True
-
     pd['result', 'para_text'] = "The operation has been confirmed"
-        
     skicall.update(pd)
+
