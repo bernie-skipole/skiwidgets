@@ -9,6 +9,7 @@ def index(skicall):
     # the title and widget decription is in section 'header'
     headersection = SectionData('header')
     headersection['title', 'large_text'] = 'DropDown1'
+    # A textblock contains the widget description
     ref = "widgets.dropdown.DropDown1"
     headersection['widgetdesc','textblock_ref'] = ref
     headersection['widgetdesc','text_refnotfound'] = f'Textblock reference {ref} not found'
@@ -34,6 +35,12 @@ def respond(skicall):
     if ('dropdown1', 'selectvalue') not in skicall.call_data:
         raise FailPage(message="No DropDown1 submission received")
 
-    # The selection selected will be visible on the page in a ShowCallData widget
+    value = skicall.call_data['dropdown1', 'selectvalue']
+    if value not in ["One", "Two", "Three", "Four"]:
+        raise FailPage(message="An invalid value has been received")
+    # A valid value has been picked, display it as a result
+    pd = PageData()
+    pd['result','para_text'] = f"The value {value} has been submitted."
+    skicall.update(pd)
 
  

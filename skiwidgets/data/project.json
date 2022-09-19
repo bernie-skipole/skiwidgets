@@ -1198,8 +1198,8 @@
 "name": "setcalldata",
 "brief": "A form to send text data",
 "fields": {
-"action": "6005",
-"action_json": "",
+"action": "no_javascript",
+"action_json": "6005",
 "button_class": "w3-button w3-theme-d4",
 "button_text": "Submit",
 "buttondiv_class": "w3-container w3-cell",
@@ -1260,6 +1260,20 @@
 }
 ],
 [
+"Widget",
+{
+"class": "paras.ParaText",
+"name": "result",
+"brief": "Paragraph showing a result message",
+"fields": {
+"para_text": "",
+"show": true,
+"widget_class": "",
+"widget_style": ""
+}
+}
+],
+[
 "SectionPlaceHolder",
 {
 "brief": "Section which shows the code",
@@ -1302,7 +1316,7 @@
 "original_fields": {}
 }
 },
-"setcalldata": {
+"responce": {
 "ident": 6005,
 "brief": "Called to set contents into skicall.call_data",
 "RespondPage": {
@@ -1310,9 +1324,14 @@
 "original_args": {
 "allowed_callers": [],
 "alternate_ident": "home",
-"fail_ident": null,
-"submit_option": false,
-"target_ident": 6002,
+"fail_ident": 6002,
+"submit_list": [
+"debug_tools",
+"showcalldata",
+"respond"
+],
+"submit_option": true,
+"target_ident": "general_json",
 "validate_fail_ident": null,
 "validate_option": false
 },

@@ -9,6 +9,7 @@ def index(skicall):
     # the title and widget decription is in section 'header'
     headersection = SectionData('header')
     headersection['title', 'large_text'] = 'ShowCallData'
+    # A textblock contains the widget description
     ref = "widgets.debug_tools.ShowCallData"
     headersection['widgetdesc','textblock_ref'] = ref
     headersection['widgetdesc','text_refnotfound'] = f'Textblock reference {ref} not found'
@@ -21,11 +22,15 @@ def index(skicall):
         codesection['pretext', 'pre_text'] = f.read()
     skicall.update(codesection)
 
-    # The input text widget is updated with any string input
-    if ('setcalldata', 'input_text') in skicall.call_data:
-        pd = PageData()
-        pd['setcalldata', 'input_text'] = skicall.call_data['setcalldata', 'input_text']
-        skicall.update(pd)
 
+def respond(skicall):
+    "Responds to submission from the SubmitTextInput4 widget form"
 
+    if ('setcalldata', 'input_text') not in skicall.call_data:
+        raise FailPage(message="No submission received")
+
+    value = skicall.call_data['setcalldata', 'input_text']
+    pd = PageData()
+    pd['result','para_text'] = f"Received: {value}"
+    skicall.update(pd)
 
