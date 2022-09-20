@@ -1939,6 +1939,42 @@
 [
 "Part",
 {
+"tag_name": "h3",
+"brief": "Heading",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-content"
+},
+"parts": [
+[
+"Text",
+"Skipole widgets"
+]
+]
+}
+],
+[
+"Part",
+{
+"tag_name": "p",
+"brief": "About skipole",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-content"
+},
+"parts": [
+[
+"Text",
+"This site displays examples of skipole framework widgets."
+]
+]
+}
+],
+[
+"Part",
+{
 "tag_name": "p",
 "brief": "Paragraph with w3-content class",
 "show": true,
@@ -1948,14 +1984,102 @@
 },
 "parts": [
 [
-"TextBlock",
+"Text",
+"For example; at url"
+],
+[
+"HTMLSymbol",
 {
-"textref": "welcome_text",
-"failmessage": "TextBlock not found",
-"show": true,
-"escape": true,
-"linebreaks": true
+"text": "&nbsp;"
 }
+],
+[
+"Part",
+{
+"tag_name": "a",
+"brief": "link to example widget",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"href": "/skiwidgets/checkbox/CheckBox1"
+},
+"parts": [
+[
+"Text",
+"/skiwidgets/checkbox/CheckBox1"
+]
+]
+}
+],
+[
+"HTMLSymbol",
+{
+"text": "&nbsp;"
+}
+],
+[
+"Text",
+"the CheckBox1 widget is displayed."
+]
+]
+}
+],
+[
+"Part",
+{
+"tag_name": "p",
+"brief": "Paragraph with w3-content class",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-content"
+},
+"parts": [
+[
+"Text",
+"Further information about the skipole framework can be found at"
+],
+[
+"HTMLSymbol",
+{
+"text": "&nbsp;"
+}
+],
+[
+"Part",
+{
+"tag_name": "a",
+"brief": "Link to skipole docs",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"href": "https://bernie-skipole.github.io/skipole"
+},
+"parts": [
+[
+"Text",
+"https://bernie-skipole.github.io/skipole"
+]
+]
+}
+]
+]
+}
+],
+[
+"Part",
+{
+"tag_name": "p",
+"brief": "Paragraph with w3-content class",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-content"
+},
+"parts": [
+[
+"Text",
+"The following is a list of modules, each containing widgets, choose the module to list its widgets."
 ]
 ]
 }
