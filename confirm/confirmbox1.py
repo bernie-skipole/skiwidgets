@@ -6,7 +6,8 @@ from skipole import FailPage, GoTo, ValidateError, ServerError, ServeFile, PageD
 def index(skicall):
     "Sets up the page"
 
-    # the title and widget decription is in section 'header'
+    # the title and widget decription is in section 'header' which contains a
+    # HeadText widget with name 'title' and a TextBlockPara widget with name 'widgetdesc'
     headersection = SectionData('header')
     headersection['title', 'large_text'] = 'ConfirmBox1'
     # A textblock contains the widget description
@@ -15,7 +16,8 @@ def index(skicall):
     headersection['widgetdesc','text_refnotfound'] = f'Textblock reference {ref} not found'
     skicall.update(headersection)
 
-    # this code file contents is placed in a pre tag, set in section 'codefile'
+    # this code file contents is placed in section 'codefile' which contains a
+    # PreText widget with name 'pretext'
     codesection = SectionData('codefile')
     code = os.path.realpath(__file__)
     with open(code) as f:
