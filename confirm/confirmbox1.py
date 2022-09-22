@@ -27,7 +27,7 @@ def index(skicall):
 
 
 def show_widget(skicall):
-    "Called by a button to show the checkbox"
+    "Called by a button to show the confirmbox"
     if ('buttonlink2', 'get_field1') not in skicall.call_data:
        raise FailPage(message="Invalid call")
 
