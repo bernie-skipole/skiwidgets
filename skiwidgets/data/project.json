@@ -2497,6 +2497,23 @@
 }
 ]
 },
+"module": {
+"ident": 4003,
+"brief": "requests widgets of module",
+"RespondPage": {
+"class": "SubmitData",
+"original_args": {
+"allowed_callers": [],
+"fail_ident": "home",
+"submit_list": [
+"modulelist",
+"retrieve_widgets_list"
+],
+"target_ident": 4002
+},
+"original_fields": {}
+}
+},
 "widgets": {
 "ident": 4002,
 "brief": "Template to list widgets in a module",
