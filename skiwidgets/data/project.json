@@ -2371,7 +2371,7 @@
 "paradiv_class": "",
 "show": true,
 "show_error": "",
-"widget_class": "w3-panel w3-green",
+"widget_class": "w3-panel w3-theme-d4",
 "widget_style": ""
 }
 }
