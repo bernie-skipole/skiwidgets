@@ -833,8 +833,7 @@
 "show": true,
 "hide_if_empty": false,
 "attribs": {
-"class": "w3-container",
-"style": "margin-top: 200px;"
+"class": "w3-container w3-section"
 },
 "parts": [
 [
@@ -2006,8 +2005,7 @@
 "show": true,
 "hide_if_empty": false,
 "attribs": {
-"class": "w3-container",
-"style": "margin-top: 200px;"
+"class": "w3-container w3-section"
 },
 "parts": [
 [
