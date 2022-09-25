@@ -22,7 +22,7 @@ def start_call(called_ident, skicall):
     try:
         # break the path into segments
         pathsegments = skicall.path.rstrip('/').split('/')
-        if pathsegments[-2] == 'skiwidgets' and pathsegments[-1] != 'widgets' and pathsegments[-1] != 'testwidget':
+        if pathsegments[-2] == 'skiwidgets' and pathsegments[-1] != 'index' and pathsegments[-1] != 'widgets' and pathsegments[-1] != 'testwidget':
             # possibly requesting a module name, ie a path such as /skiwidgets/checkbox
             # set the module name into skicall.call_data['module']
             skicall.call_data['module'] = pathsegments[-1]
