@@ -52,7 +52,10 @@ def retrieve_widgets_list(skicall):
     call_data['headtext'] = module_name
 
     pd = PageData()
-    pd['moduledesc','textblock_ref'] = 'widgets.' + module_name + '.module'
+    pd['title', 'large_text'] = "Module: " + module_name
+    ref = 'widgets.' + module_name + '.module'
+    pd['moduledesc','textblock_ref'] = ref
+    pd['moduledesc','text_refnotfound'] = f'Textblock reference {ref} not found'
 
     # table of widgets
 
@@ -66,10 +69,10 @@ def retrieve_widgets_list(skicall):
     widget_list = editwidget.widgets_in_module(module_name)
     contents = []
     for widget in widget_list:
-        ref = ".".join(("widgets", module_name, widget.classname))
-        notfound = 'Textblock reference %s not found' % ref
+        widgetref = ".".join(("widgets", module_name, widget.classname))
+        notfound = f'Textblock reference {widgetref} not found'
         classname = widget.classname
-        contents.append([classname, classname, module_name, ref, notfound, ''])
+        contents.append([classname, classname, module_name, widgetref, notfound, ''])
 
     pd["widgets","link_table"] = contents
     skicall.update(pd)

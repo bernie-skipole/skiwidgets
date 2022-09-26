@@ -10,6 +10,7 @@
 "home": 1,
 "jquery_core": "skis,jquery_core",
 "json_failed": 3,
+"modulewidgets": 4003,
 "no_javascript": 2,
 "redirector": 2030,
 "server_error": 2020,
@@ -3569,6 +3570,21 @@
 "show": true,
 "show_error": "An unknown error has occurred.",
 "widget_class": "w3-red",
+"widget_style": ""
+}
+}
+],
+[
+"Widget",
+{
+"class": "headers.HeadText",
+"name": "title",
+"brief": "The module name",
+"fields": {
+"large_text": "",
+"show": true,
+"tag": "h1",
+"widget_class": "w3-content",
 "widget_style": ""
 }
 }

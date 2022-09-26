@@ -18,16 +18,26 @@ PROJECT = "skiwidgets"
 PROJ_DATA={}
 
 def start_call(called_ident, skicall):
-    """When a call is initially received this function is called."""
+    """If requesting a module name, ie a path such as /skiwidgets/checkbox then
+       set skicall.call_data['module'] with the module name, and go to label
+       'modulewidgets' which is a responder which calls modulelist.retrieve_widgets_list
+       to display the list of widgets in the module"""
+
+    if called_ident:
+        # some pages, such as /skiwidgets/index.html are not modules, for these
+        # pages, just return called_ident, these pages are all under the skiwidgets
+        # folder with low ident numbers
+        identnum = called_ident[1]
+        if identnum < 100:
+            return called_ident
+    # identify where the called path ends in /skiwidgets/<module>
     try:
         # break the path into segments
         pathsegments = skicall.path.rstrip('/').split('/')
-        if pathsegments[-2] == 'skiwidgets' and pathsegments[-1] != 'index' and pathsegments[-1] != 'widgets' and pathsegments[-1] != 'testwidget':
-            # possibly requesting a module name, ie a path such as /skiwidgets/checkbox
-            # set the module name into skicall.call_data['module']
+        if pathsegments[-2] == 'skiwidgets':
+            # so pathsegments[-1] is the module name
             skicall.call_data['module'] = pathsegments[-1]
-            # divert call to a responder which calls modulelist.retrieve_widgets_list
-            return 4003
+            return 'modulewidgets'
     except:
         pass
 
