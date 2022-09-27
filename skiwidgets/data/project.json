@@ -3014,6 +3014,380 @@
 },
 "pages": {}
 },
+"inputforms": {
+"ident": 5300,
+"brief": "Folder containing inputforms widgets",
+"default_page_name": "index",
+"restricted": false,
+"folders": {
+"Form1": {
+"ident": 5301,
+"brief": "Folder containing the Form1 widget",
+"default_page_name": "index.html",
+"restricted": false,
+"folders": {
+"restricted": {
+"ident": 5303,
+"brief": "Contains templates",
+"default_page_name": "index",
+"restricted": true,
+"folders": {},
+"pages": {
+"index": {
+"ident": 5304,
+"brief": "This page is a template for the inputforms.Form1 widget",
+"TemplatePage": {
+"show_backcol": false,
+"last_scroll": true,
+"interval": 0,
+"interval_target": null,
+"catch_to_html": null,
+"lang": "en",
+"backcol": "#ffffff",
+"default_error_widget": [
+"header",
+"top_error"
+]
+},
+"head": [
+"Part",
+{
+"tag_name": "head",
+"brief": "The head section of the page",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"ClosedPart",
+{
+"tag_name": "meta",
+"brief": "The charset meta declaration",
+"show": true,
+"attribs": {
+"charset": "utf-8"
+}
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "meta",
+"brief": "The viewport meta declaration",
+"show": true,
+"attribs": {
+"content": "width=device-width, initial-scale=1",
+"name": "viewport"
+}
+}
+],
+[
+"Part",
+{
+"tag_name": "title",
+"brief": "The page title element",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"Form1"
+]
+]
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "link",
+"brief": "css link to w3_css",
+"show": true,
+"attribs": {
+"href": "{w3_css}",
+"rel": "stylesheet",
+"type": "text/css"
+}
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "link",
+"brief": "css link to w3_theme_ski_css",
+"show": true,
+"attribs": {
+"href": "{w3_theme_ski_css}",
+"rel": "stylesheet",
+"type": "text/css"
+}
+}
+],
+[
+"Part",
+{
+"tag_name": "script",
+"brief": "script link to jquery_core",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"src": "{jquery_core}"
+},
+"parts": []
+}
+],
+[
+"Part",
+{
+"tag_name": "script",
+"brief": "script link to skipole_js",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"src": "{skipole_js}"
+},
+"parts": []
+}
+]
+]
+}
+],
+"body": [
+"Part",
+{
+"tag_name": "body",
+"brief": "The body section of the page",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-theme"
+},
+"parts": [
+[
+"Part",
+{
+"tag_name": "div",
+"brief": "containing div",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-container"
+},
+"parts": [
+[
+"SectionPlaceHolder",
+{
+"brief": "title, description and top_error",
+"section_name": "header",
+"placename": "header",
+"multiplier": 0,
+"mtag": "div",
+"show": true
+}
+],
+[
+"Part",
+{
+"tag_name": "div",
+"brief": "div holding form widget",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-container"
+},
+"parts": [
+[
+"Part",
+{
+"tag_name": "p",
+"brief": "Paragraph describing the page contents",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"Below is a Form1 widget, containing a TextInput2 widget and a SubmitButton2 widget."
+]
+]
+}
+],
+[
+"Widget",
+{
+"class": "inputforms.Form1",
+"name": "form1",
+"brief": "A Form1 widget",
+"fields": {
+"action": "5305",
+"clear_error": false,
+"container_class": "",
+"enctype": "",
+"error_class": "",
+"hidden_field1": "",
+"hidden_field2": "",
+"hidden_field3": "",
+"hidden_field4": "",
+"show": true,
+"show_error": "",
+"widget_class": "w3-section",
+"widget_style": ""
+},
+"container_0": [
+[
+"Widget",
+{
+"class": "inputtext.TextInput2",
+"name": "textinput2",
+"brief": "A textinput2 field contained in form1",
+"fields": {
+"clear_error": false,
+"disabled": false,
+"error_class": "w3-panel w3-red",
+"input_accepted_class": "w3-pale-green",
+"input_class": "",
+"input_disabled_class": "",
+"input_errored_class": "w3-pale-red",
+"input_text": "",
+"inputdiv_class": "",
+"label": "Your Input:",
+"label_class": "",
+"label_style": "display:inline-block;margin-right:1%;text-align:right;width:30%;",
+"maxlength": "",
+"pattern": "",
+"redstar": false,
+"redstar_class": "w3-margin-left",
+"redstar_style": "color:red",
+"required": false,
+"set_input_accepted": false,
+"set_input_errored": false,
+"show": true,
+"show_error": "",
+"size": "",
+"title": "",
+"type": "text",
+"widget_class": "w3-container",
+"widget_style": ""
+}
+}
+],
+[
+"Part",
+{
+"tag_name": "div",
+"brief": "Create spacing for the button",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-section",
+"style": "margin-left: 30%;"
+},
+"parts": [
+[
+"ClosedWidget",
+{
+"class": "inputforms.SubmitButton2",
+"name": "submitbutton2",
+"brief": "Submit button in form1",
+"fields": {
+"button_text": "Submit",
+"show": true,
+"widget_class": "w3-button w3-theme-d4 w3-margin-left",
+"widget_style": ""
+}
+}
+]
+]
+}
+]
+]
+}
+],
+[
+"Widget",
+{
+"class": "paras.ParaText",
+"name": "result",
+"brief": "Paragraph showing a result message",
+"fields": {
+"para_text": "",
+"show": true,
+"widget_class": "",
+"widget_style": ""
+}
+}
+],
+[
+"SectionPlaceHolder",
+{
+"brief": "Section which shows the code",
+"section_name": "codefile",
+"placename": "codefile",
+"multiplier": 0,
+"mtag": "div",
+"show": true
+}
+]
+]
+}
+]
+]
+}
+]
+]
+}
+]
+}
+}
+}
+},
+"pages": {
+"index.html": {
+"ident": 5302,
+"brief": "Sets up title and widget description",
+"RespondPage": {
+"class": "SubmitData",
+"original_args": {
+"allowed_callers": [],
+"fail_ident": "home",
+"submit_list": [
+"inputforms",
+"form1",
+"index"
+],
+"target_ident": 5304
+},
+"original_fields": {}
+}
+},
+"responce": {
+"ident": 5305,
+"brief": "Responce to a Form1 submission",
+"RespondPage": {
+"class": "AllowStore",
+"original_args": {
+"allowed_callers": [
+5304
+],
+"alternate_ident": "home",
+"fail_ident": 5302,
+"submit_list": [
+"inputforms",
+"form1",
+"respond"
+],
+"submit_option": true,
+"target_ident": 5302,
+"validate_fail_ident": null,
+"validate_option": false
+},
+"original_fields": {
+"textinput2:input_text": ""
+}
+}
+}
+}
+}
+},
+"pages": {}
+},
 "restricted": {
 "ident": 4000,
 "brief": "Holds site index template page",
