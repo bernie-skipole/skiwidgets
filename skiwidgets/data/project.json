@@ -104,6 +104,60 @@
 [
 "Widget",
 {
+"class": "links.ButtonLink2",
+"name": "allmodules",
+"brief": "Link to the list of modules",
+"fields": {
+"button_class": "w3-button w3-theme-l1 w3-border w3-round",
+"button_style": "",
+"button_text": "All Modules",
+"button_wait_text": "Please wait...",
+"buttondiv_class": "w3-container w3-center",
+"buttondiv_style": "",
+"clear_error": false,
+"error_class": "w3-panel w3-red",
+"get_field1": "",
+"get_field2": "",
+"hide": false,
+"json_ident": "",
+"link_ident": "home",
+"show": true,
+"show_error": "",
+"widget_class": "w3-container w3-right",
+"widget_style": ""
+}
+}
+],
+[
+"Widget",
+{
+"class": "links.ButtonLink2",
+"name": "tomodule",
+"brief": "Link to the module page of this widget",
+"fields": {
+"button_class": "w3-button w3-theme-l1 w3-border w3-round",
+"button_style": "",
+"button_text": "Module",
+"button_wait_text": "Please wait...",
+"buttondiv_class": "w3-container w3-center",
+"buttondiv_style": "",
+"clear_error": false,
+"error_class": "w3-panel w3-red",
+"get_field1": "",
+"get_field2": "",
+"hide": false,
+"json_ident": "",
+"link_ident": "no_javascript",
+"show": true,
+"show_error": "",
+"widget_class": "w3-container w3-right",
+"widget_style": ""
+}
+}
+],
+[
+"Widget",
+{
 "class": "headers.HeadText",
 "name": "title",
 "brief": "The widget name",
@@ -3315,6 +3369,24 @@
 }
 ],
 [
+"Widget",
+{
+"class": "debug_tools.ShowCallData",
+"name": "showcalldata",
+"brief": "A ShowCallData widget",
+"fields": {
+"clear_error": false,
+"error_class": "w3-panel w3-red",
+"para_class": "w3-section",
+"show": true,
+"show_error": "",
+"toptext": "This is a ShowCallData widget, which displays the contents of the skicall.call_data dictionary.",
+"widget_class": "w3-section",
+"widget_style": ""
+}
+}
+],
+[
 "SectionPlaceHolder",
 {
 "brief": "Section which shows the code",
@@ -3944,6 +4016,33 @@
 "show": true,
 "show_error": "An unknown error has occurred.",
 "widget_class": "w3-red",
+"widget_style": ""
+}
+}
+],
+[
+"Widget",
+{
+"class": "links.ButtonLink2",
+"name": "allmodules",
+"brief": "Link to the list of modules",
+"fields": {
+"button_class": "w3-button w3-theme-l1 w3-border w3-round",
+"button_style": "",
+"button_text": "All Modules",
+"button_wait_text": "Please wait...",
+"buttondiv_class": "w3-container w3-center",
+"buttondiv_style": "",
+"clear_error": false,
+"error_class": "w3-panel w3-red",
+"get_field1": "",
+"get_field2": "",
+"hide": false,
+"json_ident": "",
+"link_ident": "home",
+"show": true,
+"show_error": "",
+"widget_class": "w3-container w3-right",
 "widget_style": ""
 }
 }

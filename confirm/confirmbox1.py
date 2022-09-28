@@ -4,7 +4,7 @@ from skipole import FailPage, GoTo, ValidateError, ServerError, ServeFile, PageD
 
 
 def index(skicall):
-    "Sets up the page"
+    "Called by a SubmitData responder, and sets up the page"
 
     # the title and widget decription is in section 'header' which contains a
     # HeadText widget with name 'title' and a TextBlockPara widget with name 'widgetdesc'

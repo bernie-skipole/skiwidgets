@@ -4,7 +4,7 @@ from skipole import FailPage, GoTo, ValidateError, ServerError, ServeFile, PageD
 
 
 def index(skicall):
-    "Sets up the page"
+    "Called by a SubmitData responder, and sets up the page"
 
     # the title and widget decription is in section 'header' which contains a
     # HeadText widget with name 'title' and a TextBlockPara widget with name 'widgetdesc'
@@ -27,7 +27,10 @@ def index(skicall):
 
 
 def respond(skicall):
-    "Responds to submission from CheckBox1"
+    """Responds to submission from the CheckBox1 widget.
+       Called by an AllowStore responder with general_json page as its
+       target so the result widget is updated via a JSON responce,
+       and dynamically updates the page."""
 
     if ('checkbox1', 'checkbox') not in skicall.call_data:
         raise FailPage(message="No CheckBox1 submission received")
