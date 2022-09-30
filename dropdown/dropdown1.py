@@ -8,12 +8,16 @@ def index(skicall):
 
     # the title and widget decription is in section 'header' which contains a
     # HeadText widget with name 'title' and a TextBlockPara widget with name 'widgetdesc'
+    # It also has a ButtonLink2 widget with name 'tomodule'
     headersection = SectionData('header')
     headersection['title', 'large_text'] = 'DropDown1'
     # A textblock contains the widget description
     ref = "widgets.dropdown.DropDown1"
     headersection['widgetdesc','textblock_ref'] = ref
     headersection['widgetdesc','text_refnotfound'] = f'Textblock reference {ref} not found'
+    # link to this widgets module page
+    headersection['tomodule','button_text'] = "Module: dropdown"
+    headersection['tomodule','link_ident'] = skicall.makepath('dropdown')
     skicall.update(headersection)
 
     # this code file contents is placed in section 'codefile' which contains a

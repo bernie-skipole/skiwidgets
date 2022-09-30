@@ -14,6 +14,9 @@ def index(skicall):
     ref = "widgets.checkbox.CheckBox1"
     headersection['widgetdesc','textblock_ref'] = ref
     headersection['widgetdesc','text_refnotfound'] = f'Textblock reference {ref} not found'
+    # link to this widgets module page
+    headersection['tomodule','button_text'] = "Module: checkbox"
+    headersection['tomodule','link_ident'] = skicall.makepath('checkbox')
     skicall.update(headersection)
 
     # this code file contents is placed in section 'codefile' which contains a
