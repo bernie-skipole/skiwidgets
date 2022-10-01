@@ -28,6 +28,14 @@ def index(skicall):
         codesection['pretext', 'pre_text'] = f.read()
     skicall.update(codesection)
 
+    # populate the table
+    pd = PageData()
+    pd['inputtable1','col1'] = ["1 one", "1 two", "1 three", "1 four"]
+    pd['inputtable1','col2'] = ["2 one", "2 two", "2 three", "2 four"]
+
+    pd['inputtable1', 'inputdict'] = {'aaa':'input1', 'bbb':'input2', 'ccc':'input3', 'ddd':'input4'}
+    skicall.update(pd)
+
  
 def respond(skicall):
     """Responds to submission from textinput2 which is contained in form1

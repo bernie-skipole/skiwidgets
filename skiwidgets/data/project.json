@@ -3662,7 +3662,7 @@
 "name": "form1",
 "brief": "A Form1 widget",
 "fields": {
-"action": "5305",
+"action": "5405",
 "clear_error": false,
 "container_class": "",
 "enctype": "",
@@ -3678,18 +3678,6 @@
 },
 "container_0": [
 [
-"Part",
-{
-"tag_name": "div",
-"brief": "Create spacing for the button",
-"show": true,
-"hide_if_empty": false,
-"attribs": {
-"class": "w3-section",
-"style": "margin-left: 30%;"
-},
-"parts": [
-[
 "Widget",
 {
 "class": "inputtables.InputTable1",
@@ -3703,15 +3691,26 @@
 "maxlength": "",
 "row_classes": [],
 "show": true,
-"size": "",
-"title1": "",
-"title2": "",
-"title3": "",
+"size": "10",
+"title1": "col1",
+"title2": "col2",
+"title3": "col3",
 "widget_class": "w3-table w3-theme-d1 w3-border w3-bordered",
 "widget_style": ""
 }
 }
 ],
+[
+"Part",
+{
+"tag_name": "div",
+"brief": "Create spacing for the button",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-section"
+},
+"parts": [
 [
 "ClosedWidget",
 {
@@ -3802,7 +3801,7 @@
 "inputtable1",
 "index"
 ],
-"target_ident": 5304
+"target_ident": 5404
 },
 "original_fields": {}
 }
