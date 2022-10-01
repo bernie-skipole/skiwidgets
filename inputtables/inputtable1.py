@@ -28,34 +28,38 @@ def index(skicall):
         codesection['pretext', 'pre_text'] = f.read()
     skicall.update(codesection)
 
-    # populate the table
+    # illustrate the table by accepting data from the inputs, and using it to populate col1
     pd = PageData()
-    pd['inputtable1','col1'] = ["1 one", "1 two", "1 three", "1 four"]
+    # col2 is static
     pd['inputtable1','col2'] = ["2 one", "2 two", "2 three", "2 four"]
 
-    pd['inputtable1', 'inputdict'] = {'aaa':'input1', 'bbb':'input2', 'ccc':'input3', 'ddd':'input4'}
+    # col1 is updated with submitted values if they have been received
+    if ('inputtable1', 'inputdict') not in skicall.call_data:
+        # on the first call to this page ('inputtable1', 'inputdict') will
+        # not be in skicall.call_data, so col1 and inputdict are set with initial values
+        pd['inputtable1','col1'] = ["1 one", "1 two", "1 three", "1 four"]
+        pd['inputtable1', 'inputdict'] = {'aaa':'input1', 'bbb':'input2', 'ccc':'input3', 'ddd':'input4'}
+    else:
+        # however, after data submission, inputdict will be defined, so update col1
+        # and inputdict with the vaues received
+        call_data = skicall.call_data['inputtable1', 'inputdict']
+        pd['inputtable1','col1'] = [call_data['aaa'], call_data['bbb'], call_data['ccc'], call_data['ddd']]
+        pd['inputtable1', 'inputdict'] = {'aaa':call_data['aaa'],
+                                          'bbb':call_data['bbb'],
+                                          'ccc':call_data['ccc'],
+                                          'ddd':call_data['ddd']
+                                         }
+
     skicall.update(pd)
 
  
 def respond(skicall):
-    """Responds to submission from textinput2 which is contained in form1
-       The AllowStore responder calling this function has as its target the
-       SubmitData responder which calls the above index function. So the
-       returned HTML page has both the sections completed and those widgets
-       set here completed"""
+    """Called by a GetDictionaryDefaults responder having received a submission
+       from inputtable1.
+       This responder expects this function to return a dictionary which will be
+       updated with the dictionary received from the inputtable1. The responder has
+       as its target an AllowStore responder which sets this updated received data
+       into skicall.call_data and calls the above index function"""
 
-    if ('textinput2', 'input_text') not in skicall.call_data:
-        raise FailPage(message="No submission received")
-
-    pd = PageData()
-    pd['result','para_text'] = "Text Received : " + skicall.call_data['textinput2', 'input_text']
-    # And fill in the textinput2 field so the last submission remains visible
-    if skicall.call_data['textinput2', 'input_text']:
-        pd['textinput2', 'input_text'] = skicall.call_data['textinput2', 'input_text']
-        # and set the field to geen, to show input has been accepted
-        pd['textinput2', 'set_input_accepted'] = True
-    else:
-        # empty text, set the field to red
-        pd['textinput2', 'set_input_errored'] = True
-    skicall.update(pd)
+    return {'aaa':'', 'bbb':'', 'ccc':'', 'ddd':''}
 

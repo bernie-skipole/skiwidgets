@@ -3479,6 +3479,32 @@
 "restricted": true,
 "folders": {},
 "pages": {
+"allowstore": {
+"ident": 5406,
+"brief": "sets data into call_data",
+"RespondPage": {
+"class": "AllowStore",
+"original_args": {
+"allowed_callers": [
+5405
+],
+"alternate_ident": "home",
+"fail_ident": 5402,
+"submit_list": [
+"inputtables",
+"inputtable1",
+"index"
+],
+"submit_option": true,
+"target_ident": 5404,
+"validate_fail_ident": null,
+"validate_option": false
+},
+"original_fields": {
+"inputtable1:inputdict": ""
+}
+}
+},
 "index": {
 "ident": 5404,
 "brief": "This page is a template for the inputforms.Form1 widget",
@@ -3688,7 +3714,7 @@
 "col2": [],
 "header_class": "w3-theme-d3",
 "inputdict": {},
-"maxlength": "",
+"maxlength": "10",
 "row_classes": [],
 "show": true,
 "size": "10",
@@ -3729,20 +3755,6 @@
 }
 ]
 ]
-}
-],
-[
-"Widget",
-{
-"class": "paras.ParaText",
-"name": "result",
-"brief": "Paragraph showing a result message",
-"fields": {
-"para_text": "",
-"show": true,
-"widget_class": "",
-"widget_style": ""
-}
 }
 ],
 [
@@ -3810,26 +3822,21 @@
 "ident": 5405,
 "brief": "Responce to a Form1 submission",
 "RespondPage": {
-"class": "AllowStore",
+"class": "GetDictionaryDefaults",
 "original_args": {
 "allowed_callers": [
 5404
 ],
-"alternate_ident": "home",
 "fail_ident": 5402,
 "submit_list": [
 "inputtables",
 "inputtable1",
 "respond"
 ],
-"submit_option": true,
-"target_ident": 5402,
-"validate_fail_ident": null,
-"validate_option": false
+"target_ident": 5406,
+"widgfield": "inputtable1:inputdict"
 },
-"original_fields": {
-"inputtable1:inputdict": ""
-}
+"original_fields": {}
 }
 }
 }
