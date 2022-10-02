@@ -3676,7 +3676,7 @@
 "parts": [
 [
 "Text",
-"Below is a Form1 widget, containing an InputTable1 widget and a SubmitButton2 widget."
+"Below is a Form1 widget, containing an InputTable1 widget and a SubmitButton2 widget. In this example, submitting the table sets any input into column 1."
 ]
 ]
 }

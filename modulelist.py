@@ -19,7 +19,7 @@ def retrieve_module_list(skicall):
 
     contents = []
 
-    modules_tuple = editwidget.widget_modules()
+    modules_tuple = skicall.proj_data['modules']
 
     for name in modules_tuple:
         ref = 'widgets.' + name + '.module'
@@ -42,7 +42,7 @@ def retrieve_widgets_list(skicall):
     else:
         raise FailPage("Module not identified")
 
-    modules_tuple = editwidget.widget_modules()
+    modules_tuple = skicall.proj_data['modules']
 
     if module_name not in modules_tuple:
         raise FailPage("Module not identified")
@@ -93,7 +93,7 @@ def retrieve_widgets_edit(skicall):
     if (not module_name) or (not widget_name):
         raise FailPage("Invalid call")
 
-    modules_tuple = editwidget.widget_modules()
+    modules_tuple = skicall.proj_data['modules']
 
     if module_name not in modules_tuple:
         raise FailPage("Module not identified")

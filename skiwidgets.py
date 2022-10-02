@@ -9,13 +9,20 @@ import os
 
 from skipole import WSGIApplication, FailPage, GoTo, ValidateError, ServerError, ServeFile, use_submit_list, skis, PageData, SectionData
 
+# get editwidget to find module names, and development_server if not running waitress
+from skipole.skilift import editwidget, development_server
+
+
 # the framework needs to know the location of the projectfiles directory holding the project data
 # and static files.
 
 PROJECTFILES = os.path.dirname(os.path.realpath(__file__))
 PROJECT = "skiwidgets"
 
-PROJ_DATA={}
+# set tuple of module names into proj_data
+
+PROJ_DATA={ 'modules': editwidget.widget_modules()
+          }
 
 def start_call(called_ident, skicall):
     """If requesting a module name, ie a path such as /skiwidgets/checkbox then
@@ -23,18 +30,11 @@ def start_call(called_ident, skicall):
        'modulewidgets' which is a responder which calls modulelist.retrieve_widgets_list
        to display the list of widgets in the module"""
 
-    if called_ident:
-        # some pages, such as /skiwidgets/index.html are not modules, for these
-        # pages, just return called_ident, these pages are all under the skiwidgets
-        # folder with low ident numbers
-        identnum = called_ident[1]
-        if identnum < 100:
-            return called_ident
-    # identify where the called path ends in /skiwidgets/<module>
+    # identify where the called path ends in a module name
     try:
         # break the path into segments
         pathsegments = skicall.path.rstrip('/').split('/')
-        if pathsegments[-2] == 'skiwidgets':
+        if pathsegments[-1] in skicall.proj_data['modules']:
             # so pathsegments[-1] is the module name
             skicall.call_data['module'] = pathsegments[-1]
             return 'modulewidgets'
@@ -97,9 +97,6 @@ if __name__ == "__main__":
     # if using the waitress server
     #from waitress import serve
 
-    # or the skilift development server
-    from skipole import skilift
-
     # serve the application, note host 0.0.0.0 rather than
     # 127.0.0.1 - so this will be available externally
 
@@ -112,6 +109,6 @@ if __name__ == "__main__":
 
     # or skilift
     print(f"Serving {PROJECT} on port {port}")
-    skilift.development_server(host, port, application)
+    development_server(host, port, application)
 
 

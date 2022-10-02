@@ -61,5 +61,8 @@ def respond(skicall):
        as its target an AllowStore responder which sets this updated received data
        into skicall.call_data and calls the above index function"""
 
+    # This function is necessary since any empty contents may be missing from
+    # the submission, and this ensures they are all present
+
     return {'aaa':'', 'bbb':'', 'ccc':'', 'ddd':''}
 
