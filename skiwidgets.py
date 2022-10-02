@@ -30,14 +30,16 @@ def start_call(called_ident, skicall):
        'modulewidgets' which is a responder which calls modulelist.retrieve_widgets_list
        to display the list of widgets in the module"""
 
-    # identify where the called path ends in a module name
+    # identify where the called path ends in a module name,
+    # as the module folder has no default page, called_ident should be None
     try:
-        # break the path into segments
-        pathsegments = skicall.path.rstrip('/').split('/')
-        if pathsegments[-1] in skicall.proj_data['modules']:
-            # so pathsegments[-1] is the module name
-            skicall.call_data['module'] = pathsegments[-1]
-            return 'modulewidgets'
+        if called_ident is None:
+            # break the path into segments
+            pathsegments = skicall.path.rstrip('/').split('/')
+            if pathsegments[-1] in skicall.proj_data['modules']:
+                # so pathsegments[-1] is the module name, set it into call_data
+                skicall.call_data['module'] = pathsegments[-1]
+                return 'modulewidgets'
     except:
         pass
 
@@ -46,7 +48,7 @@ def start_call(called_ident, skicall):
 @use_submit_list
 def submit_data(skicall):
     """The use_submit_list decorator redirects calls to othe packages, modules and functions"""
-    raise ServerError(message=f"Responder {skicall.ident_list[-1][1]} does not have a correct submit list set")
+    raise ServerError(message=f"Responder {skicall.ident_list[-1]} does not have a correct submit list set")
 
 def end_call(page_ident, page_type, skicall):
     """This function is called prior to returning a page,
