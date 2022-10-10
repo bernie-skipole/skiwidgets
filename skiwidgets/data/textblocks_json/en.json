@@ -73,6 +73,7 @@
   "widgets.inputtext.TextInput4": "A div containing a div with label and a div with a text input field (no form or submit button)",
   "widgets.inputtext.TwoInputsSubmit1": "A form with two text input fields, a submit button and four hidden fields.",
   "widgets.inputtext.module": "Contains widgets for inputting text.",
+  "widgets.links.Audio1": "Audio player widget, audio files set by ident or label. Play can be set by JSON.",
   "widgets.links.ButtonLink1": "A button link to the page with the given ident, label or url, and two optional get fields.",
   "widgets.links.ButtonLink2": "A div containing a button link to the page with the given ident, label or url, and two optional get fields.",
   "widgets.links.CloseButton": "A link button that closes a given section/widget, or if javascript is disabled, calls a link.",
