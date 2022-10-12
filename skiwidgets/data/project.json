@@ -3,7 +3,7 @@
 "default_language": "en",
 "brief": "Site illustrating skipole widgets",
 "version": "0.0.1",
-"skipole": "5.4.7",
+"skipole": "5.4.8",
 "specialpages": {
 "audiofile": 6,
 "favicon": 3002,
@@ -4490,6 +4490,387 @@
 "target_ident": 6104
 },
 "original_fields": {}
+}
+}
+}
+}
+},
+"pages": {}
+},
+"lists": {
+"ident": 6200,
+"brief": "Folder containing lists widgets",
+"default_page_name": "index",
+"restricted": false,
+"folders": {
+"UList1": {
+"ident": 6201,
+"brief": "Folder containing the UList1 widget",
+"default_page_name": "index.html",
+"restricted": false,
+"folders": {
+"restricted": {
+"ident": 6203,
+"brief": "Contains templates",
+"default_page_name": "index",
+"restricted": true,
+"folders": {},
+"pages": {
+"index": {
+"ident": 6204,
+"brief": "lists.UList1 template",
+"TemplatePage": {
+"show_backcol": false,
+"last_scroll": true,
+"interval": 0,
+"interval_target": null,
+"catch_to_html": null,
+"lang": "en",
+"backcol": "#ffffff",
+"default_error_widget": [
+"header",
+"top_error"
+]
+},
+"head": [
+"Part",
+{
+"tag_name": "head",
+"brief": "The head section of the page",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"ClosedPart",
+{
+"tag_name": "meta",
+"brief": "The charset meta declaration",
+"show": true,
+"attribs": {
+"charset": "utf-8"
+}
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "meta",
+"brief": "The viewport meta declaration",
+"show": true,
+"attribs": {
+"content": "width=device-width, initial-scale=1",
+"name": "viewport"
+}
+}
+],
+[
+"Part",
+{
+"tag_name": "title",
+"brief": "The page title element",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"UList1"
+]
+]
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "link",
+"brief": "css link to w3_css",
+"show": true,
+"attribs": {
+"href": "{w3_css}",
+"rel": "stylesheet",
+"type": "text/css"
+}
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "link",
+"brief": "css link to w3_theme_ski_css",
+"show": true,
+"attribs": {
+"href": "{w3_theme_ski_css}",
+"rel": "stylesheet",
+"type": "text/css"
+}
+}
+],
+[
+"Part",
+{
+"tag_name": "script",
+"brief": "script link to jquery_core",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"src": "{jquery_core}"
+},
+"parts": []
+}
+],
+[
+"Part",
+{
+"tag_name": "script",
+"brief": "script link to skipole_js",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"src": "{skipole_js}"
+},
+"parts": []
+}
+]
+]
+}
+],
+"body": [
+"Part",
+{
+"tag_name": "body",
+"brief": "The body section of the page",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-theme"
+},
+"parts": [
+[
+"Part",
+{
+"tag_name": "div",
+"brief": "containing div",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-container"
+},
+"parts": [
+[
+"SectionPlaceHolder",
+{
+"brief": "title, description and top_error",
+"section_name": "header",
+"placename": "header",
+"multiplier": 0,
+"mtag": "div",
+"show": true
+}
+],
+[
+"Part",
+{
+"tag_name": "div",
+"brief": "div holding page description",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-container"
+},
+"parts": [
+[
+"Part",
+{
+"tag_name": "p",
+"brief": "Paragraph describing the page contents",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"Below is a SubmitTextInput4 widget, which sends the text data input to an AllowStore responder, which inserts the data received into the skicall.call_data dictionary."
+]
+]
+}
+],
+[
+"Part",
+{
+"tag_name": "p",
+"brief": "Further paragraph describing page contents",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"The SubmitTextInput4 widget has been given the name 'setlistdata', and the field containing the sent data has name 'input_text'. Type a string containing comma separators, and the resultant list will be shown with each item."
+]
+]
+}
+],
+[
+"Widget",
+{
+"class": "inputtext.SubmitTextInput4",
+"name": "setlistdata",
+"brief": "A form to send text data",
+"fields": {
+"action": "no_javascript",
+"action_json": "6205",
+"button_class": "w3-button w3-theme-d4",
+"button_text": "Submit",
+"buttondiv_class": "w3-container w3-cell",
+"buttondiv_style": "",
+"clear_error": false,
+"error_class": "w3-panel w3-red",
+"formdiv_class": "w3-cell-row",
+"formdiv_style": "",
+"hidden_field1": "",
+"hidden_field2": "",
+"hidden_field3": "",
+"hidden_field4": "",
+"hide": false,
+"input_accepted_class": "w3-pale-green",
+"input_class": "",
+"input_errored_class": "w3-pale-red",
+"input_style": "padding:8px;border:2px solid #ccc;width:100%",
+"input_text": "Set any text here",
+"inputdiv_class": "w3-container w3-cell",
+"inputdiv_style": "width : 32%;",
+"left_class": "w3-right-align",
+"left_style": "font-weight : bold;",
+"left_text": "Your input:",
+"leftdiv_class": "w3-container w3-cell",
+"leftdiv_style": "width : 32%;",
+"maxlength": "",
+"pattern": "",
+"required": false,
+"set_input_accepted": false,
+"set_input_errored": false,
+"show": true,
+"show_error": "",
+"size": "",
+"target": "",
+"title": "",
+"type": "text",
+"widget_class": "w3-section",
+"widget_style": ""
+}
+}
+],
+[
+"Part",
+{
+"tag_name": "p",
+"brief": "Further paragraph describing UList1widget",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"Below is the UList1 widget which will display the items input."
+]
+]
+}
+],
+[
+"Widget",
+{
+"class": "lists.UList1",
+"name": "ulist1",
+"brief": "Illustration of UList1 widget",
+"fields": {
+"contents": [],
+"even_class": "",
+"odd_class": "",
+"show": true,
+"widget_class": "",
+"widget_style": ""
+}
+}
+],
+[
+"Widget",
+{
+"class": "debug_tools.ShowCallData",
+"name": "showcalldata",
+"brief": "A ShowCallData widget",
+"fields": {
+"clear_error": false,
+"error_class": "w3-panel w3-red",
+"para_class": "w3-section",
+"show": true,
+"show_error": "",
+"toptext": "This is a ShowCallData widget, which displays the contents of the skicall.call_data dictionary.",
+"widget_class": "w3-section",
+"widget_style": ""
+}
+}
+],
+[
+"SectionPlaceHolder",
+{
+"brief": "Section which shows the code",
+"section_name": "codefile",
+"placename": "codefile",
+"multiplier": 0,
+"mtag": "div",
+"show": true
+}
+]
+]
+}
+]
+]
+}
+]
+]
+}
+]
+}
+}
+}
+},
+"pages": {
+"index.html": {
+"ident": 6202,
+"brief": "Sets up title and widget description",
+"RespondPage": {
+"class": "SubmitData",
+"original_args": {
+"allowed_callers": [],
+"fail_ident": "home",
+"submit_list": [
+"lists",
+"ulist1",
+"index"
+],
+"target_ident": 6204
+},
+"original_fields": {}
+}
+},
+"responce": {
+"ident": 6205,
+"brief": "Called to set contents into skicall.call_data",
+"RespondPage": {
+"class": "AllowStore",
+"original_args": {
+"allowed_callers": [],
+"alternate_ident": "home",
+"fail_ident": 6202,
+"submit_list": [
+"lists",
+"ulist1",
+"respond"
+],
+"submit_option": true,
+"target_ident": "general_json",
+"validate_fail_ident": null,
+"validate_option": false
+},
+"original_fields": {
+"setlistdata:input_text": ""
+}
 }
 }
 }
