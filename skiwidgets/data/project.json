@@ -4878,6 +4878,365 @@
 },
 "pages": {}
 },
+"logins": {
+"ident": 6300,
+"brief": "Folder containing logins widgets",
+"default_page_name": "index",
+"restricted": false,
+"folders": {
+"NamePasswd1": {
+"ident": 6301,
+"brief": "Folder containing the NamePasswd1 widget",
+"default_page_name": "index.html",
+"restricted": false,
+"folders": {
+"restricted": {
+"ident": 6303,
+"brief": "Contains templates",
+"default_page_name": "index",
+"restricted": true,
+"folders": {},
+"pages": {
+"index": {
+"ident": 6304,
+"brief": "This page is a template for the logins.NamePasswd1 widget",
+"TemplatePage": {
+"show_backcol": false,
+"last_scroll": true,
+"interval": 0,
+"interval_target": null,
+"catch_to_html": null,
+"lang": "en",
+"backcol": "#ffffff",
+"default_error_widget": [
+"header",
+"top_error"
+]
+},
+"head": [
+"Part",
+{
+"tag_name": "head",
+"brief": "The head section of the page",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"ClosedPart",
+{
+"tag_name": "meta",
+"brief": "The charset meta declaration",
+"show": true,
+"attribs": {
+"charset": "utf-8"
+}
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "meta",
+"brief": "The viewport meta declaration",
+"show": true,
+"attribs": {
+"content": "width=device-width, initial-scale=1",
+"name": "viewport"
+}
+}
+],
+[
+"Part",
+{
+"tag_name": "title",
+"brief": "The page title element",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"NamePasswd1"
+]
+]
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "link",
+"brief": "css link to w3_css",
+"show": true,
+"attribs": {
+"href": "{w3_css}",
+"rel": "stylesheet",
+"type": "text/css"
+}
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "link",
+"brief": "css link to w3_theme_ski_css",
+"show": true,
+"attribs": {
+"href": "{w3_theme_ski_css}",
+"rel": "stylesheet",
+"type": "text/css"
+}
+}
+],
+[
+"Part",
+{
+"tag_name": "script",
+"brief": "script link to jquery_core",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"src": "{jquery_core}"
+},
+"parts": []
+}
+],
+[
+"Part",
+{
+"tag_name": "script",
+"brief": "script link to skipole_js",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"src": "{skipole_js}"
+},
+"parts": []
+}
+]
+]
+}
+],
+"body": [
+"Part",
+{
+"tag_name": "body",
+"brief": "The body section of the page",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-theme"
+},
+"parts": [
+[
+"Part",
+{
+"tag_name": "div",
+"brief": "containing div",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-container"
+},
+"parts": [
+[
+"SectionPlaceHolder",
+{
+"brief": "title, description and top_error",
+"section_name": "header",
+"placename": "header",
+"multiplier": 0,
+"mtag": "div",
+"show": true
+}
+],
+[
+"Part",
+{
+"tag_name": "div",
+"brief": "div holding form widget",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-container"
+},
+"parts": [
+[
+"Part",
+{
+"tag_name": "p",
+"brief": "Paragraph describing the page contents",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"Below is a NamePasswd1 widget. Type 'username' and 'password' for an OK response, any other text for a fail response."
+],
+[
+"Widget",
+{
+"class": "logins.NamePasswd1",
+"name": "namepasswd1",
+"brief": "A NamePasswd1 widget",
+"fields": {
+"action": "6305",
+"action_json": "",
+"button_class": "w3-button w3-theme-d4 w3-margin",
+"button_style": "",
+"button_text": "Submit",
+"clear_error": false,
+"disabled1": false,
+"disabled2": false,
+"div1_class": "w3-section",
+"div2_class": "w3-section",
+"div3_class": "w3-container w3-center",
+"error_class": "w3-panel w3-red",
+"hidden_field1": "",
+"hidden_field2": "",
+"hidden_field3": "",
+"hidden_field4": "",
+"input_accepted_class": "w3-pale-green",
+"input_class1": "",
+"input_class2": "",
+"input_errored_class": "w3-pale-red",
+"input_text1": "",
+"input_text2": "",
+"inputdiv_class": "w3-container",
+"label1": "Username:",
+"label2": "Password:",
+"label_class1": "",
+"label_class2": "",
+"label_style1": "display:inline-block;margin-right:1%;text-align:right;width:40%;",
+"label_style2": "display:inline-block;margin-right:1%;text-align:right;width:40%;",
+"maxlength1": "",
+"maxlength2": "",
+"pattern1": "",
+"pattern2": "",
+"required1": true,
+"required2": true,
+"set_input_accepted1": false,
+"set_input_accepted2": false,
+"set_input_errored1": false,
+"set_input_errored2": false,
+"show": true,
+"show_error": "",
+"size1": "",
+"size2": "",
+"title1": "",
+"title2": "",
+"widget_class": "w3-container",
+"widget_style": ""
+}
+}
+]
+]
+}
+],
+[
+"Widget",
+{
+"class": "paras.ParaText",
+"name": "result",
+"brief": "Paragraph showing a result message",
+"fields": {
+"para_text": "",
+"show": true,
+"widget_class": "",
+"widget_style": ""
+}
+}
+],
+[
+"Widget",
+{
+"class": "debug_tools.ShowCallData",
+"name": "showcalldata",
+"brief": "A ShowCallData widget",
+"fields": {
+"clear_error": false,
+"error_class": "w3-panel w3-red",
+"para_class": "w3-section",
+"show": true,
+"show_error": "",
+"toptext": "This is a ShowCallData widget, which displays the contents of the skicall.call_data dictionary.",
+"widget_class": "w3-section",
+"widget_style": ""
+}
+}
+],
+[
+"SectionPlaceHolder",
+{
+"brief": "Section which shows the code",
+"section_name": "codefile",
+"placename": "codefile",
+"multiplier": 0,
+"mtag": "div",
+"show": true
+}
+]
+]
+}
+]
+]
+}
+]
+]
+}
+]
+}
+}
+}
+},
+"pages": {
+"index.html": {
+"ident": 6302,
+"brief": "Sets up title and widget description",
+"RespondPage": {
+"class": "SubmitData",
+"original_args": {
+"allowed_callers": [],
+"fail_ident": "home",
+"submit_list": [
+"logins",
+"namepasswd1",
+"index"
+],
+"target_ident": 6304
+},
+"original_fields": {}
+}
+},
+"responce": {
+"ident": 6305,
+"brief": "Responce to a NamePasswd1 submission",
+"RespondPage": {
+"class": "AllowStore",
+"original_args": {
+"allowed_callers": [
+6304
+],
+"alternate_ident": "home",
+"fail_ident": 6302,
+"submit_list": [
+"logins",
+"namepasswd1",
+"respond"
+],
+"submit_option": true,
+"target_ident": 6302,
+"validate_fail_ident": null,
+"validate_option": false
+},
+"original_fields": {
+"namepasswd1:input_text1": "",
+"namepasswd1:input_text2": ""
+}
+}
+}
+}
+}
+},
+"pages": {}
+},
 "restricted": {
 "ident": 4000,
 "brief": "Holds site index template page",
