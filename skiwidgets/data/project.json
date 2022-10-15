@@ -5639,6 +5639,396 @@
 },
 "pages": {}
 },
+"radio": {
+"ident": 6500,
+"brief": "Folder containing radio widgets",
+"default_page_name": "index",
+"restricted": false,
+"folders": {
+"BooleanRadio": {
+"ident": 6501,
+"brief": "Folder containing the BooleanRadio widget",
+"default_page_name": "index.html",
+"restricted": false,
+"folders": {
+"restricted": {
+"ident": 6503,
+"brief": "Contains templates",
+"default_page_name": "index",
+"restricted": true,
+"folders": {},
+"pages": {
+"index": {
+"ident": 6504,
+"brief": "radio.BooleanRadio template",
+"TemplatePage": {
+"show_backcol": false,
+"last_scroll": true,
+"interval": 0,
+"interval_target": null,
+"catch_to_html": null,
+"lang": "en",
+"backcol": "#ffffff",
+"default_error_widget": [
+"header",
+"top_error"
+]
+},
+"head": [
+"Part",
+{
+"tag_name": "head",
+"brief": "The head section of the page",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"ClosedPart",
+{
+"tag_name": "meta",
+"brief": "The charset meta declaration",
+"show": true,
+"attribs": {
+"charset": "utf-8"
+}
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "meta",
+"brief": "The viewport meta declaration",
+"show": true,
+"attribs": {
+"content": "width=device-width, initial-scale=1",
+"name": "viewport"
+}
+}
+],
+[
+"Part",
+{
+"tag_name": "title",
+"brief": "The page title element",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"BooleanRadio"
+]
+]
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "link",
+"brief": "css link to w3_css",
+"show": true,
+"attribs": {
+"href": "{w3_css}",
+"rel": "stylesheet",
+"type": "text/css"
+}
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "link",
+"brief": "css link to w3_theme_ski_css",
+"show": true,
+"attribs": {
+"href": "{w3_theme_ski_css}",
+"rel": "stylesheet",
+"type": "text/css"
+}
+}
+],
+[
+"Part",
+{
+"tag_name": "script",
+"brief": "script link to jquery_core",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"src": "{jquery_core}"
+},
+"parts": []
+}
+],
+[
+"Part",
+{
+"tag_name": "script",
+"brief": "script link to skipole_js",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"src": "{skipole_js}"
+},
+"parts": []
+}
+]
+]
+}
+],
+"body": [
+"Part",
+{
+"tag_name": "body",
+"brief": "The body section of the page",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-theme"
+},
+"parts": [
+[
+"Part",
+{
+"tag_name": "div",
+"brief": "containing div",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-container"
+},
+"parts": [
+[
+"SectionPlaceHolder",
+{
+"brief": "title, description and top_error",
+"section_name": "header",
+"placename": "header",
+"multiplier": 0,
+"mtag": "div",
+"show": true
+}
+],
+[
+"Part",
+{
+"tag_name": "div",
+"brief": "div holding page description",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-container"
+},
+"parts": [
+[
+"Part",
+{
+"tag_name": "p",
+"brief": "Paragraph describing the page contents",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"This is a SubmitForm1 widget with a BooleanRadio widget contained within it. The form sends the data input to an AllowStore responder, which inserts the data received into the skicall.call_data dictionary."
+]
+]
+}
+]
+]
+}
+],
+[
+"Part",
+{
+"tag_name": "div",
+"brief": "The Widget",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Widget",
+{
+"class": "inputforms.SubmitForm1",
+"name": "form",
+"brief": "Form holding the BooleanRadio widget",
+"fields": {
+"action": "2",
+"action_json": "6505",
+"button_class": "w3-button w3-theme-d4",
+"button_text": "Submit",
+"button_wait_text": "",
+"clear_error": false,
+"container_class": "w3-section",
+"div_class": "",
+"enctype": "",
+"error_class": "w3-panel w3-red",
+"hidden_field1": "",
+"hidden_field2": "",
+"hidden_field3": "",
+"hidden_field4": "",
+"left_class": "",
+"left_label": "Please Submit:",
+"left_style": "display:inline-block;margin-right:1%;text-align:right;width:30%;",
+"right_class": "",
+"right_label": "",
+"right_style": "",
+"show": true,
+"show_error": "",
+"widget_class": "w3-container",
+"widget_style": ""
+},
+"container_0": [
+[
+"Widget",
+{
+"class": "radio.BooleanRadio",
+"name": "booleanradio",
+"brief": "Illustrates a BooleanRadio widget",
+"fields": {
+"div_class1": "w3-section",
+"div_class2": "w3-section",
+"left_class1": "",
+"left_class2": "",
+"left_label1": "True",
+"left_label2": "False",
+"left_style1": "display:inline-block;margin-right:1%;text-align:right;width:30%;",
+"left_style2": "display:inline-block;margin-right:1%;text-align:right;width:30%;",
+"radio_checked": true,
+"right_class1": "",
+"right_class2": "",
+"right_label1": "",
+"right_label2": "",
+"right_style1": "",
+"right_style2": "",
+"show": true,
+"widget_class": "w3-container",
+"widget_style": ""
+}
+}
+]
+]
+}
+]
+]
+}
+],
+[
+"Part",
+{
+"tag_name": "div",
+"brief": "The result message",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-container w3-section"
+},
+"parts": [
+[
+"Widget",
+{
+"class": "debug_tools.ShowCallData",
+"name": "showcalldata",
+"brief": "A ShowCallData widget",
+"fields": {
+"clear_error": false,
+"error_class": "w3-panel w3-red",
+"para_class": "w3-section",
+"show": true,
+"show_error": "",
+"toptext": "This is a ShowCallData widget, which displays the contents of the skicall.call_data dictionary.",
+"widget_class": "w3-section",
+"widget_style": ""
+}
+}
+],
+[
+"Widget",
+{
+"class": "paras.ParaText",
+"name": "result",
+"brief": "Paragraph showing a result message",
+"fields": {
+"para_text": "",
+"show": true,
+"widget_class": "",
+"widget_style": ""
+}
+}
+],
+[
+"SectionPlaceHolder",
+{
+"brief": "Section which shows the code",
+"section_name": "codefile",
+"placename": "codefile",
+"multiplier": 0,
+"mtag": "div",
+"show": true
+}
+]
+]
+}
+]
+]
+}
+]
+]
+}
+]
+}
+}
+}
+},
+"pages": {
+"index.html": {
+"ident": 6502,
+"brief": "Sets up title and widget description",
+"RespondPage": {
+"class": "SubmitData",
+"original_args": {
+"allowed_callers": [],
+"fail_ident": "home",
+"submit_list": [
+"radio",
+"booleanradio",
+"index"
+],
+"target_ident": 6504
+},
+"original_fields": {}
+}
+},
+"responce": {
+"ident": 6505,
+"brief": "Responce to a BooleanRadio submission",
+"RespondPage": {
+"class": "AllowStore",
+"original_args": {
+"allowed_callers": [
+6504
+],
+"alternate_ident": "home",
+"fail_ident": 6502,
+"submit_list": [
+"radio",
+"booleanradio",
+"respond"
+],
+"submit_option": true,
+"target_ident": "general_json",
+"validate_fail_ident": null,
+"validate_option": false
+},
+"original_fields": {
+"booleanradio:radio_checked": ""
+}
+}
+}
+}
+}
+},
+"pages": {}
+},
 "restricted": {
 "ident": 4000,
 "brief": "Holds site index template page",
