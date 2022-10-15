@@ -5237,6 +5237,408 @@
 },
 "pages": {}
 },
+"paras": {
+"ident": 6400,
+"brief": "Folder containing links widgets",
+"default_page_name": "index",
+"restricted": false,
+"folders": {
+"DivHTML": {
+"ident": 6401,
+"brief": "Folder containing the DivHTML widget",
+"default_page_name": "index.html",
+"restricted": false,
+"folders": {
+"restricted": {
+"ident": 6403,
+"brief": "Contains templates",
+"default_page_name": "index",
+"restricted": true,
+"folders": {},
+"pages": {
+"index": {
+"ident": 6404,
+"brief": "paras.DivHTML template",
+"TemplatePage": {
+"show_backcol": false,
+"last_scroll": true,
+"interval": 0,
+"interval_target": null,
+"catch_to_html": null,
+"lang": "en",
+"backcol": "#ffffff",
+"default_error_widget": [
+"header",
+"top_error"
+]
+},
+"head": [
+"Part",
+{
+"tag_name": "head",
+"brief": "The head section of the page",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"ClosedPart",
+{
+"tag_name": "meta",
+"brief": "The charset meta declaration",
+"show": true,
+"attribs": {
+"charset": "utf-8"
+}
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "meta",
+"brief": "The viewport meta declaration",
+"show": true,
+"attribs": {
+"content": "width=device-width, initial-scale=1",
+"name": "viewport"
+}
+}
+],
+[
+"Part",
+{
+"tag_name": "title",
+"brief": "The page title element",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"DivHTML"
+]
+]
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "link",
+"brief": "css link to w3_css",
+"show": true,
+"attribs": {
+"href": "{w3_css}",
+"rel": "stylesheet",
+"type": "text/css"
+}
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "link",
+"brief": "css link to w3_theme_ski_css",
+"show": true,
+"attribs": {
+"href": "{w3_theme_ski_css}",
+"rel": "stylesheet",
+"type": "text/css"
+}
+}
+],
+[
+"Part",
+{
+"tag_name": "script",
+"brief": "script link to jquery_core",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"src": "{jquery_core}"
+},
+"parts": []
+}
+],
+[
+"Part",
+{
+"tag_name": "script",
+"brief": "script link to skipole_js",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"src": "{skipole_js}"
+},
+"parts": []
+}
+]
+]
+}
+],
+"body": [
+"Part",
+{
+"tag_name": "body",
+"brief": "The body section of the page",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-theme"
+},
+"parts": [
+[
+"Part",
+{
+"tag_name": "div",
+"brief": "containing div",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-container"
+},
+"parts": [
+[
+"SectionPlaceHolder",
+{
+"brief": "title, description and top_error",
+"section_name": "header",
+"placename": "header",
+"multiplier": 0,
+"mtag": "div",
+"show": true
+}
+],
+[
+"Part",
+{
+"tag_name": "div",
+"brief": "div holding widgets",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-container"
+},
+"parts": [
+[
+"Part",
+{
+"tag_name": "p",
+"brief": "Paragraph describing the page contents",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"Below are three DivHTML widgets, each containing HTML content which can be set by Python code. Each widget has drop and drag enabled, drag from one widget to the other to test.\r\nSee if you can swap the first two colours (refresh page to get initial colours back)."
+]
+]
+}
+],
+[
+"Widget",
+{
+"class": "paras.DivHTML",
+"name": "divhtml_a",
+"brief": "First DivHTML widget",
+"fields": {
+"drag": "blue",
+"drop": "blue",
+"dropident": "6406",
+"hide": false,
+"set_html": "<p class=\"w3-blue\">This is the first DivHTML widget</p>",
+"show": true,
+"widget_class": "",
+"widget_style": ""
+}
+}
+],
+[
+"Widget",
+{
+"class": "paras.DivHTML",
+"name": "divhtml_b",
+"brief": "Second DivHTML widget",
+"fields": {
+"drag": "red",
+"drop": "red",
+"dropident": "6405",
+"hide": false,
+"set_html": "<p class=\"w3-red\">This is the second DivHTML widget</p>",
+"show": true,
+"widget_class": "",
+"widget_style": ""
+}
+}
+],
+[
+"Widget",
+{
+"class": "paras.DivHTML",
+"name": "divhtml_c",
+"brief": "Third DivHTML widget",
+"fields": {
+"drag": "purple",
+"drop": "purple",
+"dropident": "6407",
+"hide": false,
+"set_html": "<p class=\"w3-purple\">This is the third DivHTML widget</p>",
+"show": true,
+"widget_class": "",
+"widget_style": ""
+}
+}
+],
+[
+"Widget",
+{
+"class": "debug_tools.ShowCallData",
+"name": "showcalldata",
+"brief": "A ShowCallData widget",
+"fields": {
+"clear_error": false,
+"error_class": "w3-panel w3-red",
+"para_class": "w3-section",
+"show": true,
+"show_error": "",
+"toptext": "This is a ShowCallData widget, which displays the contents of the skicall.call_data dictionary.",
+"widget_class": "w3-section",
+"widget_style": ""
+}
+}
+],
+[
+"SectionPlaceHolder",
+{
+"brief": "Section which shows the code",
+"section_name": "codefile",
+"placename": "codefile",
+"multiplier": 0,
+"mtag": "div",
+"show": true
+}
+]
+]
+}
+]
+]
+}
+]
+]
+}
+]
+}
+}
+}
+},
+"pages": {
+"drop_on_a": {
+"ident": 6406,
+"brief": "Called when dropped on a",
+"RespondPage": {
+"class": "AllowStore",
+"original_args": {
+"allowed_callers": [
+6404
+],
+"alternate_ident": "home",
+"fail_ident": "home",
+"submit_list": [
+"paras",
+"divhtml",
+"drop_on_a"
+],
+"submit_option": true,
+"target_ident": "general_json",
+"validate_fail_ident": null,
+"validate_option": false
+},
+"original_fields": {
+"divhtml_a:drag": "",
+"divhtml_a:drop": "",
+"divhtml_b:drag": "",
+"divhtml_c:drag": ""
+}
+}
+},
+"drop_on_b": {
+"ident": 6405,
+"brief": "Called when dropped on b",
+"RespondPage": {
+"class": "AllowStore",
+"original_args": {
+"allowed_callers": [
+6404
+],
+"alternate_ident": "home",
+"fail_ident": "home",
+"submit_list": [
+"paras",
+"divhtml",
+"drop_on_b"
+],
+"submit_option": true,
+"target_ident": "general_json",
+"validate_fail_ident": null,
+"validate_option": false
+},
+"original_fields": {
+"divhtml_a:drag": "",
+"divhtml_b:drag": "",
+"divhtml_b:drop": "",
+"divhtml_c:drag": ""
+}
+}
+},
+"drop_on_c": {
+"ident": 6407,
+"brief": "Called when dropped on c",
+"RespondPage": {
+"class": "AllowStore",
+"original_args": {
+"allowed_callers": [
+6404
+],
+"alternate_ident": "home",
+"fail_ident": "home",
+"submit_list": [
+"paras",
+"divhtml",
+"drop_on_c"
+],
+"submit_option": true,
+"target_ident": "general_json",
+"validate_fail_ident": null,
+"validate_option": false
+},
+"original_fields": {
+"divhtml_a:drag": "",
+"divhtml_b:drag": "",
+"divhtml_c:drag": "",
+"divhtml_c:drop": ""
+}
+}
+},
+"index.html": {
+"ident": 6402,
+"brief": "Sets up title and widget description",
+"RespondPage": {
+"class": "SubmitData",
+"original_args": {
+"allowed_callers": [],
+"fail_ident": "home",
+"submit_list": [
+"paras",
+"divhtml",
+"index"
+],
+"target_ident": 6404
+},
+"original_fields": {}
+}
+}
+}
+}
+},
+"pages": {}
+},
 "restricted": {
 "ident": 4000,
 "brief": "Holds site index template page",
