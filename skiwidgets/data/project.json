@@ -7956,6 +7956,318 @@
 }
 },
 "pages": {}
+},
+"svggraphs": {
+"ident": 6700,
+"brief": "Folder containing svggraphs widgets",
+"default_page_name": "index",
+"restricted": false,
+"folders": {
+"Axis1": {
+"ident": 6701,
+"brief": "Folder containing the Axis1 widget",
+"default_page_name": "index.html",
+"restricted": false,
+"folders": {
+"restricted": {
+"ident": 6703,
+"brief": "Contains templates",
+"default_page_name": "index",
+"restricted": true,
+"folders": {},
+"pages": {
+"index": {
+"ident": 6704,
+"brief": "This page is a template for the svggraphs.Axis1 widget",
+"TemplatePage": {
+"show_backcol": false,
+"last_scroll": true,
+"interval": 0,
+"interval_target": null,
+"catch_to_html": null,
+"lang": "en",
+"backcol": "#ffffff",
+"default_error_widget": [
+"header",
+"top_error"
+]
+},
+"head": [
+"Part",
+{
+"tag_name": "head",
+"brief": "The head section of the page",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"ClosedPart",
+{
+"tag_name": "meta",
+"brief": "The charset meta declaration",
+"show": true,
+"attribs": {
+"charset": "utf-8"
+}
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "meta",
+"brief": "The viewport meta declaration",
+"show": true,
+"attribs": {
+"content": "width=device-width, initial-scale=1",
+"name": "viewport"
+}
+}
+],
+[
+"Part",
+{
+"tag_name": "title",
+"brief": "The page title element",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"Axis1"
+]
+]
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "link",
+"brief": "css link to w3_css",
+"show": true,
+"attribs": {
+"href": "{w3_css}",
+"rel": "stylesheet",
+"type": "text/css"
+}
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "link",
+"brief": "css link to w3_theme_ski_css",
+"show": true,
+"attribs": {
+"href": "{w3_theme_ski_css}",
+"rel": "stylesheet",
+"type": "text/css"
+}
+}
+],
+[
+"Part",
+{
+"tag_name": "script",
+"brief": "script link to jquery_core",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"src": "{jquery_core}"
+},
+"parts": []
+}
+],
+[
+"Part",
+{
+"tag_name": "script",
+"brief": "script link to skipole_js",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"src": "{skipole_js}"
+},
+"parts": []
+}
+]
+]
+}
+],
+"body": [
+"Part",
+{
+"tag_name": "body",
+"brief": "The body section of the page",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-theme"
+},
+"parts": [
+[
+"Part",
+{
+"tag_name": "div",
+"brief": "containing div",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-container"
+},
+"parts": [
+[
+"SectionPlaceHolder",
+{
+"brief": "title, description and top_error",
+"section_name": "header",
+"placename": "header",
+"multiplier": 0,
+"mtag": "div",
+"show": true
+}
+],
+[
+"Part",
+{
+"tag_name": "div",
+"brief": "div holding form widget",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-container"
+},
+"parts": [
+[
+"Part",
+{
+"tag_name": "p",
+"brief": "Paragraph describing the page contents",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"This is an SVG tag, width 1200, height 1200 with an Axis1 widget set within it:"
+]
+]
+}
+],
+[
+"Part",
+{
+"tag_name": "svg",
+"brief": "svg tag",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"height": "1200",
+"width": "1200"
+},
+"parts": [
+[
+"Widget",
+{
+"class": "svggraphs.Axis1",
+"name": "axis1",
+"brief": "illustration of an Axis1 widget",
+"fields": {
+"axiscol": "green",
+"fill": "white",
+"fill_opacity": "1",
+"font_family": "arial",
+"maxxvalue": "100",
+"maxyvalue": "100",
+"minxvalue": "0",
+"minyvalue": "0",
+"show": true,
+"transform": "",
+"widget_class": "",
+"widget_style": ""
+},
+"container_0": [
+[
+"Text",
+""
+]
+]
+}
+]
+]
+}
+],
+[
+"SectionPlaceHolder",
+{
+"brief": "Section which shows the code",
+"section_name": "codefile",
+"placename": "codefile",
+"multiplier": 0,
+"mtag": "div",
+"show": true
+}
+]
+]
+}
+]
+]
+}
+]
+]
+}
+]
+}
+}
+}
+},
+"pages": {
+"index.html": {
+"ident": 6702,
+"brief": "Sets up title and widget description",
+"RespondPage": {
+"class": "SubmitData",
+"original_args": {
+"allowed_callers": [],
+"fail_ident": "home",
+"submit_list": [
+"svggraphs",
+"axis1",
+"index"
+],
+"target_ident": 6704
+},
+"original_fields": {}
+}
+},
+"responce": {
+"ident": 6705,
+"brief": "AllowStore to change circle colour",
+"RespondPage": {
+"class": "AllowStore",
+"original_args": {
+"allowed_callers": [
+6604
+],
+"alternate_ident": "home",
+"fail_ident": 6602,
+"submit_list": [
+"svgbasics",
+"circle",
+"respond"
+],
+"submit_option": true,
+"target_ident": "general_json",
+"validate_fail_ident": null,
+"validate_option": false
+},
+"original_fields": {
+"buttonlink2:get_field1": ""
+}
+}
+}
+}
+}
+},
+"pages": {}
 }
 },
 "pages": {
