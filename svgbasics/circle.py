@@ -28,4 +28,23 @@ def index(skicall):
         codesection['pretext', 'pre_text'] = f.read()
     skicall.update(codesection)
 
+
+def respond(skicall):
+    "Responds to submission from buttonlink2 to change the color of the Circle widget"
+
+    if ('buttonlink2', 'get_field1') not in skicall.call_data:
+        raise FailPage(message="No submission received")
+
+    value = skicall.call_data['buttonlink2', 'get_field1']
+    if value == 'yellow':
+        new_value = 'red'
+    elif value == 'red':
+        new_value = 'yellow'
+    else:
+        return
+    pd = PageData()
+    pd['buttonlink2', 'get_field1'] = new_value
+    pd['circle', 'fill'] = new_value
+    skicall.update(pd)
+
     

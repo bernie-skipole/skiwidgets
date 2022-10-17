@@ -7802,27 +7802,23 @@
 "parts": [
 [
 "Text",
-"This is an SVGContainer widget with a Circle widget set within it:"
+"This is an SVG tag, width 500, height 500 with a Circle widget set within it:"
 ]
 ]
 }
 ],
 [
-"Widget",
+"Part",
 {
-"class": "svgbasics.SVGContainer",
-"name": "svgcontainer",
-"brief": "Container for further svg widgets",
-"fields": {
-"height": "500",
-"preserveAspectRatio": "",
+"tag_name": "svg",
+"brief": "svg tag 500 x 500",
 "show": true,
-"viewBox": "",
-"widget_class": "",
-"widget_style": "",
+"hide_if_empty": false,
+"attribs": {
+"height": "500",
 "width": "500"
 },
-"container_0": [
+"parts": [
 [
 "ClosedWidget",
 {
@@ -7843,6 +7839,48 @@
 }
 ]
 ]
+}
+],
+[
+"Part",
+{
+"tag_name": "p",
+"brief": "Paragraph describing the page contents",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"Click the ButtonLink2 widget below to request a 'fill' colour change of the Circle widget."
+]
+]
+}
+],
+[
+"Widget",
+{
+"class": "links.ButtonLink2",
+"name": "buttonlink2",
+"brief": "Button to change the widget fill value",
+"fields": {
+"button_class": "w3-button w3-theme-l1 w3-border w3-round",
+"button_style": "",
+"button_text": "Change Colour",
+"button_wait_text": "Please wait...",
+"buttondiv_class": "w3-container",
+"buttondiv_style": "",
+"clear_error": false,
+"error_class": "w3-panel w3-red",
+"get_field1": "yellow",
+"get_field2": "",
+"hide": false,
+"json_ident": "6605",
+"link_ident": "no_javascript",
+"show": true,
+"show_error": "",
+"widget_class": "w3-container",
+"widget_style": ""
+}
 }
 ],
 [
@@ -7886,6 +7924,32 @@
 "target_ident": 6604
 },
 "original_fields": {}
+}
+},
+"responce": {
+"ident": 6605,
+"brief": "AllowStore to change circle colour",
+"RespondPage": {
+"class": "AllowStore",
+"original_args": {
+"allowed_callers": [
+6604
+],
+"alternate_ident": "home",
+"fail_ident": 6602,
+"submit_list": [
+"svgbasics",
+"circle",
+"respond"
+],
+"submit_option": true,
+"target_ident": "general_json",
+"validate_fail_ident": null,
+"validate_option": false
+},
+"original_fields": {
+"buttonlink2:get_field1": ""
+}
 }
 }
 }
