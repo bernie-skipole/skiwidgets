@@ -137,7 +137,7 @@
   "widgets.svgbasics.SimpleText": "SVG text. Should be a child of an SVG tag.",
   "widgets.svgbasics.TextBlockGroup": "A g tag, containing a TextBlock. The TextBlock is not escaped, so may contain svg commands which are set directly into the group.",
   "widgets.svgbasics.module": "SVG basic tags and shapes.",
-  "widgets.svggraphs.Axis1": "A graph axis, normally set in an svg space of 1200 high, 1200 width, used to contain further widgets displaying points.",
+  "widgets.svggraphs.Axis1": "A graph axis, 720 pixels high, and 960 width, with further space around it for graph labels - and should normally be set in an svg space of 1000 high, 1300 width. This widget has a container into which you would insert further Points or Lines widgets which contain the data to be plotted.",
   "widgets.svggraphs.Axis2": "A graph axis can be set with scale size, normally set in an svg space, used to contain further widgets displaying points.",
   "widgets.svggraphs.Axis3": "A graph axis with string labels set along the x and y axis, normally set in an svg space, used to contain further widgets displaying points.",
   "widgets.svggraphs.Chart1": "A chart filled with a list of values from the right to the left.",

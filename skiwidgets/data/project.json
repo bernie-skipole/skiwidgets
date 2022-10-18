@@ -8147,7 +8147,7 @@
 "parts": [
 [
 "Text",
-"This is an SVG tag, width 1200, height 1200 with an Axis1 widget set within it:"
+"This is an SVG tag, width 1300, height 1000 with an Axis1 widget set within it:"
 ]
 ]
 }
@@ -8160,8 +8160,8 @@
 "show": true,
 "hide_if_empty": false,
 "attribs": {
-"height": "1200",
-"width": "1200"
+"height": "1000",
+"width": "1300"
 },
 "parts": [
 [
@@ -8186,10 +8186,68 @@
 },
 "container_0": [
 [
-"Text",
-""
+"Widget",
+{
+"class": "svggraphs.Points",
+"name": "points",
+"brief": "Points set into Axis1",
+"fields": {
+"pointcol": "black",
+"show": true,
+"transform": "",
+"values": [],
+"widget_class": "",
+"widget_style": ""
+}
+}
 ]
 ]
+}
+],
+[
+"Widget",
+{
+"class": "svgbasics.SimpleText",
+"name": "simpletext",
+"brief": "Text below the graph",
+"fields": {
+"dx": "0",
+"dy": "0",
+"fill": "green",
+"font_family": "Arial",
+"font_size": "20",
+"show": true,
+"stroke": "",
+"stroke_width": "",
+"text": "Points created from a Points widget contained in the Axis1 widget.",
+"widget_class": "",
+"widget_style": "",
+"x": "400",
+"y": "850"
+}
+}
+],
+[
+"Widget",
+{
+"class": "svgbasics.SimpleText",
+"name": "simpletext2",
+"brief": "Text below the graph",
+"fields": {
+"dx": "0",
+"dy": "0",
+"fill": "green",
+"font_family": "Arial",
+"font_size": "20",
+"show": true,
+"stroke": "",
+"stroke_width": "",
+"text": "These text lines are created by SimpleText widgets appended after the Axis1 widget.",
+"widget_class": "",
+"widget_style": "",
+"x": "400",
+"y": "900"
+}
 }
 ]
 ]

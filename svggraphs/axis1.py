@@ -28,4 +28,7 @@ def index(skicall):
         codesection['pretext', 'pre_text'] = f.read()
     skicall.update(codesection)
 
-    
+    # Set some points in the axis, using a Points widget
+    pd = PageData()
+    pd['points','values'] = [(10,10), (20,40), (30,60), (40,50), (70,30), (90,10)]
+    skicall.update(pd)
