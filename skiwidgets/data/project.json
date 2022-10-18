@@ -8295,31 +8295,300 @@
 },
 "original_fields": {}
 }
+}
+}
+}
 },
-"responce": {
-"ident": 6705,
-"brief": "AllowStore to change circle colour",
+"pages": {}
+},
+"svgmeters": {
+"ident": 6800,
+"brief": "Folder containing svgmeters widgets",
+"default_page_name": "index",
+"restricted": false,
+"folders": {
+"Angle": {
+"ident": 6801,
+"brief": "Folder containing the Angle widget",
+"default_page_name": "index.html",
+"restricted": false,
+"folders": {
+"restricted": {
+"ident": 6803,
+"brief": "Contains templates",
+"default_page_name": "index",
+"restricted": true,
+"folders": {},
+"pages": {
+"index": {
+"ident": 6804,
+"brief": "This page is a template for the svgmeters.Angle widget",
+"TemplatePage": {
+"show_backcol": false,
+"last_scroll": true,
+"interval": 2,
+"interval_target": 6805,
+"catch_to_html": null,
+"lang": "en",
+"backcol": "#ffffff",
+"default_error_widget": [
+"header",
+"top_error"
+]
+},
+"head": [
+"Part",
+{
+"tag_name": "head",
+"brief": "The head section of the page",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"ClosedPart",
+{
+"tag_name": "meta",
+"brief": "The charset meta declaration",
+"show": true,
+"attribs": {
+"charset": "utf-8"
+}
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "meta",
+"brief": "The viewport meta declaration",
+"show": true,
+"attribs": {
+"content": "width=device-width, initial-scale=1",
+"name": "viewport"
+}
+}
+],
+[
+"Part",
+{
+"tag_name": "title",
+"brief": "The page title element",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"Angle"
+]
+]
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "link",
+"brief": "css link to w3_css",
+"show": true,
+"attribs": {
+"href": "{w3_css}",
+"rel": "stylesheet",
+"type": "text/css"
+}
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "link",
+"brief": "css link to w3_theme_ski_css",
+"show": true,
+"attribs": {
+"href": "{w3_theme_ski_css}",
+"rel": "stylesheet",
+"type": "text/css"
+}
+}
+],
+[
+"Part",
+{
+"tag_name": "script",
+"brief": "script link to jquery_core",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"src": "{jquery_core}"
+},
+"parts": []
+}
+],
+[
+"Part",
+{
+"tag_name": "script",
+"brief": "script link to skipole_js",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"src": "{skipole_js}"
+},
+"parts": []
+}
+]
+]
+}
+],
+"body": [
+"Part",
+{
+"tag_name": "body",
+"brief": "The body section of the page",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-theme"
+},
+"parts": [
+[
+"Part",
+{
+"tag_name": "div",
+"brief": "containing div",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-container"
+},
+"parts": [
+[
+"SectionPlaceHolder",
+{
+"brief": "title, description and top_error",
+"section_name": "header",
+"placename": "header",
+"multiplier": 0,
+"mtag": "div",
+"show": true
+}
+],
+[
+"Part",
+{
+"tag_name": "div",
+"brief": "div holding form widget",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-container"
+},
+"parts": [
+[
+"Part",
+{
+"tag_name": "p",
+"brief": "Paragraph describing the page contents",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"This page is set to request a JSON update every two seconds, which increments the value measured by 5 degrees.\r\nThis is an SVG tag, width 500, height 500 with an Angle widget set within it."
+]
+]
+}
+],
+[
+"Part",
+{
+"tag_name": "svg",
+"brief": "svg tag 500 x 500",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"height": "500",
+"width": "500"
+},
+"parts": [
+[
+"Widget",
+{
+"class": "svgmeters.Angle",
+"name": "angle",
+"brief": "illustration of an Angle widget",
+"fields": {
+"font_family": "arial",
+"measurement": "0",
+"scale_units": "360",
+"show": true,
+"transform": "",
+"widget_class": "",
+"widget_style": ""
+}
+}
+]
+]
+}
+],
+[
+"SectionPlaceHolder",
+{
+"brief": "Section which shows the code",
+"section_name": "codefile",
+"placename": "codefile",
+"multiplier": 0,
+"mtag": "div",
+"show": true
+}
+]
+]
+}
+]
+]
+}
+]
+]
+}
+]
+}
+}
+}
+},
+"pages": {
+"index.html": {
+"ident": 6802,
+"brief": "Sets up title and widget description",
 "RespondPage": {
-"class": "AllowStore",
+"class": "SubmitData",
+"original_args": {
+"allowed_callers": [],
+"fail_ident": "home",
+"submit_list": [
+"svgmeters",
+"angle",
+"index"
+],
+"target_ident": 6804
+},
+"original_fields": {}
+}
+},
+"reading": {
+"ident": 6805,
+"brief": "called to update the meter",
+"RespondPage": {
+"class": "SubmitData",
 "original_args": {
 "allowed_callers": [
-6604
+6804
 ],
-"alternate_ident": "home",
-"fail_ident": 6602,
+"fail_ident": "home",
 "submit_list": [
-"svgbasics",
-"circle",
-"respond"
+"svgmeters",
+"angle",
+"reading"
 ],
-"submit_option": true,
-"target_ident": "general_json",
-"validate_fail_ident": null,
-"validate_option": false
+"target_ident": "general_json"
 },
-"original_fields": {
-"buttonlink2:get_field1": ""
-}
+"original_fields": {}
 }
 }
 }
