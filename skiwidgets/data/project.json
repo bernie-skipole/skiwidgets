@@ -8595,6 +8595,334 @@
 }
 },
 "pages": {}
+},
+"tables": {
+"ident": 6900,
+"brief": "Folder containing tables widgets",
+"default_page_name": "index",
+"restricted": false,
+"folders": {
+"ButtonTextBlockTable1": {
+"ident": 6901,
+"brief": "Folder containing the ButtonTextBlockTable1 widget",
+"default_page_name": "index.html",
+"restricted": false,
+"folders": {
+"restricted": {
+"ident": 6903,
+"brief": "Contains templates",
+"default_page_name": "index",
+"restricted": true,
+"folders": {},
+"pages": {
+"index": {
+"ident": 6904,
+"brief": "tables.ButtonTextBlockTable1 template",
+"TemplatePage": {
+"show_backcol": false,
+"last_scroll": true,
+"interval": 0,
+"interval_target": null,
+"catch_to_html": null,
+"lang": "en",
+"backcol": "#ffffff",
+"default_error_widget": [
+"header",
+"top_error"
+]
+},
+"head": [
+"Part",
+{
+"tag_name": "head",
+"brief": "The head section of the page",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"ClosedPart",
+{
+"tag_name": "meta",
+"brief": "The charset meta declaration",
+"show": true,
+"attribs": {
+"charset": "utf-8"
+}
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "meta",
+"brief": "The viewport meta declaration",
+"show": true,
+"attribs": {
+"content": "width=device-width, initial-scale=1",
+"name": "viewport"
+}
+}
+],
+[
+"Part",
+{
+"tag_name": "title",
+"brief": "The page title element",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"ButtonTextBlockTable1"
+]
+]
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "link",
+"brief": "css link to w3_css",
+"show": true,
+"attribs": {
+"href": "{w3_css}",
+"rel": "stylesheet",
+"type": "text/css"
+}
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "link",
+"brief": "css link to w3_theme_ski_css",
+"show": true,
+"attribs": {
+"href": "{w3_theme_ski_css}",
+"rel": "stylesheet",
+"type": "text/css"
+}
+}
+],
+[
+"Part",
+{
+"tag_name": "script",
+"brief": "script link to jquery_core",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"src": "{jquery_core}"
+},
+"parts": []
+}
+],
+[
+"Part",
+{
+"tag_name": "script",
+"brief": "script link to skipole_js",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"src": "{skipole_js}"
+},
+"parts": []
+}
+]
+]
+}
+],
+"body": [
+"Part",
+{
+"tag_name": "body",
+"brief": "The body section of the page",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-theme"
+},
+"parts": [
+[
+"Part",
+{
+"tag_name": "div",
+"brief": "containing div",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-container"
+},
+"parts": [
+[
+"SectionPlaceHolder",
+{
+"brief": "title, description and top_error",
+"section_name": "header",
+"placename": "header",
+"multiplier": 0,
+"mtag": "div",
+"show": true
+}
+],
+[
+"Part",
+{
+"tag_name": "div",
+"brief": "div holding page description",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-container"
+},
+"parts": [
+[
+"Part",
+{
+"tag_name": "p",
+"brief": "Paragraph describing ButtonTextBlockTable1 widget",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"Below is the ButtonTextBlockTable1 widget which has been set with module names and TextBlock references via Python code. The buttons submit the module name, which is displayed in a paras.ParaText widget shown below the table."
+]
+]
+}
+],
+[
+"Widget",
+{
+"class": "tables.ButtonTextBlockTable1",
+"name": "buttontextblocktable1",
+"brief": "illustration of a ButtonTextBlockTable1 widget",
+"fields": {
+"action": "6905",
+"button_class": "w3-button w3-block w3-small w3-theme-dark",
+"buttons": [],
+"clear_error": false,
+"col1_button_title": "Choose option",
+"col2_text_title": "Module reference",
+"error_class": "w3-panel w3-red",
+"even_class": "",
+"header_class": "w3-theme-d3",
+"hidden_field1": "",
+"hidden_field2": "",
+"hidden_field3": "",
+"hidden_field4": "",
+"odd_class": "w3-theme-d2",
+"show": true,
+"show_error": "",
+"table_class": "w3-table w3-theme-d1 w3-border w3-bordered",
+"widget_class": "w3-section",
+"widget_style": ""
+}
+}
+],
+[
+"Widget",
+{
+"class": "debug_tools.ShowCallData",
+"name": "showcalldata",
+"brief": "A ShowCallData widget",
+"fields": {
+"clear_error": false,
+"error_class": "w3-panel w3-red",
+"para_class": "w3-section",
+"show": true,
+"show_error": "",
+"toptext": "This is a ShowCallData widget, which displays the contents of the skicall.call_data dictionary.",
+"widget_class": "w3-section",
+"widget_style": ""
+}
+}
+],
+[
+"Widget",
+{
+"class": "paras.ParaText",
+"name": "result",
+"brief": "Paragraph showing a result message",
+"fields": {
+"para_text": "",
+"show": true,
+"widget_class": "",
+"widget_style": ""
+}
+}
+],
+[
+"SectionPlaceHolder",
+{
+"brief": "Section which shows the code",
+"section_name": "codefile",
+"placename": "codefile",
+"multiplier": 0,
+"mtag": "div",
+"show": true
+}
+]
+]
+}
+]
+]
+}
+]
+]
+}
+]
+}
+}
+}
+},
+"pages": {
+"index.html": {
+"ident": 6902,
+"brief": "Sets up title and widget description",
+"RespondPage": {
+"class": "SubmitData",
+"original_args": {
+"allowed_callers": [],
+"fail_ident": "home",
+"submit_list": [
+"tables",
+"buttontextblocktable1",
+"index"
+],
+"target_ident": 6904
+},
+"original_fields": {}
+}
+},
+"responce": {
+"ident": 6905,
+"brief": "Called to set contents into skicall.call_data",
+"RespondPage": {
+"class": "AllowStore",
+"original_args": {
+"allowed_callers": [],
+"alternate_ident": "home",
+"fail_ident": 6902,
+"submit_list": [
+"tables",
+"buttontextblocktable1",
+"respond"
+],
+"submit_option": true,
+"target_ident": 6902,
+"validate_fail_ident": null,
+"validate_option": false
+},
+"original_fields": {
+"buttontextblocktable1:buttons": ""
+}
+}
+}
+}
+}
+},
+"pages": {}
 }
 },
 "pages": {
