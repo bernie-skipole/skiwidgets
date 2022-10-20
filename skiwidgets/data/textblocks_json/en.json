@@ -167,5 +167,6 @@
   "widgets.textarea.module": "Widgets containing a textarea to insert into a form.",
   "widgets.upload.SubmitUploadFile1": "Defines a form with a file input field.",
   "widgets.upload.UploadFile1": "A file input field, without form or submit button.",
+  "widgets.upload.SubmitUploadFile2": "A form with a file input field, which also submits the filename chosen. Includes a container for further fields.",
   "widgets.upload.module": "Widgets containing an upload input button to insert into a form."
 }
