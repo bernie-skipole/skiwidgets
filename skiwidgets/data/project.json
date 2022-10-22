@@ -9443,7 +9443,7 @@
 "parts": [
 [
 "Text",
-"Below is the SubmitUploadFile1 widget. You can choose to upload a file, however only the first few bytes received will be accepted and shown in this illustration."
+"Below is the SubmitUploadFile1 widget. You can choose to upload a file, however the web server has been set to limit the size of the accepted data, so only test with a small file."
 ]
 ]
 }
@@ -9476,6 +9476,24 @@
 "submitbuttonlabel_class": "",
 "submitbuttonlabel_style": "",
 "submitinputdiv_class": "w3-section",
+"widget_class": "w3-section",
+"widget_style": ""
+}
+}
+],
+[
+"Widget",
+{
+"class": "debug_tools.ShowCallData",
+"name": "showcalldata",
+"brief": "Shows the data in skicall.call_data",
+"fields": {
+"clear_error": false,
+"error_class": "w3-panel w3-red",
+"para_class": "w3-section",
+"show": true,
+"show_error": "",
+"toptext": "This is a ShowCallData widget, which displays the contents of the skicall.call_data dictionary.",
 "widget_class": "w3-section",
 "widget_style": ""
 }

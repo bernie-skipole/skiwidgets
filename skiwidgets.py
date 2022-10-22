@@ -97,7 +97,7 @@ if __name__ == "__main__":
     set_debug(True) 
 
     # if using the waitress server
-    #from waitress import serve
+    # from waitress import serve
 
     # serve the application, note host 0.0.0.0 rather than
     # 127.0.0.1 - so this will be available externally
@@ -107,10 +107,16 @@ if __name__ == "__main__":
     port = 8000
 
     # using waitress
-    #serve(application, host=host, port=port)
+    # serve(application, host=host, port=port, max_request_body_size=1000)
 
-    # or skilift
+    # waitress serve arguments
+    #
+    # max_request_body_size has been set to 1000, as this site illustrates widgets only
+    # and the upload file widgets could be used to send something very large unless limited
+
+    # or skilift development server
     print(f"Serving {PROJECT} on port {port}")
     development_server(host, port, application)
+
 
 
