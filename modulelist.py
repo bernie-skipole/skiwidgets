@@ -110,32 +110,46 @@ def retrieve_widgets_edit(skicall):
 def handle_page_not_found(skicall):
     "Called by start_call in the event a target page is not found"
     try:
-        # identify where the called path ends in a module name,
-        # as the module folder has no default page, called_ident should be None
-
         # break the path into segments
         pathsegments = skicall.path.rstrip('/').split('/')
         if pathsegments[-1] in skicall.proj_data['modules']:
-            # so pathsegments[-1] is the module name, set it into call_data
+            # so pathsegments[-1] is the module name, but without a widget
+            # set it into call_data, and display the module
             skicall.call_data['module'] = pathsegments[-1]
             return 'modulewidgets'
 
         if pathsegments[-2] in skicall.proj_data['modules']:
             # presumably the url is of the form ../module/widget
-            widget_list = [ widget.classname for widget in editwidget.widgets_in_module(pathsegments[-2]) ]
+            module = pathsegments[-2]
+            widget_list = [ widget.classname for widget in editwidget.widgets_in_module(module) ]
             if pathsegments[-1] not in widget_list:
                 # return None which causes a page not found to be returned
                 return
+            widget = pathsegments[-1]
+            # fill in the page title
+            headersection = SectionData('header')
+            headersection['title', 'large_text'] = widget
+            # A textblock contains the widget description
+            ref = f"widgets.{module}.{widget}"
+            headersection['widgetdesc','textblock_ref'] = ref
+            headersection['widgetdesc','text_refnotfound'] = f'Textblock reference {ref} not found'
+            # link to this widgets module page
+            headersection['tomodule','button_text'] = f"Module: {module}"
+            headersection['tomodule','link_ident'] = skicall.makepath(module)
+            skicall.update(headersection)
             # so a widget is identified, but no page found, so no example for the widget
             # is available
             pd = PageData()
-            pd["divpara","para_text"] = f"""No example for widget {pathsegments[-2]}.{pathsegments[-1]} has been created yet.
+            pd["divpara","para_text"] = f"""No example for widget {module}.{widget} has been created yet.
 This is still a work in progress."""
             skicall.update(pd)
+            # pass call to a template page with divpara widget, which will show the above message
             return 'widgetnotyetdone'
 
     except:
         pass
+    # if an error has occurred in the above, or none of the tests above are satisfied, return None
+    # which forces a page not found message
     return
 
 

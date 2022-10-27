@@ -6564,6 +6564,39 @@
 },
 "parts": [
 [
+"Part",
+{
+"tag_name": "div",
+"brief": "containing div",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-container"
+},
+"parts": [
+[
+"SectionPlaceHolder",
+{
+"brief": "title, description and top_error",
+"section_name": "header",
+"placename": "header",
+"multiplier": 0,
+"mtag": "div",
+"show": true
+}
+],
+[
+"Part",
+{
+"tag_name": "div",
+"brief": "div holding page description",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-container"
+},
+"parts": [
+[
 "Widget",
 {
 "class": "paras.DivPara",
@@ -6577,9 +6610,15 @@
 "pre_line": true,
 "show": true,
 "show_error": "",
-"widget_class": "w3-section",
-"widget_style": ""
+"widget_class": "w3-red w3-border w3-round",
+"widget_style": "padding:16px;"
 }
+}
+]
+]
+}
+]
+]
 }
 ]
 ]
