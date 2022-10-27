@@ -3,14 +3,17 @@
 import os
 
 ########### uses development version of skipole###
-#import sys
-#sys.path.insert(0, "/home/bernard/git/skipole")
+import sys
+sys.path.insert(0, "/home/bernard/git/skipole")
 ##################################################
 
 from skipole import WSGIApplication, FailPage, GoTo, ValidateError, ServerError, ServeFile, use_submit_list, skis, PageData, SectionData
 
 # get editwidget to find module names, and development_server if not running waitress
 from skipole.skilift import editwidget, development_server
+
+# gets functions from modulelist
+import modulelist
 
 
 # the framework needs to know the location of the projectfiles directory holding the project data
@@ -25,24 +28,9 @@ PROJ_DATA={ 'modules': editwidget.widget_modules()
           }
 
 def start_call(called_ident, skicall):
-    """If requesting a module name, ie a path such as /skiwidgets/checkbox then
-       set skicall.call_data['module'] with the module name, and go to label
-       'modulewidgets' which is a responder which calls modulelist.retrieve_widgets_list
-       to display the list of widgets in the module"""
-
-    # identify where the called path ends in a module name,
-    # as the module folder has no default page, called_ident should be None
-    try:
-        if called_ident is None:
-            # break the path into segments
-            pathsegments = skicall.path.rstrip('/').split('/')
-            if pathsegments[-1] in skicall.proj_data['modules']:
-                # so pathsegments[-1] is the module name, set it into call_data
-                skicall.call_data['module'] = pathsegments[-1]
-                return 'modulewidgets'
-    except:
-        pass
-
+    "Call modulelist.handle_page_not_found if no page found, otherwise return the called_ident"
+    if called_ident is None:
+        return modulelist.handle_page_not_found(skicall)
     return called_ident
 
 @use_submit_list

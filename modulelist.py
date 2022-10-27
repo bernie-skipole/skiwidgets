@@ -107,5 +107,37 @@ def retrieve_widgets_edit(skicall):
     raise GoTo(targetpath)
 
 
+def handle_page_not_found(skicall):
+    "Called by start_call in the event a target page is not found"
+    try:
+        # identify where the called path ends in a module name,
+        # as the module folder has no default page, called_ident should be None
+
+        # break the path into segments
+        pathsegments = skicall.path.rstrip('/').split('/')
+        if pathsegments[-1] in skicall.proj_data['modules']:
+            # so pathsegments[-1] is the module name, set it into call_data
+            skicall.call_data['module'] = pathsegments[-1]
+            return 'modulewidgets'
+
+        if pathsegments[-2] in skicall.proj_data['modules']:
+            # presumably the url is of the form ../module/widget
+            widget_list = [ widget.classname for widget in editwidget.widgets_in_module(pathsegments[-2]) ]
+            if pathsegments[-1] not in widget_list:
+                # return None which causes a page not found to be returned
+                return
+            # so a widget is identified, but no page found, so no example for the widget
+            # is available
+            pd = PageData()
+            pd["divpara","para_text"] = f"""No example for widget {pathsegments[-2]}.{pathsegments[-1]} has been created yet.
+This is still a work in progress."""
+            skicall.update(pd)
+            return 'widgetnotyetdone'
+
+    except:
+        pass
+    return
+
+
 
 
