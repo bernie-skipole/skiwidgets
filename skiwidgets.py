@@ -74,11 +74,11 @@ if __name__ == "__main__":
     # which can be used to develop pages for your project
     #
     ############################### THESE LINES ADD SKIADMIN ######################
-    #                                                                             #
-    from skipole import skiadmin                                                  #
-    skiadmin_application = skiadmin.makeapp(editedprojname=PROJECT)               #
-    application.add_project(skiadmin_application, url='/skiwidgets/skiadmin')     #
-    #                                                                             #
+    #                                                                             
+    from skipole import skiadmin                                                  
+    skiadmin_application = skiadmin.makeapp(editedprojname=PROJECT, examples="/skiwidgets/")
+    application.add_project(skiadmin_application, url='/skiwidgets/skiadmin')     
+    #                                                                             
     ###############################################################################
 
     from skipole import set_debug
