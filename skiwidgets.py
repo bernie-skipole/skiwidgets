@@ -3,8 +3,8 @@
 import os
 
 ########### uses development version of skipole###
-import sys
-sys.path.insert(0, "/home/bernard/git/skipole")
+#import sys
+#sys.path.insert(0, "/home/bernard/git/skipole")
 ##################################################
 
 from skipole import WSGIApplication, FailPage, GoTo, ValidateError, ServerError, ServeFile, use_submit_list, skis, PageData, SectionData
@@ -12,7 +12,6 @@ from skipole import WSGIApplication, FailPage, GoTo, ValidateError, ServerError,
 # get editwidget to find module names, and development_server if not running waitress
 from skipole.skilift import editwidget, development_server
 
-# gets functions from modulelist
 import modulelist
 
 
