@@ -790,7 +790,7 @@
 "parts": [
 [
 "Text",
-"This is a SubmitForm1 widget with a CheckBox2 widget contained within it. The form sends the data input to an AllowStore responder, which inserts the data received into the skicall.call_data dictionary."
+"This is a SubmitForm1 widget with a CheckBox2 widget contained within it. The form has container_class and div_class both set to \"w3-container w3-cell\" to display in-line with the checkbox. The form sends the data input to an AllowStore responder, which inserts the data received into the skicall.call_data dictionary."
 ]
 ]
 }
@@ -805,6 +805,9 @@
 "brief": "The Widget",
 "show": true,
 "hide_if_empty": false,
+"attribs": {
+"class": "w3-section"
+},
 "parts": [
 [
 "Widget",
@@ -819,8 +822,8 @@
 "button_text": "Submit",
 "button_wait_text": "",
 "clear_error": false,
-"container_class": "w3-section",
-"div_class": "",
+"container_class": "w3-container w3-cell",
+"div_class": "w3-container w3-cell",
 "enctype": "",
 "error_class": "w3-panel w3-red",
 "hidden_field1": "",
@@ -828,41 +831,17 @@
 "hidden_field3": "",
 "hidden_field4": "",
 "left_class": "",
-"left_label": "Please Submit:",
+"left_label": "",
 "left_style": "display:inline-block;margin-right:1%;text-align:right;width:30%;",
 "right_class": "",
-"right_label": "",
-"right_style": "",
+"right_label": "Submit to send check",
+"right_style": "margin-left:1em",
 "show": true,
 "show_error": "",
 "widget_class": "w3-container",
 "widget_style": ""
 },
 "container_0": [
-[
-"Part",
-{
-"tag_name": "span",
-"brief": "further text",
-"show": true,
-"hide_if_empty": false,
-"attribs": {
-"class": "w3-blue"
-},
-"parts": [
-[
-"Text",
-"As the widget is in a span, a further span tag can go here."
-],
-[
-"HTMLSymbol",
-{
-"text": "&nbsp;"
-}
-]
-]
-}
-],
 [
 "Widget",
 {
@@ -875,7 +854,7 @@
 "checkbox_style": "",
 "checked": false,
 "left_class": "",
-"left_label": "Left label for the checkbox:",
+"left_label": "Left Label:",
 "left_style": "margin-right:1em",
 "right_class": "",
 "right_label": "",
