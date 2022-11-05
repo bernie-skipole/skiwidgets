@@ -994,6 +994,422 @@
 "default_page_name": "index",
 "restricted": false,
 "folders": {
+"AlertClear1": {
+"ident": 7301,
+"brief": "Folder containing the AlertClear1 widget",
+"default_page_name": "index.html",
+"restricted": false,
+"folders": {
+"restricted": {
+"ident": 7303,
+"brief": "Contains templates",
+"default_page_name": "index",
+"restricted": true,
+"folders": {},
+"pages": {
+"index": {
+"ident": 7304,
+"brief": "confirm.AlertClear1 template",
+"TemplatePage": {
+"show_backcol": false,
+"last_scroll": true,
+"interval": 0,
+"interval_target": null,
+"catch_to_html": null,
+"lang": "en",
+"backcol": "#ffffff",
+"default_error_widget": [
+"header",
+"top_error"
+]
+},
+"head": [
+"Part",
+{
+"tag_name": "head",
+"brief": "The head section of the page",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"ClosedPart",
+{
+"tag_name": "meta",
+"brief": "The charset meta declaration",
+"show": true,
+"attribs": {
+"charset": "utf-8"
+}
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "meta",
+"brief": "The viewport meta declaration",
+"show": true,
+"attribs": {
+"content": "width=device-width, initial-scale=1",
+"name": "viewport"
+}
+}
+],
+[
+"Part",
+{
+"tag_name": "title",
+"brief": "The page title element",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"AlertClear1"
+]
+]
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "link",
+"brief": "css link to w3_css",
+"show": true,
+"attribs": {
+"href": "{w3_css}",
+"rel": "stylesheet",
+"type": "text/css"
+}
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "link",
+"brief": "css link to w3_theme_ski_css",
+"show": true,
+"attribs": {
+"href": "{w3_theme_ski_css}",
+"rel": "stylesheet",
+"type": "text/css"
+}
+}
+],
+[
+"Part",
+{
+"tag_name": "script",
+"brief": "script link to jquery_core",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"src": "{jquery_core}"
+},
+"parts": []
+}
+],
+[
+"Part",
+{
+"tag_name": "script",
+"brief": "script link to skipole_js",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"src": "{skipole_js}"
+},
+"parts": []
+}
+]
+]
+}
+],
+"body": [
+"Part",
+{
+"tag_name": "body",
+"brief": "The body section of the page",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-theme"
+},
+"parts": [
+[
+"Part",
+{
+"tag_name": "div",
+"brief": "containing div",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-container"
+},
+"parts": [
+[
+"SectionPlaceHolder",
+{
+"brief": "title, description and top_error",
+"section_name": "header",
+"placename": "header",
+"multiplier": 0,
+"mtag": "div",
+"show": true
+}
+],
+[
+"Part",
+{
+"tag_name": "div",
+"brief": "div holding text about button",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-container"
+},
+"parts": [
+[
+"Part",
+{
+"tag_name": "p",
+"brief": "Paragraph describing the page contents",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"The following button displays a modal AlertClear1 widget."
+]
+]
+}
+]
+]
+}
+],
+[
+"Widget",
+{
+"class": "links.ButtonLink2",
+"name": "buttonlink2",
+"brief": "Button to show the widget",
+"fields": {
+"button_class": "w3-button w3-theme-l1 w3-border w3-round",
+"button_style": "",
+"button_text": "Submit",
+"button_wait_text": "Please wait...",
+"buttondiv_class": "w3-container",
+"buttondiv_style": "",
+"clear_error": false,
+"error_class": "w3-panel w3-red",
+"get_field1": "show",
+"get_field2": "",
+"hide": false,
+"json_ident": "7306",
+"link_ident": "no_javascript",
+"show": true,
+"show_error": "",
+"widget_class": "w3-container",
+"widget_style": ""
+}
+}
+],
+[
+"Part",
+{
+"tag_name": "div",
+"brief": "div holding text about button",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-container"
+},
+"parts": [
+[
+"Part",
+{
+"tag_name": "p",
+"brief": "Paragraph describing the page contents",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"The following button raises an error which is shown in the AlertClear1 widget."
+]
+]
+}
+]
+]
+}
+],
+[
+"Widget",
+{
+"class": "links.ButtonLink2",
+"name": "errorbuttonlink2",
+"brief": "Button to raise an error on the widget",
+"fields": {
+"button_class": "w3-button w3-theme-l1 w3-border w3-round",
+"button_style": "",
+"button_text": "show error",
+"button_wait_text": "Please wait...",
+"buttondiv_class": "w3-container",
+"buttondiv_style": "",
+"clear_error": false,
+"error_class": "w3-panel w3-red",
+"get_field1": "",
+"get_field2": "",
+"hide": false,
+"json_ident": "",
+"link_ident": "7307",
+"show": true,
+"show_error": "",
+"widget_class": "w3-container",
+"widget_style": ""
+}
+}
+],
+[
+"Part",
+{
+"tag_name": "div",
+"brief": "The Widget",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Widget",
+{
+"class": "confirm.AlertClear1",
+"name": "alertclear1",
+"brief": "Illustrates an AlertClear1 widget",
+"fields": {
+"boxdiv_class": "w3-modal-content w3-panel w3-theme-d4",
+"boxdiv_style": "",
+"button_class": "w3-bar-item w3-button w3-right w3-theme-l2",
+"buttondiv_class": "w3-bar",
+"buttondiv_style": "",
+"clear_error": false,
+"error_class": "w3-panel w3-red",
+"get_field1": "",
+"get_field2": "",
+"get_field3": "",
+"hide": true,
+"inner_class": "w3-panel w3-theme-d4",
+"inner_style": "",
+"link_ident": "no_javascript",
+"para_text": "",
+"pre_line": true,
+"show": true,
+"show_error": "",
+"widget_class": "w3-modal",
+"widget_style": ""
+}
+}
+]
+]
+}
+],
+[
+"Part",
+{
+"tag_name": "div",
+"brief": "The code",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-container w3-section"
+},
+"parts": [
+[
+"SectionPlaceHolder",
+{
+"brief": "Section which shows the code",
+"section_name": "codefile",
+"placename": "codefile",
+"multiplier": 0,
+"mtag": "div",
+"show": true
+}
+]
+]
+}
+]
+]
+}
+]
+]
+}
+]
+}
+}
+}
+},
+"pages": {
+"index.html": {
+"ident": 7302,
+"brief": "Sets up title and widget description",
+"RespondPage": {
+"class": "SubmitData",
+"original_args": {
+"allowed_callers": [],
+"fail_ident": "home",
+"submit_list": [
+"confirm",
+"alertclear1",
+"index"
+],
+"target_ident": 7304
+},
+"original_fields": {}
+}
+},
+"show_error": {
+"ident": 7307,
+"brief": "Shows an error on the widget",
+"RespondPage": {
+"class": "SubmitData",
+"original_args": {
+"allowed_callers": [
+7304
+],
+"fail_ident": 7302,
+"submit_list": [
+"confirm",
+"alertclear1",
+"show_error"
+],
+"target_ident": 7302
+},
+"original_fields": {}
+}
+},
+"show_widget": {
+"ident": 7306,
+"brief": "Shows the widget",
+"RespondPage": {
+"class": "AllowStore",
+"original_args": {
+"allowed_callers": [],
+"alternate_ident": "home",
+"fail_ident": 7302,
+"submit_list": [
+"confirm",
+"alertclear1",
+"show_widget"
+],
+"submit_option": true,
+"target_ident": "general_json",
+"validate_fail_ident": null,
+"validate_option": false
+},
+"original_fields": {
+"buttonlink2:get_field1": ""
+}
+}
+}
+}
+},
 "ConfirmBox1": {
 "ident": 5501,
 "brief": "Folder containing the ConfirmBox1 widget",
