@@ -2,10 +2,11 @@
 
 import os
 
-########### uses development version of skipole###
+########### uses development version of skipole###################################
+########### only valid on my own development pc - everyone else ignore this option
 #import sys
 #sys.path.insert(0, "/home/bernard/git/skipole")
-##################################################
+##################################################################################
 
 from skipole import WSGIApplication, FailPage, GoTo, ValidateError, ServerError, ServeFile, use_submit_list, skis, PageData, SectionData
 
@@ -64,9 +65,6 @@ application.add_project(skis_application, url='/skiwidgets/lib')
 
 if __name__ == "__main__":
 
-    # If called as a script, this portion runs the python waitress server
-    # and serves the project.
-
     ###############################################################################
     #
     # you could add the 'skiadmin' sub project
@@ -74,9 +72,9 @@ if __name__ == "__main__":
     #
     ############################### THESE LINES ADD SKIADMIN ######################
     #                                                                             
-    from skipole import skiadmin                                                  
-    skiadmin_application = skiadmin.makeapp(editedprojname=PROJECT, examples="/skiwidgets/")
-    application.add_project(skiadmin_application, url='/skiwidgets/skiadmin')     
+    #from skipole import skiadmin                                                  
+    #skiadmin_application = skiadmin.makeapp(editedprojname=PROJECT, examples="/skiwidgets/")
+    #application.add_project(skiadmin_application, url='/skiwidgets/skiadmin')     
     #                                                                             
     ###############################################################################
 
@@ -84,26 +82,26 @@ if __name__ == "__main__":
     set_debug(True) 
 
     # if using the waitress server
-    # from waitress import serve
+    from waitress import serve
 
-    # serve the application, note host 0.0.0.0 rather than
-    # 127.0.0.1 - so this will be available externally
+    # serve the application
+    # if it is required to serve externally use host 0.0.0.0
+    # rather than 127.0.0.1
 
-    # host = "0.0.0.0"
+    #host = "0.0.0.0"
     host = "127.0.0.1"
     port = 8000
 
     # using waitress
-    # serve(application, host=host, port=port, max_request_body_size=1000)
+    serve(application, host=host, port=port, max_request_body_size=1000)
 
-    # waitress serve arguments
-    #
+    # note:
     # max_request_body_size has been set to 1000, as this site illustrates widgets only
     # and the upload file widgets could be used to send something very large unless limited
 
-    # or skilift development server
-    print(f"Serving {PROJECT} on port {port}")
-    development_server(host, port, application)
+    # or serve with the skilift development server
+    #print(f"Serving {PROJECT} on port {port}")
+    #development_server(host, port, application)
 
 
 
