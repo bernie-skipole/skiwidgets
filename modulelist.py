@@ -1,8 +1,5 @@
 
-from skipole import FailPage, GoTo, ValidateError, ServerError, ServeFile, PageData, SectionData
-
-from skipole.skilift import editwidget
-
+from skipole import FailPage, GoTo, ValidateError, ServerError, ServeFile, PageData, SectionData, widgets_in_module
 
 
 def retrieve_module_list(skicall):
@@ -66,13 +63,12 @@ def retrieve_widgets_list(skicall):
     # col 4 is text to appear if the reference cannot be found in the database
     # col 5 normally empty string, if set to text it will replace the textblock
 
-    widget_list = editwidget.widgets_in_module(module_name)
+    widget_list = widgets_in_module(module_name)
     contents = []
     for widget in widget_list:
-        widgetref = ".".join(("widgets", module_name, widget.classname))
+        widgetref = ".".join(("widgets", module_name, widget))
         notfound = f'Textblock reference {widgetref} not found'
-        classname = widget.classname
-        contents.append([classname, classname, module_name, widgetref, notfound, ''])
+        contents.append([widget, widget, module_name, widgetref, notfound, ''])
 
     pd["widgets","link_table"] = contents
     skicall.update(pd)
@@ -98,7 +94,7 @@ def retrieve_widgets_edit(skicall):
     if module_name not in modules_tuple:
         raise FailPage("Module not identified")
 
-    widget_list = [ widget.classname for widget in editwidget.widgets_in_module(module_name) ]
+    widget_list = widgets_in_module(module_name)
     if widget_name not in widget_list:
         raise FailPage("Widget not identified")
 
@@ -121,7 +117,7 @@ def handle_page_not_found(skicall):
         if pathsegments[-2] in skicall.proj_data['modules']:
             # presumably the url is of the form ../module/widget
             module = pathsegments[-2]
-            widget_list = [ widget.classname for widget in editwidget.widgets_in_module(module) ]
+            widget_list = widgets_in_module(module)
             if pathsegments[-1] not in widget_list:
                 # return None which causes a page not found to be returned
                 return

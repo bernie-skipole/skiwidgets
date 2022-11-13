@@ -8,10 +8,7 @@ import os
 #sys.path.insert(0, "/home/bernard/git/skipole")
 ##################################################################################
 
-from skipole import WSGIApplication, FailPage, GoTo, ValidateError, ServerError, ServeFile, use_submit_list, skis, PageData, SectionData
-
-# get editwidget to find module names, and development_server if not running waitress
-from skipole.skilift import editwidget, development_server
+from skipole import WSGIApplication, FailPage, GoTo, ValidateError, ServerError, ServeFile, use_submit_list, skis, PageData, SectionData, widget_modules
 
 import modulelist
 
@@ -24,7 +21,7 @@ PROJECT = "skiwidgets"
 
 # set tuple of module names into proj_data
 
-PROJ_DATA={ 'modules': editwidget.widget_modules()
+PROJ_DATA={ 'modules': widget_modules()
           }
 
 def start_call(called_ident, skicall):
@@ -62,46 +59,27 @@ application.add_project(skis_application, url='/skiwidgets/lib')
 # The above shows the main application served at "/skiwidgets" and the skis library
 # project served at "/skiwidgets/lib"
 
-
 if __name__ == "__main__":
 
-    ###############################################################################
-    #
-    # you could add the 'skiadmin' sub project
-    # which can be used to develop pages for your project
-    #
-    ############################### THESE LINES ADD SKIADMIN ######################
-    #                                                                             
-    #from skipole import skiadmin                                                  
-    #skiadmin_application = skiadmin.makeapp(editedprojname=PROJECT, examples="/skiwidgets/")
-    #application.add_project(skiadmin_application, url='/skiwidgets/skiadmin')     
-    #                                                                             
-    ###############################################################################
-
-    from skipole import set_debug
-    set_debug(True) 
-
-    # if using the waitress server
-    from waitress import serve
-
-    # serve the application
-    # if it is required to serve externally use host 0.0.0.0
-    # rather than 127.0.0.1
-
-    #host = "0.0.0.0"
+    #set_debug(True)
     host = "127.0.0.1"
     port = 8000
 
-    # using waitress
+    #from skilift import make_skiadmin, development_server
+
+    #skiadmin_application = make_skiadmin(editedprojname=PROJECT, examples="http://www.webparametrics.co.uk/skiwidgets/")
+    #application.add_project(skiadmin_application, url='/skiadmin')
+
+    # serve the application with the development server from skilift
+    #print("Serving %s on port %s. Call http://localhost:%s/skiadmin to edit." % (PROJECT, port, port))
+    #development_server(host, port, application)
+
+
+    # if using the waitress server
+    from waitress import serve
     serve(application, host=host, port=port, max_request_body_size=1000)
 
     # note:
     # max_request_body_size has been set to 1000, as this site illustrates widgets only
     # and the upload file widgets could be used to send something very large unless limited
-
-    # or serve with the skilift development server
-    #print(f"Serving {PROJECT} on port {port}")
-    #development_server(host, port, application)
-
-
 
