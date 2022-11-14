@@ -2,13 +2,7 @@
 
 import os
 
-########### uses development version of skipole###################################
-########### only valid on my own development pc - everyone else ignore this option
-#import sys
-#sys.path.insert(0, "/home/bernard/git/skipole")
-##################################################################################
-
-from skipole import WSGIApplication, FailPage, GoTo, ValidateError, ServerError, ServeFile, use_submit_list, skis, PageData, SectionData, widget_modules
+from skipole import WSGIApplication, FailPage, GoTo, ValidateError, ServerError, ServeFile, use_submit_list, skis, PageData, SectionData, set_debug, widget_modules
 
 import modulelist
 
@@ -61,23 +55,24 @@ application.add_project(skis_application, url='/skiwidgets/lib')
 
 if __name__ == "__main__":
 
-    #set_debug(True)
+    set_debug(True)
     host = "127.0.0.1"
+    # host = "0.0.0.0"
     port = 8000
 
-    #from skilift import make_skiadmin, development_server
+    from skilift import make_skiadmin, development_server
 
-    #skiadmin_application = make_skiadmin(editedprojname=PROJECT, examples="http://www.webparametrics.co.uk/skiwidgets/")
-    #application.add_project(skiadmin_application, url='/skiadmin')
+    skiadmin_application = make_skiadmin(editedprojname=PROJECT, examples="http://www.webparametrics.co.uk/skiwidgets/")
+    application.add_project(skiadmin_application, url='/skiwidgets/skiadmin')
 
     # serve the application with the development server from skilift
-    #print("Serving %s on port %s. Call http://localhost:%s/skiadmin to edit." % (PROJECT, port, port))
-    #development_server(host, port, application)
+    print("Serving %s on port %s. Call http://localhost:%s/skiadmin to edit." % (PROJECT, port, port))
+    development_server(host, port, application)
 
 
     # if using the waitress server
-    from waitress import serve
-    serve(application, host=host, port=port, max_request_body_size=1000)
+    #from waitress import serve
+    #serve(application, host=host, port=port, max_request_body_size=1000)
 
     # note:
     # max_request_body_size has been set to 1000, as this site illustrates widgets only
