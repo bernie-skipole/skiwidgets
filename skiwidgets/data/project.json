@@ -55,7 +55,38 @@
 "show": true,
 "hide_if_empty": false,
 "attribs": {
-"class": "w3-container w3-sand"
+"class": "w3-container"
+},
+"parts": [
+[
+"Widget",
+{
+"class": "debug_tools.ShowResponders",
+"name": "showresponders",
+"brief": "Shows Responders called to produce this page",
+"fields": {
+"clear_error": false,
+"error_class": "",
+"para_class": "",
+"paradiv_class": "",
+"show": true,
+"show_error": "",
+"table_class": "w3-table w3-bordered",
+"toptext": "This table lists the Responders called to produce this page:",
+"widget_class": "w3-section w3-pale-yellow",
+"widget_style": ""
+}
+}
+],
+[
+"Part",
+{
+"tag_name": "div",
+"brief": "The code",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-section w3-sand"
 },
 "parts": [
 [
@@ -87,6 +118,9 @@
 "widget_class": "",
 "widget_style": ""
 }
+}
+]
+]
 }
 ]
 ]
@@ -3373,6 +3407,358 @@
 },
 "original_fields": {
 "setenviron:input_text": ""
+}
+}
+}
+}
+},
+"ShowResponders": {
+"ident": 7701,
+"brief": "Folder containing the ShowResponders widget",
+"default_page_name": "index.html",
+"restricted": false,
+"folders": {
+"restricted": {
+"ident": 7703,
+"brief": "Contains templates",
+"default_page_name": "index",
+"restricted": true,
+"folders": {},
+"pages": {
+"index": {
+"ident": 7704,
+"brief": "debug_tools.ShowResponders template",
+"TemplatePage": {
+"show_backcol": false,
+"last_scroll": true,
+"interval": 0,
+"interval_target": null,
+"catch_to_html": null,
+"lang": "en",
+"backcol": "#ffffff",
+"default_error_widget": [
+"header",
+"top_error"
+]
+},
+"head": [
+"Part",
+{
+"tag_name": "head",
+"brief": "The head section of the page",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"ClosedPart",
+{
+"tag_name": "meta",
+"brief": "The charset meta declaration",
+"show": true,
+"attribs": {
+"charset": "utf-8"
+}
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "meta",
+"brief": "The viewport meta declaration",
+"show": true,
+"attribs": {
+"content": "width=device-width, initial-scale=1",
+"name": "viewport"
+}
+}
+],
+[
+"Part",
+{
+"tag_name": "title",
+"brief": "The page title element",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"ShowResponders"
+]
+]
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "link",
+"brief": "css link to w3_css",
+"show": true,
+"attribs": {
+"href": "{w3_css}",
+"rel": "stylesheet",
+"type": "text/css"
+}
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "link",
+"brief": "css link to w3_theme_ski_css",
+"show": true,
+"attribs": {
+"href": "{w3_theme_ski_css}",
+"rel": "stylesheet",
+"type": "text/css"
+}
+}
+],
+[
+"Part",
+{
+"tag_name": "script",
+"brief": "script link to jquery_core",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"src": "{jquery_core}"
+},
+"parts": []
+}
+],
+[
+"Part",
+{
+"tag_name": "script",
+"brief": "script link to skipole_js",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"src": "{skipole_js}"
+},
+"parts": []
+}
+]
+]
+}
+],
+"body": [
+"Part",
+{
+"tag_name": "body",
+"brief": "The body section of the page",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-theme"
+},
+"parts": [
+[
+"Part",
+{
+"tag_name": "div",
+"brief": "containing div",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-container"
+},
+"parts": [
+[
+"SectionPlaceHolder",
+{
+"brief": "title, description and top_error",
+"section_name": "header",
+"placename": "header",
+"multiplier": 0,
+"mtag": "div",
+"show": true
+}
+],
+[
+"Part",
+{
+"tag_name": "div",
+"brief": "div holding page description",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-container"
+},
+"parts": [
+[
+"Part",
+{
+"tag_name": "p",
+"brief": "Paragraph describing the page contents",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"Below is a SubmitTextInput4 widget, which sends text data."
+]
+]
+}
+],
+[
+"Part",
+{
+"tag_name": "p",
+"brief": "Further paragraph describing page contents",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"The SubmitTextInput4 widget has been given the name 'settext', and the field containing the sent data has name 'input_text'. Press Submit to send the text."
+]
+]
+}
+],
+[
+"Widget",
+{
+"class": "inputtext.SubmitTextInput4",
+"name": "settext",
+"brief": "A form to send text data",
+"fields": {
+"action": "no_javascript",
+"action_json": "7705",
+"button_class": "w3-button w3-theme-d4",
+"button_text": "Submit",
+"buttondiv_class": "w3-container w3-cell",
+"buttondiv_style": "",
+"clear_error": false,
+"error_class": "w3-panel w3-red",
+"formdiv_class": "w3-cell-row",
+"formdiv_style": "",
+"hidden_field1": "",
+"hidden_field2": "",
+"hidden_field3": "",
+"hidden_field4": "",
+"hide": false,
+"input_accepted_class": "w3-pale-green",
+"input_class": "",
+"input_errored_class": "w3-pale-red",
+"input_style": "padding:8px;border:2px solid #ccc;width:100%",
+"input_text": "Set any text here",
+"inputdiv_class": "w3-container w3-cell",
+"inputdiv_style": "width : 32%;",
+"left_class": "w3-right-align",
+"left_style": "font-weight : bold;",
+"left_text": "Your input:",
+"leftdiv_class": "w3-container w3-cell",
+"leftdiv_style": "width : 32%;",
+"maxlength": "",
+"pattern": "",
+"required": false,
+"set_input_accepted": false,
+"set_input_errored": false,
+"show": true,
+"show_error": "",
+"size": "",
+"target": "",
+"title": "",
+"type": "text",
+"widget_class": "w3-section",
+"widget_style": ""
+}
+}
+],
+[
+"Widget",
+{
+"class": "paras.ParaText",
+"name": "result",
+"brief": "Paragraph showing a result message",
+"fields": {
+"para_text": "",
+"show": true,
+"widget_class": "",
+"widget_style": ""
+}
+}
+],
+[
+"Part",
+{
+"tag_name": "p",
+"brief": "Further paragraph describing ShowResponders widget",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"The table below listing Responders is a ShowResponders widgit."
+]
+]
+}
+],
+[
+"SectionPlaceHolder",
+{
+"brief": "Section which shows the code",
+"section_name": "codefile",
+"placename": "codefile",
+"multiplier": 0,
+"mtag": "div",
+"show": true
+}
+]
+]
+}
+]
+]
+}
+]
+]
+}
+]
+}
+}
+}
+},
+"pages": {
+"index.html": {
+"ident": 7702,
+"brief": "Sets up title and widget description",
+"RespondPage": {
+"class": "SubmitData",
+"original_args": {
+"allowed_callers": [],
+"fail_ident": "home",
+"submit_list": [
+"debug_tools",
+"showresponders",
+"index"
+],
+"target_ident": 7704
+},
+"original_fields": {}
+}
+},
+"responce": {
+"ident": 7705,
+"brief": "Called to set contents into skicall.call_data",
+"RespondPage": {
+"class": "AllowStore",
+"original_args": {
+"allowed_callers": [],
+"alternate_ident": "home",
+"fail_ident": 7702,
+"submit_list": [
+"debug_tools",
+"showresponders",
+"respond"
+],
+"submit_option": true,
+"target_ident": "general_json",
+"validate_fail_ident": null,
+"validate_option": false
+},
+"original_fields": {
+"settext:input_text": ""
 }
 }
 }

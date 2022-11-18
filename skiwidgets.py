@@ -65,7 +65,7 @@ if __name__ == "__main__":
     skiadmin_application = make_skiadmin(editedprojname=PROJECT, examples="http://www.webparametrics.co.uk/skiwidgets/")
     application.add_project(skiadmin_application, url='/skiwidgets/skiadmin')
 
-    # serve the application with the development server from skilift
+    # if using the development server from skilift
     print("Serving %s on port %s. Call http://localhost:%s/skiadmin to edit." % (PROJECT, port, port))
     development_server(host, port, application)
 
