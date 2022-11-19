@@ -17,6 +17,7 @@
   "widgets.debug_tools.ShowResponders": "A div containing a table with columns showing the responders called to access this page. This widget is only displayed if debug mode is ON.",
   "widgets.debug_tools.module": "Used to aid debugging, for example, displaying the environ dictionary.",
   "widgets.dropdown.DropDown1": "A div holding a drop down input field. Without a form or submit button, typically included within a form.",
+  "widgets.dropdown.HiddenContainer": "Intended as a modal, normally hidden, box with a closing X button, acting as a container for further HTML and widgets.\r\nNote: If the client has javascript enabled, pressing the X button hides the widget without calling the link.  The link is only called if javascript is not available.",
   "widgets.dropdown.SubmitDropDown1": "Defines a form with a drop down input field, and four hidden fields.",
   "widgets.dropdown.module": "Widgets displaying dropdown forms.",
   "widgets.error_messages.ErrorClear1": "Hidden div holding inner divs of text and clear button which hides the widget.",
