@@ -60,19 +60,19 @@ if __name__ == "__main__":
     # host = "0.0.0.0"
     port = 8000
 
-    # from skilift import make_skiadmin, development_server
+    from skilift import make_skiadmin, development_server
 
-    # skiadmin_application = make_skiadmin(editedprojname=PROJECT, examples="http://www.webparametrics.co.uk/skiwidgets/")
-    # application.add_project(skiadmin_application, url='/skiwidgets/skiadmin')
+    skiadmin_application = make_skiadmin(editedprojname=PROJECT, examples="http://www.webparametrics.co.uk/skiwidgets/")
+    application.add_project(skiadmin_application, url='/skiwidgets/skiadmin')
 
     # if using the development server from skilift
-    # print("Serving %s on port %s. Call http://localhost:%s/skiadmin to edit." % (PROJECT, port, port))
-    # development_server(host, port, application)
+    print("Serving %s on port %s. Call http://localhost:%s/skiadmin to edit." % (PROJECT, port, port))
+    development_server(host, port, application)
 
 
     # if using the waitress server
-    from waitress import serve
-    serve(application, host=host, port=port, max_request_body_size=1000)
+    #from waitress import serve
+    #serve(application, host=host, port=port, max_request_body_size=1000)
 
     # note:
     # max_request_body_size has been set to 1000, as this site illustrates widgets only
