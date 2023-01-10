@@ -6050,7 +6050,7 @@
 "parts": [
 [
 "Text",
-"The following button sets an error to be displayed in an ErrorCode widget and refreshes the page."
+"The following button sets an error to be displayed in an ErrorDiv widget and refreshes the page."
 ]
 ]
 }
@@ -6067,7 +6067,7 @@
 "fields": {
 "button_class": "w3-button w3-theme-l1 w3-border w3-round",
 "button_style": "",
-"button_text": "Set Error Message",
+"button_text": "Raise Error",
 "button_wait_text": "Please wait...",
 "buttondiv_class": "w3-container",
 "buttondiv_style": "",
@@ -6076,8 +6076,8 @@
 "get_field1": "show error",
 "get_field2": "",
 "hide": false,
-"json_ident": "8106",
-"link_ident": "no_javascript",
+"json_ident": "",
+"link_ident": "8206",
 "show": true,
 "show_error": "",
 "widget_class": "w3-container",
@@ -6096,22 +6096,36 @@
 [
 "Widget",
 {
-"class": "error_messages.ErrorCode",
-"name": "errorcode",
-"brief": "Illustrates the ErrorCode widget",
+"class": "error_messages.ErrorDiv",
+"name": "errordiv",
+"brief": "Illustrates the ErrorDiv widget",
 "fields": {
 "clear_error": false,
-"code": "0",
-"code_class": "",
-"error_class": "w3-red",
-"para_class": "w3-yellow",
-"para_text": "This is the text in the errorcode widget",
-"pre_line": true,
+"container_class": "",
+"error_class": "w3-panel w3-red",
+"hide": true,
 "show": true,
 "show_error": "",
-"widget_class": "",
+"widget_class": "w3-panel w3-yellow",
 "widget_style": ""
+},
+"container_0": [
+[
+"Part",
+{
+"tag_name": "p",
+"brief": "Container paragraph",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"This is a paragraph in a <p> tag set within the widget container."
+]
+]
 }
+]
+]
 }
 ]
 ]
@@ -6173,7 +6187,7 @@
 },
 "show_error": {
 "ident": 8206,
-"brief": "Displays the error",
+"brief": "Raises the error",
 "RespondPage": {
 "class": "AllowStore",
 "original_args": {
