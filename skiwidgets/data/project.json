@@ -7519,6 +7519,2405 @@
 }
 }
 }
+},
+"HeaderErrorPara": {
+"ident": 8501,
+"brief": "Folder containing the HeaderErrorPara widget",
+"default_page_name": "index.html",
+"restricted": false,
+"folders": {
+"restricted": {
+"ident": 8503,
+"brief": "Contains templates",
+"default_page_name": "index",
+"restricted": true,
+"folders": {},
+"pages": {
+"index": {
+"ident": 8504,
+"brief": "headers.HeaderErrorPara template",
+"TemplatePage": {
+"show_backcol": false,
+"last_scroll": true,
+"interval": 0,
+"interval_target": null,
+"catch_to_html": null,
+"lang": "en",
+"backcol": "#ffffff",
+"default_error_widget": [
+"header",
+"top_error"
+]
+},
+"head": [
+"Part",
+{
+"tag_name": "head",
+"brief": "The head section of the page",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"ClosedPart",
+{
+"tag_name": "meta",
+"brief": "The charset meta declaration",
+"show": true,
+"attribs": {
+"charset": "utf-8"
+}
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "meta",
+"brief": "The viewport meta declaration",
+"show": true,
+"attribs": {
+"content": "width=device-width, initial-scale=1",
+"name": "viewport"
+}
+}
+],
+[
+"Part",
+{
+"tag_name": "title",
+"brief": "The page title element",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"HeaderErrorPara"
+]
+]
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "link",
+"brief": "css link to w3_css",
+"show": true,
+"attribs": {
+"href": "{w3_css}",
+"rel": "stylesheet",
+"type": "text/css"
+}
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "link",
+"brief": "css link to w3_theme_ski_css",
+"show": true,
+"attribs": {
+"href": "{w3_theme_ski_css}",
+"rel": "stylesheet",
+"type": "text/css"
+}
+}
+],
+[
+"Part",
+{
+"tag_name": "script",
+"brief": "script link to jquery_core",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"src": "{jquery_core}"
+},
+"parts": []
+}
+],
+[
+"Part",
+{
+"tag_name": "script",
+"brief": "script link to skipole_js",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"src": "{skipole_js}"
+},
+"parts": []
+}
+]
+]
+}
+],
+"body": [
+"Part",
+{
+"tag_name": "body",
+"brief": "The body section of the page",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-theme"
+},
+"parts": [
+[
+"Part",
+{
+"tag_name": "div",
+"brief": "containing div",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-container"
+},
+"parts": [
+[
+"SectionPlaceHolder",
+{
+"brief": "title, description and top_error",
+"section_name": "header",
+"placename": "header",
+"multiplier": 0,
+"mtag": "div",
+"show": true
+}
+],
+[
+"Part",
+{
+"tag_name": "div",
+"brief": "div holding text about button",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-container"
+},
+"parts": [
+[
+"Part",
+{
+"tag_name": "p",
+"brief": "Paragraph describing the page contents",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"The following button sets an error to be displayed in an HeaderErrorPara widget and refreshes the page."
+]
+]
+}
+]
+]
+}
+],
+[
+"Widget",
+{
+"class": "links.ButtonLink2",
+"name": "buttonlink2",
+"brief": "Button to display the error",
+"fields": {
+"button_class": "w3-button w3-theme-l1 w3-border w3-round",
+"button_style": "",
+"button_text": "Raise Error",
+"button_wait_text": "Please wait...",
+"buttondiv_class": "w3-container",
+"buttondiv_style": "",
+"clear_error": false,
+"error_class": "w3-panel w3-red",
+"get_field1": "show error",
+"get_field2": "",
+"hide": false,
+"json_ident": "",
+"link_ident": "8506",
+"show": true,
+"show_error": "",
+"widget_class": "w3-container",
+"widget_style": ""
+}
+}
+],
+[
+"Part",
+{
+"tag_name": "div",
+"brief": "The Widget",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-container w3-section"
+},
+"parts": [
+[
+"Widget",
+{
+"class": "headers.HeaderErrorPara",
+"name": "headererrorpara",
+"brief": "Illustrates the HeaderErrorPara widget",
+"fields": {
+"clear_error": false,
+"hide": true,
+"show": true,
+"show_error": "",
+"widget_class": "w3-red",
+"widget_style": ""
+}
+}
+]
+]
+}
+],
+[
+"Part",
+{
+"tag_name": "div",
+"brief": "The result message",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-container w3-section"
+},
+"parts": [
+[
+"SectionPlaceHolder",
+{
+"brief": "Section which shows the code",
+"section_name": "codefile",
+"placename": "codefile",
+"multiplier": 0,
+"mtag": "div",
+"show": true
+}
+]
+]
+}
+]
+]
+}
+]
+]
+}
+]
+}
+}
+}
+},
+"pages": {
+"index.html": {
+"ident": 8502,
+"brief": "Sets up title and widget description",
+"RespondPage": {
+"class": "SubmitData",
+"original_args": {
+"allowed_callers": [],
+"fail_ident": "home",
+"submit_list": [
+"headers",
+"headererrorpara",
+"index"
+],
+"target_ident": 8504
+},
+"original_fields": {}
+}
+},
+"show_error": {
+"ident": 8506,
+"brief": "Raises the error",
+"RespondPage": {
+"class": "AllowStore",
+"original_args": {
+"allowed_callers": [],
+"alternate_ident": "home",
+"fail_ident": 8502,
+"submit_list": [
+"headers",
+"headererrorpara",
+"show_error"
+],
+"submit_option": true,
+"target_ident": 8502,
+"validate_fail_ident": null,
+"validate_option": false
+},
+"original_fields": {
+"buttonlink2:get_field1": ""
+}
+}
+}
+}
+},
+"HeaderText1": {
+"ident": 8601,
+"brief": "Folder containing the HeaderText1 widget",
+"default_page_name": "index.html",
+"restricted": false,
+"folders": {
+"restricted": {
+"ident": 8603,
+"brief": "Contains templates",
+"default_page_name": "index",
+"restricted": true,
+"folders": {},
+"pages": {
+"index": {
+"ident": 8604,
+"brief": "headers.HeaderText1 template",
+"TemplatePage": {
+"show_backcol": false,
+"last_scroll": true,
+"interval": 0,
+"interval_target": null,
+"catch_to_html": null,
+"lang": "en",
+"backcol": "#ffffff",
+"default_error_widget": [
+"header",
+"top_error"
+]
+},
+"head": [
+"Part",
+{
+"tag_name": "head",
+"brief": "The head section of the page",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"ClosedPart",
+{
+"tag_name": "meta",
+"brief": "The charset meta declaration",
+"show": true,
+"attribs": {
+"charset": "utf-8"
+}
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "meta",
+"brief": "The viewport meta declaration",
+"show": true,
+"attribs": {
+"content": "width=device-width, initial-scale=1",
+"name": "viewport"
+}
+}
+],
+[
+"Part",
+{
+"tag_name": "title",
+"brief": "The page title element",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"HeaderText1"
+]
+]
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "link",
+"brief": "css link to w3_css",
+"show": true,
+"attribs": {
+"href": "{w3_css}",
+"rel": "stylesheet",
+"type": "text/css"
+}
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "link",
+"brief": "css link to w3_theme_ski_css",
+"show": true,
+"attribs": {
+"href": "{w3_theme_ski_css}",
+"rel": "stylesheet",
+"type": "text/css"
+}
+}
+],
+[
+"Part",
+{
+"tag_name": "script",
+"brief": "script link to jquery_core",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"src": "{jquery_core}"
+},
+"parts": []
+}
+],
+[
+"Part",
+{
+"tag_name": "script",
+"brief": "script link to skipole_js",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"src": "{skipole_js}"
+},
+"parts": []
+}
+]
+]
+}
+],
+"body": [
+"Part",
+{
+"tag_name": "body",
+"brief": "The body section of the page",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-theme"
+},
+"parts": [
+[
+"Part",
+{
+"tag_name": "div",
+"brief": "containing div",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-container"
+},
+"parts": [
+[
+"SectionPlaceHolder",
+{
+"brief": "title, description and top_error",
+"section_name": "header",
+"placename": "header",
+"multiplier": 0,
+"mtag": "div",
+"show": true
+}
+],
+[
+"Part",
+{
+"tag_name": "div",
+"brief": "div holding form widget",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-container"
+},
+"parts": [
+[
+"Part",
+{
+"tag_name": "p",
+"brief": "Paragraph describing the page contents",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"Below is a SubmitTextInput4 widget, which sends the text data input to an AllowStore responder, which inserts the data received into a HeaderText1 widget shown below."
+]
+]
+}
+],
+[
+"Part",
+{
+"tag_name": "p",
+"brief": "Further paragraph describing page contents",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"The SubmitTextInput4 widget has been given the name 'setheadertext', and the field containing the sent data has name 'input_text'. Press Submit to send the text, which should then appear in the HeaderText1 widget."
+]
+]
+}
+],
+[
+"Widget",
+{
+"class": "inputtext.SubmitTextInput4",
+"name": "setheadertext",
+"brief": "A form to send text data",
+"fields": {
+"action": "no_javascript",
+"action_json": "8605",
+"button_class": "w3-button w3-theme-d4",
+"button_text": "Submit",
+"buttondiv_class": "w3-container w3-cell",
+"buttondiv_style": "",
+"clear_error": false,
+"error_class": "w3-panel w3-red",
+"formdiv_class": "w3-cell-row",
+"formdiv_style": "",
+"hidden_field1": "",
+"hidden_field2": "",
+"hidden_field3": "",
+"hidden_field4": "",
+"hide": false,
+"input_accepted_class": "w3-pale-green",
+"input_class": "",
+"input_errored_class": "w3-pale-red",
+"input_style": "padding:8px;border:2px solid #ccc;width:100%",
+"input_text": "Set any text here",
+"inputdiv_class": "w3-container w3-cell",
+"inputdiv_style": "width : 32%;",
+"left_class": "w3-right-align",
+"left_style": "font-weight : bold;",
+"left_text": "Your input:",
+"leftdiv_class": "w3-container w3-cell",
+"leftdiv_style": "width : 32%;",
+"maxlength": "",
+"pattern": "",
+"required": false,
+"set_input_accepted": false,
+"set_input_errored": false,
+"show": true,
+"show_error": "",
+"size": "",
+"target": "",
+"title": "",
+"type": "text",
+"widget_class": "w3-section",
+"widget_style": ""
+}
+}
+],
+[
+"Widget",
+{
+"class": "headers.HeaderText1",
+"name": "headertext1",
+"brief": "Illustrates the HeaderText1 widget",
+"fields": {
+"clear_error": false,
+"error_class": "",
+"h_class": "",
+"h_style": "",
+"large_text": "Initial H1 text",
+"p_class": "",
+"p_style": "",
+"show": true,
+"show_error": "",
+"small_text": "Initial paragraph text",
+"widget_class": "w3-panel w3-theme-d4",
+"widget_style": ""
+}
+}
+],
+[
+"SectionPlaceHolder",
+{
+"brief": "Section which shows the code",
+"section_name": "codefile",
+"placename": "codefile",
+"multiplier": 0,
+"mtag": "div",
+"show": true
+}
+]
+]
+}
+]
+]
+}
+]
+]
+}
+]
+}
+}
+}
+},
+"pages": {
+"index.html": {
+"ident": 8602,
+"brief": "Sets up title and widget description",
+"RespondPage": {
+"class": "SubmitData",
+"original_args": {
+"allowed_callers": [],
+"fail_ident": "home",
+"submit_list": [
+"headers",
+"headertext1",
+"index"
+],
+"target_ident": 8604
+},
+"original_fields": {}
+}
+},
+"settext": {
+"ident": 8605,
+"brief": "Responder to set text into header",
+"RespondPage": {
+"class": "AllowStore",
+"original_args": {
+"allowed_callers": [],
+"alternate_ident": "home",
+"fail_ident": 8602,
+"submit_list": [
+"headers",
+"headertext1",
+"settext"
+],
+"submit_option": true,
+"target_ident": "general_json",
+"validate_fail_ident": null,
+"validate_option": false
+},
+"original_fields": {
+"setheadertext:input_text": ""
+}
+}
+}
+}
+},
+"HeaderText2": {
+"ident": 8701,
+"brief": "Folder containing the HeaderText2 widget",
+"default_page_name": "index.html",
+"restricted": false,
+"folders": {
+"restricted": {
+"ident": 8703,
+"brief": "Contains templates",
+"default_page_name": "index",
+"restricted": true,
+"folders": {},
+"pages": {
+"index": {
+"ident": 8704,
+"brief": "headers.HeaderText2 template",
+"TemplatePage": {
+"show_backcol": false,
+"last_scroll": true,
+"interval": 0,
+"interval_target": null,
+"catch_to_html": null,
+"lang": "en",
+"backcol": "#ffffff",
+"default_error_widget": [
+"header",
+"top_error"
+]
+},
+"head": [
+"Part",
+{
+"tag_name": "head",
+"brief": "The head section of the page",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"ClosedPart",
+{
+"tag_name": "meta",
+"brief": "The charset meta declaration",
+"show": true,
+"attribs": {
+"charset": "utf-8"
+}
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "meta",
+"brief": "The viewport meta declaration",
+"show": true,
+"attribs": {
+"content": "width=device-width, initial-scale=1",
+"name": "viewport"
+}
+}
+],
+[
+"Part",
+{
+"tag_name": "title",
+"brief": "The page title element",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"HeaderText2"
+]
+]
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "link",
+"brief": "css link to w3_css",
+"show": true,
+"attribs": {
+"href": "{w3_css}",
+"rel": "stylesheet",
+"type": "text/css"
+}
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "link",
+"brief": "css link to w3_theme_ski_css",
+"show": true,
+"attribs": {
+"href": "{w3_theme_ski_css}",
+"rel": "stylesheet",
+"type": "text/css"
+}
+}
+],
+[
+"Part",
+{
+"tag_name": "script",
+"brief": "script link to jquery_core",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"src": "{jquery_core}"
+},
+"parts": []
+}
+],
+[
+"Part",
+{
+"tag_name": "script",
+"brief": "script link to skipole_js",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"src": "{skipole_js}"
+},
+"parts": []
+}
+]
+]
+}
+],
+"body": [
+"Part",
+{
+"tag_name": "body",
+"brief": "The body section of the page",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-theme"
+},
+"parts": [
+[
+"Part",
+{
+"tag_name": "div",
+"brief": "containing div",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-container"
+},
+"parts": [
+[
+"SectionPlaceHolder",
+{
+"brief": "title, description and top_error",
+"section_name": "header",
+"placename": "header",
+"multiplier": 0,
+"mtag": "div",
+"show": true
+}
+],
+[
+"Part",
+{
+"tag_name": "div",
+"brief": "div holding form widget",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-container"
+},
+"parts": [
+[
+"Part",
+{
+"tag_name": "p",
+"brief": "Paragraph describing the page contents",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"Below is a SubmitTextInput4 widget, which sends the text data input to an AllowStore responder, which inserts the data received into a HeaderText2 widget shown below."
+]
+]
+}
+],
+[
+"Part",
+{
+"tag_name": "p",
+"brief": "Further paragraph describing page contents",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"The SubmitTextInput4 widget has been given the name 'setheadertext', and the field containing the sent data has name 'input_text'. Press Submit to send the text, which should then appear in the HeaderText2 widget."
+]
+]
+}
+],
+[
+"Widget",
+{
+"class": "inputtext.SubmitTextInput4",
+"name": "setheadertext",
+"brief": "A form to send text data",
+"fields": {
+"action": "no_javascript",
+"action_json": "8705",
+"button_class": "w3-button w3-theme-d4",
+"button_text": "Submit",
+"buttondiv_class": "w3-container w3-cell",
+"buttondiv_style": "",
+"clear_error": false,
+"error_class": "w3-panel w3-red",
+"formdiv_class": "w3-cell-row",
+"formdiv_style": "",
+"hidden_field1": "",
+"hidden_field2": "",
+"hidden_field3": "",
+"hidden_field4": "",
+"hide": false,
+"input_accepted_class": "w3-pale-green",
+"input_class": "",
+"input_errored_class": "w3-pale-red",
+"input_style": "padding:8px;border:2px solid #ccc;width:100%",
+"input_text": "Set any text here",
+"inputdiv_class": "w3-container w3-cell",
+"inputdiv_style": "width : 32%;",
+"left_class": "w3-right-align",
+"left_style": "font-weight : bold;",
+"left_text": "Your input:",
+"leftdiv_class": "w3-container w3-cell",
+"leftdiv_style": "width : 32%;",
+"maxlength": "",
+"pattern": "",
+"required": false,
+"set_input_accepted": false,
+"set_input_errored": false,
+"show": true,
+"show_error": "",
+"size": "",
+"target": "",
+"title": "",
+"type": "text",
+"widget_class": "w3-section",
+"widget_style": ""
+}
+}
+],
+[
+"Widget",
+{
+"class": "headers.HeaderText2",
+"name": "headertext2",
+"brief": "Illustrates the HeaderText2 widget",
+"fields": {
+"clear_error": false,
+"error_class": "w3-panel w3-red",
+"h_class": "",
+"h_style": "",
+"large_text": "Initial H2 text",
+"p_class": "",
+"p_style": "",
+"show": true,
+"show_error": "",
+"small_text": "Initial paragraph text",
+"widget_class": "w3-panel w3-theme-d4",
+"widget_style": ""
+}
+}
+],
+[
+"SectionPlaceHolder",
+{
+"brief": "Section which shows the code",
+"section_name": "codefile",
+"placename": "codefile",
+"multiplier": 0,
+"mtag": "div",
+"show": true
+}
+]
+]
+}
+]
+]
+}
+]
+]
+}
+]
+}
+}
+}
+},
+"pages": {
+"index.html": {
+"ident": 8702,
+"brief": "Sets up title and widget description",
+"RespondPage": {
+"class": "SubmitData",
+"original_args": {
+"allowed_callers": [],
+"fail_ident": "home",
+"submit_list": [
+"headers",
+"headertext2",
+"index"
+],
+"target_ident": 8704
+},
+"original_fields": {}
+}
+},
+"settext": {
+"ident": 8705,
+"brief": "Responder to set text into header",
+"RespondPage": {
+"class": "AllowStore",
+"original_args": {
+"allowed_callers": [],
+"alternate_ident": "home",
+"fail_ident": 8702,
+"submit_list": [
+"headers",
+"headertext2",
+"settext"
+],
+"submit_option": true,
+"target_ident": "general_json",
+"validate_fail_ident": null,
+"validate_option": false
+},
+"original_fields": {
+"setheadertext:input_text": ""
+}
+}
+}
+}
+},
+"HeaderText3": {
+"ident": 8801,
+"brief": "Folder containing the HeaderText3 widget",
+"default_page_name": "index.html",
+"restricted": false,
+"folders": {
+"restricted": {
+"ident": 8803,
+"brief": "Contains templates",
+"default_page_name": "index",
+"restricted": true,
+"folders": {},
+"pages": {
+"index": {
+"ident": 8804,
+"brief": "headers.HeaderText3 template",
+"TemplatePage": {
+"show_backcol": false,
+"last_scroll": true,
+"interval": 0,
+"interval_target": null,
+"catch_to_html": null,
+"lang": "en",
+"backcol": "#ffffff",
+"default_error_widget": [
+"header",
+"top_error"
+]
+},
+"head": [
+"Part",
+{
+"tag_name": "head",
+"brief": "The head section of the page",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"ClosedPart",
+{
+"tag_name": "meta",
+"brief": "The charset meta declaration",
+"show": true,
+"attribs": {
+"charset": "utf-8"
+}
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "meta",
+"brief": "The viewport meta declaration",
+"show": true,
+"attribs": {
+"content": "width=device-width, initial-scale=1",
+"name": "viewport"
+}
+}
+],
+[
+"Part",
+{
+"tag_name": "title",
+"brief": "The page title element",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"HeaderText3"
+]
+]
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "link",
+"brief": "css link to w3_css",
+"show": true,
+"attribs": {
+"href": "{w3_css}",
+"rel": "stylesheet",
+"type": "text/css"
+}
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "link",
+"brief": "css link to w3_theme_ski_css",
+"show": true,
+"attribs": {
+"href": "{w3_theme_ski_css}",
+"rel": "stylesheet",
+"type": "text/css"
+}
+}
+],
+[
+"Part",
+{
+"tag_name": "script",
+"brief": "script link to jquery_core",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"src": "{jquery_core}"
+},
+"parts": []
+}
+],
+[
+"Part",
+{
+"tag_name": "script",
+"brief": "script link to skipole_js",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"src": "{skipole_js}"
+},
+"parts": []
+}
+]
+]
+}
+],
+"body": [
+"Part",
+{
+"tag_name": "body",
+"brief": "The body section of the page",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-theme"
+},
+"parts": [
+[
+"Part",
+{
+"tag_name": "div",
+"brief": "containing div",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-container"
+},
+"parts": [
+[
+"SectionPlaceHolder",
+{
+"brief": "title, description and top_error",
+"section_name": "header",
+"placename": "header",
+"multiplier": 0,
+"mtag": "div",
+"show": true
+}
+],
+[
+"Part",
+{
+"tag_name": "div",
+"brief": "div holding form widget",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-container"
+},
+"parts": [
+[
+"Part",
+{
+"tag_name": "p",
+"brief": "Paragraph describing the page contents",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"Below is a SubmitTextInput4 widget, which sends the text data input to an AllowStore responder, which inserts the data received into a HeaderText3 widget shown below."
+]
+]
+}
+],
+[
+"Part",
+{
+"tag_name": "p",
+"brief": "Further paragraph describing page contents",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"The SubmitTextInput4 widget has been given the name 'setheadertext', and the field containing the sent data has name 'input_text'. Press Submit to send the text, which should then appear in the HeaderText3 widget."
+]
+]
+}
+],
+[
+"Widget",
+{
+"class": "inputtext.SubmitTextInput4",
+"name": "setheadertext",
+"brief": "A form to send text data",
+"fields": {
+"action": "no_javascript",
+"action_json": "8805",
+"button_class": "w3-button w3-theme-d4",
+"button_text": "Submit",
+"buttondiv_class": "w3-container w3-cell",
+"buttondiv_style": "",
+"clear_error": false,
+"error_class": "w3-panel w3-red",
+"formdiv_class": "w3-cell-row",
+"formdiv_style": "",
+"hidden_field1": "",
+"hidden_field2": "",
+"hidden_field3": "",
+"hidden_field4": "",
+"hide": false,
+"input_accepted_class": "w3-pale-green",
+"input_class": "",
+"input_errored_class": "w3-pale-red",
+"input_style": "padding:8px;border:2px solid #ccc;width:100%",
+"input_text": "Set any text here",
+"inputdiv_class": "w3-container w3-cell",
+"inputdiv_style": "width : 32%;",
+"left_class": "w3-right-align",
+"left_style": "font-weight : bold;",
+"left_text": "Your input:",
+"leftdiv_class": "w3-container w3-cell",
+"leftdiv_style": "width : 32%;",
+"maxlength": "",
+"pattern": "",
+"required": false,
+"set_input_accepted": false,
+"set_input_errored": false,
+"show": true,
+"show_error": "",
+"size": "",
+"target": "",
+"title": "",
+"type": "text",
+"widget_class": "w3-section",
+"widget_style": ""
+}
+}
+],
+[
+"Widget",
+{
+"class": "headers.HeaderText3",
+"name": "headertext3",
+"brief": "Illustrates the HeaderText3 widget",
+"fields": {
+"clear_error": false,
+"error_class": "",
+"h_class": "",
+"h_style": "",
+"large_text": "Initial H3 text",
+"p_class": "",
+"p_style": "",
+"show": true,
+"show_error": "",
+"small_text": "Initial paragraph text",
+"widget_class": "w3-panel w3-theme-d4",
+"widget_style": ""
+}
+}
+],
+[
+"SectionPlaceHolder",
+{
+"brief": "Section which shows the code",
+"section_name": "codefile",
+"placename": "codefile",
+"multiplier": 0,
+"mtag": "div",
+"show": true
+}
+]
+]
+}
+]
+]
+}
+]
+]
+}
+]
+}
+}
+}
+},
+"pages": {
+"index.html": {
+"ident": 8802,
+"brief": "Sets up title and widget description",
+"RespondPage": {
+"class": "SubmitData",
+"original_args": {
+"allowed_callers": [],
+"fail_ident": "home",
+"submit_list": [
+"headers",
+"headertext3",
+"index"
+],
+"target_ident": 8804
+},
+"original_fields": {}
+}
+},
+"settext": {
+"ident": 8805,
+"brief": "Responder to set text into header",
+"RespondPage": {
+"class": "AllowStore",
+"original_args": {
+"allowed_callers": [],
+"alternate_ident": "home",
+"fail_ident": 8802,
+"submit_list": [
+"headers",
+"headertext3",
+"settext"
+],
+"submit_option": true,
+"target_ident": "general_json",
+"validate_fail_ident": null,
+"validate_option": false
+},
+"original_fields": {
+"setheadertext:input_text": ""
+}
+}
+}
+}
+},
+"HeaderText4": {
+"ident": 8901,
+"brief": "Folder containing the HeaderText4 widget",
+"default_page_name": "index.html",
+"restricted": false,
+"folders": {
+"restricted": {
+"ident": 8903,
+"brief": "Contains templates",
+"default_page_name": "index",
+"restricted": true,
+"folders": {},
+"pages": {
+"index": {
+"ident": 8904,
+"brief": "headers.HeaderText4 template",
+"TemplatePage": {
+"show_backcol": false,
+"last_scroll": true,
+"interval": 0,
+"interval_target": null,
+"catch_to_html": null,
+"lang": "en",
+"backcol": "#ffffff",
+"default_error_widget": [
+"header",
+"top_error"
+]
+},
+"head": [
+"Part",
+{
+"tag_name": "head",
+"brief": "The head section of the page",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"ClosedPart",
+{
+"tag_name": "meta",
+"brief": "The charset meta declaration",
+"show": true,
+"attribs": {
+"charset": "utf-8"
+}
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "meta",
+"brief": "The viewport meta declaration",
+"show": true,
+"attribs": {
+"content": "width=device-width, initial-scale=1",
+"name": "viewport"
+}
+}
+],
+[
+"Part",
+{
+"tag_name": "title",
+"brief": "The page title element",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"HeaderText4"
+]
+]
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "link",
+"brief": "css link to w3_css",
+"show": true,
+"attribs": {
+"href": "{w3_css}",
+"rel": "stylesheet",
+"type": "text/css"
+}
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "link",
+"brief": "css link to w3_theme_ski_css",
+"show": true,
+"attribs": {
+"href": "{w3_theme_ski_css}",
+"rel": "stylesheet",
+"type": "text/css"
+}
+}
+],
+[
+"Part",
+{
+"tag_name": "script",
+"brief": "script link to jquery_core",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"src": "{jquery_core}"
+},
+"parts": []
+}
+],
+[
+"Part",
+{
+"tag_name": "script",
+"brief": "script link to skipole_js",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"src": "{skipole_js}"
+},
+"parts": []
+}
+]
+]
+}
+],
+"body": [
+"Part",
+{
+"tag_name": "body",
+"brief": "The body section of the page",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-theme"
+},
+"parts": [
+[
+"Part",
+{
+"tag_name": "div",
+"brief": "containing div",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-container"
+},
+"parts": [
+[
+"SectionPlaceHolder",
+{
+"brief": "title, description and top_error",
+"section_name": "header",
+"placename": "header",
+"multiplier": 0,
+"mtag": "div",
+"show": true
+}
+],
+[
+"Part",
+{
+"tag_name": "div",
+"brief": "div holding form widget",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-container"
+},
+"parts": [
+[
+"Part",
+{
+"tag_name": "p",
+"brief": "Paragraph describing the page contents",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"Below is a SubmitTextInput4 widget, which sends the text data input to an AllowStore responder, which inserts the data received into a HeaderText4 widget shown below."
+]
+]
+}
+],
+[
+"Part",
+{
+"tag_name": "p",
+"brief": "Further paragraph describing page contents",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"The SubmitTextInput4 widget has been given the name 'setheadertext', and the field containing the sent data has name 'input_text'. Press Submit to send the text, which should then appear in the HeaderText4 widget."
+]
+]
+}
+],
+[
+"Widget",
+{
+"class": "inputtext.SubmitTextInput4",
+"name": "setheadertext",
+"brief": "A form to send text data",
+"fields": {
+"action": "no_javascript",
+"action_json": "8905",
+"button_class": "w3-button w3-theme-d4",
+"button_text": "Submit",
+"buttondiv_class": "w3-container w3-cell",
+"buttondiv_style": "",
+"clear_error": false,
+"error_class": "w3-panel w3-red",
+"formdiv_class": "w3-cell-row",
+"formdiv_style": "",
+"hidden_field1": "",
+"hidden_field2": "",
+"hidden_field3": "",
+"hidden_field4": "",
+"hide": false,
+"input_accepted_class": "w3-pale-green",
+"input_class": "",
+"input_errored_class": "w3-pale-red",
+"input_style": "padding:8px;border:2px solid #ccc;width:100%",
+"input_text": "Set any text here",
+"inputdiv_class": "w3-container w3-cell",
+"inputdiv_style": "width : 32%;",
+"left_class": "w3-right-align",
+"left_style": "font-weight : bold;",
+"left_text": "Your input:",
+"leftdiv_class": "w3-container w3-cell",
+"leftdiv_style": "width : 32%;",
+"maxlength": "",
+"pattern": "",
+"required": false,
+"set_input_accepted": false,
+"set_input_errored": false,
+"show": true,
+"show_error": "",
+"size": "",
+"target": "",
+"title": "",
+"type": "text",
+"widget_class": "w3-section",
+"widget_style": ""
+}
+}
+],
+[
+"Widget",
+{
+"class": "headers.HeaderText4",
+"name": "headertext4",
+"brief": "Illustrates the HeaderText4 widget",
+"fields": {
+"clear_error": false,
+"error_class": "",
+"h_class": "",
+"h_style": "",
+"large_text": "Initial H4 text",
+"p_class": "",
+"p_style": "",
+"show": true,
+"show_error": "",
+"small_text": "Initial paragraph text",
+"widget_class": "w3-panel w3-theme-d4",
+"widget_style": ""
+}
+}
+],
+[
+"SectionPlaceHolder",
+{
+"brief": "Section which shows the code",
+"section_name": "codefile",
+"placename": "codefile",
+"multiplier": 0,
+"mtag": "div",
+"show": true
+}
+]
+]
+}
+]
+]
+}
+]
+]
+}
+]
+}
+}
+}
+},
+"pages": {
+"index.html": {
+"ident": 8902,
+"brief": "Sets up title and widget description",
+"RespondPage": {
+"class": "SubmitData",
+"original_args": {
+"allowed_callers": [],
+"fail_ident": "home",
+"submit_list": [
+"headers",
+"headertext4",
+"index"
+],
+"target_ident": 8904
+},
+"original_fields": {}
+}
+},
+"settext": {
+"ident": 8905,
+"brief": "Responder to set text into header",
+"RespondPage": {
+"class": "AllowStore",
+"original_args": {
+"allowed_callers": [],
+"alternate_ident": "home",
+"fail_ident": 8902,
+"submit_list": [
+"headers",
+"headertext4",
+"settext"
+],
+"submit_option": true,
+"target_ident": "general_json",
+"validate_fail_ident": null,
+"validate_option": false
+},
+"original_fields": {
+"setheadertext:input_text": ""
+}
+}
+}
+}
+},
+"HeaderText5": {
+"ident": 9001,
+"brief": "Folder containing the HeaderText5 widget",
+"default_page_name": "index.html",
+"restricted": false,
+"folders": {
+"restricted": {
+"ident": 9003,
+"brief": "Contains templates",
+"default_page_name": "index",
+"restricted": true,
+"folders": {},
+"pages": {
+"index": {
+"ident": 9004,
+"brief": "headers.HeaderText5 template",
+"TemplatePage": {
+"show_backcol": false,
+"last_scroll": true,
+"interval": 0,
+"interval_target": null,
+"catch_to_html": null,
+"lang": "en",
+"backcol": "#ffffff",
+"default_error_widget": [
+"header",
+"top_error"
+]
+},
+"head": [
+"Part",
+{
+"tag_name": "head",
+"brief": "The head section of the page",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"ClosedPart",
+{
+"tag_name": "meta",
+"brief": "The charset meta declaration",
+"show": true,
+"attribs": {
+"charset": "utf-8"
+}
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "meta",
+"brief": "The viewport meta declaration",
+"show": true,
+"attribs": {
+"content": "width=device-width, initial-scale=1",
+"name": "viewport"
+}
+}
+],
+[
+"Part",
+{
+"tag_name": "title",
+"brief": "The page title element",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"HeaderText5"
+]
+]
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "link",
+"brief": "css link to w3_css",
+"show": true,
+"attribs": {
+"href": "{w3_css}",
+"rel": "stylesheet",
+"type": "text/css"
+}
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "link",
+"brief": "css link to w3_theme_ski_css",
+"show": true,
+"attribs": {
+"href": "{w3_theme_ski_css}",
+"rel": "stylesheet",
+"type": "text/css"
+}
+}
+],
+[
+"Part",
+{
+"tag_name": "script",
+"brief": "script link to jquery_core",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"src": "{jquery_core}"
+},
+"parts": []
+}
+],
+[
+"Part",
+{
+"tag_name": "script",
+"brief": "script link to skipole_js",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"src": "{skipole_js}"
+},
+"parts": []
+}
+]
+]
+}
+],
+"body": [
+"Part",
+{
+"tag_name": "body",
+"brief": "The body section of the page",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-theme"
+},
+"parts": [
+[
+"Part",
+{
+"tag_name": "div",
+"brief": "containing div",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-container"
+},
+"parts": [
+[
+"SectionPlaceHolder",
+{
+"brief": "title, description and top_error",
+"section_name": "header",
+"placename": "header",
+"multiplier": 0,
+"mtag": "div",
+"show": true
+}
+],
+[
+"Part",
+{
+"tag_name": "div",
+"brief": "div holding form widget",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-container"
+},
+"parts": [
+[
+"Part",
+{
+"tag_name": "p",
+"brief": "Paragraph describing the page contents",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"Below is a SubmitTextInput4 widget, which sends the text data input to an AllowStore responder, which inserts the data received into a HeaderText5 widget shown below."
+]
+]
+}
+],
+[
+"Part",
+{
+"tag_name": "p",
+"brief": "Further paragraph describing page contents",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"The SubmitTextInput4 widget has been given the name 'setheadertext', and the field containing the sent data has name 'input_text'. Press Submit to send the text, which should then appear in the HeaderText5 widget."
+]
+]
+}
+],
+[
+"Widget",
+{
+"class": "inputtext.SubmitTextInput4",
+"name": "setheadertext",
+"brief": "A form to send text data",
+"fields": {
+"action": "no_javascript",
+"action_json": "9005",
+"button_class": "w3-button w3-theme-d4",
+"button_text": "Submit",
+"buttondiv_class": "w3-container w3-cell",
+"buttondiv_style": "",
+"clear_error": false,
+"error_class": "w3-panel w3-red",
+"formdiv_class": "w3-cell-row",
+"formdiv_style": "",
+"hidden_field1": "",
+"hidden_field2": "",
+"hidden_field3": "",
+"hidden_field4": "",
+"hide": false,
+"input_accepted_class": "w3-pale-green",
+"input_class": "",
+"input_errored_class": "w3-pale-red",
+"input_style": "padding:8px;border:2px solid #ccc;width:100%",
+"input_text": "Set any text here",
+"inputdiv_class": "w3-container w3-cell",
+"inputdiv_style": "width : 32%;",
+"left_class": "w3-right-align",
+"left_style": "font-weight : bold;",
+"left_text": "Your input:",
+"leftdiv_class": "w3-container w3-cell",
+"leftdiv_style": "width : 32%;",
+"maxlength": "",
+"pattern": "",
+"required": false,
+"set_input_accepted": false,
+"set_input_errored": false,
+"show": true,
+"show_error": "",
+"size": "",
+"target": "",
+"title": "",
+"type": "text",
+"widget_class": "w3-section",
+"widget_style": ""
+}
+}
+],
+[
+"Widget",
+{
+"class": "headers.HeaderText5",
+"name": "headertext5",
+"brief": "Illustrates the HeaderText5 widget",
+"fields": {
+"clear_error": false,
+"error_class": "",
+"h_class": "",
+"h_style": "",
+"large_text": "Initial H5 text",
+"p_class": "",
+"p_style": "",
+"show": true,
+"show_error": "",
+"small_text": "Initial paragraph text",
+"widget_class": "w3-panel w3-theme-d4",
+"widget_style": ""
+}
+}
+],
+[
+"SectionPlaceHolder",
+{
+"brief": "Section which shows the code",
+"section_name": "codefile",
+"placename": "codefile",
+"multiplier": 0,
+"mtag": "div",
+"show": true
+}
+]
+]
+}
+]
+]
+}
+]
+]
+}
+]
+}
+}
+}
+},
+"pages": {
+"index.html": {
+"ident": 9002,
+"brief": "Sets up title and widget description",
+"RespondPage": {
+"class": "SubmitData",
+"original_args": {
+"allowed_callers": [],
+"fail_ident": "home",
+"submit_list": [
+"headers",
+"headertext5",
+"index"
+],
+"target_ident": 9004
+},
+"original_fields": {}
+}
+},
+"settext": {
+"ident": 9005,
+"brief": "Responder to set text into header",
+"RespondPage": {
+"class": "AllowStore",
+"original_args": {
+"allowed_callers": [],
+"alternate_ident": "home",
+"fail_ident": 9002,
+"submit_list": [
+"headers",
+"headertext5",
+"settext"
+],
+"submit_option": true,
+"target_ident": "general_json",
+"validate_fail_ident": null,
+"validate_option": false
+},
+"original_fields": {
+"setheadertext:input_text": ""
+}
+}
+}
+}
+},
+"HeaderText6": {
+"ident": 9101,
+"brief": "Folder containing the HeaderText6 widget",
+"default_page_name": "index.html",
+"restricted": false,
+"folders": {
+"restricted": {
+"ident": 9103,
+"brief": "Contains templates",
+"default_page_name": "index",
+"restricted": true,
+"folders": {},
+"pages": {
+"index": {
+"ident": 9104,
+"brief": "headers.HeaderText6 template",
+"TemplatePage": {
+"show_backcol": false,
+"last_scroll": true,
+"interval": 0,
+"interval_target": null,
+"catch_to_html": null,
+"lang": "en",
+"backcol": "#ffffff",
+"default_error_widget": [
+"header",
+"top_error"
+]
+},
+"head": [
+"Part",
+{
+"tag_name": "head",
+"brief": "The head section of the page",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"ClosedPart",
+{
+"tag_name": "meta",
+"brief": "The charset meta declaration",
+"show": true,
+"attribs": {
+"charset": "utf-8"
+}
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "meta",
+"brief": "The viewport meta declaration",
+"show": true,
+"attribs": {
+"content": "width=device-width, initial-scale=1",
+"name": "viewport"
+}
+}
+],
+[
+"Part",
+{
+"tag_name": "title",
+"brief": "The page title element",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"HeaderText6"
+]
+]
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "link",
+"brief": "css link to w3_css",
+"show": true,
+"attribs": {
+"href": "{w3_css}",
+"rel": "stylesheet",
+"type": "text/css"
+}
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "link",
+"brief": "css link to w3_theme_ski_css",
+"show": true,
+"attribs": {
+"href": "{w3_theme_ski_css}",
+"rel": "stylesheet",
+"type": "text/css"
+}
+}
+],
+[
+"Part",
+{
+"tag_name": "script",
+"brief": "script link to jquery_core",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"src": "{jquery_core}"
+},
+"parts": []
+}
+],
+[
+"Part",
+{
+"tag_name": "script",
+"brief": "script link to skipole_js",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"src": "{skipole_js}"
+},
+"parts": []
+}
+]
+]
+}
+],
+"body": [
+"Part",
+{
+"tag_name": "body",
+"brief": "The body section of the page",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-theme"
+},
+"parts": [
+[
+"Part",
+{
+"tag_name": "div",
+"brief": "containing div",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-container"
+},
+"parts": [
+[
+"SectionPlaceHolder",
+{
+"brief": "title, description and top_error",
+"section_name": "header",
+"placename": "header",
+"multiplier": 0,
+"mtag": "div",
+"show": true
+}
+],
+[
+"Part",
+{
+"tag_name": "div",
+"brief": "div holding form widget",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-container"
+},
+"parts": [
+[
+"Part",
+{
+"tag_name": "p",
+"brief": "Paragraph describing the page contents",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"Below is a SubmitTextInput4 widget, which sends the text data input to an AllowStore responder, which inserts the data received into a HeaderText6 widget shown below."
+]
+]
+}
+],
+[
+"Part",
+{
+"tag_name": "p",
+"brief": "Further paragraph describing page contents",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"The SubmitTextInput4 widget has been given the name 'setheadertext', and the field containing the sent data has name 'input_text'. Press Submit to send the text, which should then appear in the HeaderText6 widget."
+]
+]
+}
+],
+[
+"Widget",
+{
+"class": "inputtext.SubmitTextInput4",
+"name": "setheadertext",
+"brief": "A form to send text data",
+"fields": {
+"action": "no_javascript",
+"action_json": "9105",
+"button_class": "w3-button w3-theme-d4",
+"button_text": "Submit",
+"buttondiv_class": "w3-container w3-cell",
+"buttondiv_style": "",
+"clear_error": false,
+"error_class": "w3-panel w3-red",
+"formdiv_class": "w3-cell-row",
+"formdiv_style": "",
+"hidden_field1": "",
+"hidden_field2": "",
+"hidden_field3": "",
+"hidden_field4": "",
+"hide": false,
+"input_accepted_class": "w3-pale-green",
+"input_class": "",
+"input_errored_class": "w3-pale-red",
+"input_style": "padding:8px;border:2px solid #ccc;width:100%",
+"input_text": "Set any text here",
+"inputdiv_class": "w3-container w3-cell",
+"inputdiv_style": "width : 32%;",
+"left_class": "w3-right-align",
+"left_style": "font-weight : bold;",
+"left_text": "Your input:",
+"leftdiv_class": "w3-container w3-cell",
+"leftdiv_style": "width : 32%;",
+"maxlength": "",
+"pattern": "",
+"required": false,
+"set_input_accepted": false,
+"set_input_errored": false,
+"show": true,
+"show_error": "",
+"size": "",
+"target": "",
+"title": "",
+"type": "text",
+"widget_class": "w3-section",
+"widget_style": ""
+}
+}
+],
+[
+"Widget",
+{
+"class": "headers.HeaderText6",
+"name": "headertext6",
+"brief": "Illustrates the HeaderText6 widget",
+"fields": {
+"clear_error": false,
+"error_class": "",
+"h_class": "",
+"h_style": "",
+"large_text": "Initial H6 text",
+"p_class": "",
+"p_style": "",
+"show": true,
+"show_error": "",
+"small_text": "Initial paragraph text",
+"widget_class": "w3-panel w3-theme-d4",
+"widget_style": ""
+}
+}
+],
+[
+"SectionPlaceHolder",
+{
+"brief": "Section which shows the code",
+"section_name": "codefile",
+"placename": "codefile",
+"multiplier": 0,
+"mtag": "div",
+"show": true
+}
+]
+]
+}
+]
+]
+}
+]
+]
+}
+]
+}
+}
+}
+},
+"pages": {
+"index.html": {
+"ident": 9102,
+"brief": "Sets up title and widget description",
+"RespondPage": {
+"class": "SubmitData",
+"original_args": {
+"allowed_callers": [],
+"fail_ident": "home",
+"submit_list": [
+"headers",
+"headertext6",
+"index"
+],
+"target_ident": 9104
+},
+"original_fields": {}
+}
+},
+"settext": {
+"ident": 9105,
+"brief": "Responder to set text into header",
+"RespondPage": {
+"class": "AllowStore",
+"original_args": {
+"allowed_callers": [],
+"alternate_ident": "home",
+"fail_ident": 9102,
+"submit_list": [
+"headers",
+"headertext6",
+"settext"
+],
+"submit_option": true,
+"target_ident": "general_json",
+"validate_fail_ident": null,
+"validate_option": false
+},
+"original_fields": {
+"setheadertext:input_text": ""
+}
+}
+}
+}
 }
 },
 "pages": {}
