@@ -11636,6 +11636,266 @@
 "default_page_name": "index",
 "restricted": false,
 "folders": {
+"TableList": {
+"ident": 9201,
+"brief": "Folder containing the TableList widget",
+"default_page_name": "index.html",
+"restricted": false,
+"folders": {
+"restricted": {
+"ident": 9203,
+"brief": "Contains templates",
+"default_page_name": "index",
+"restricted": true,
+"folders": {},
+"pages": {
+"index": {
+"ident": 9204,
+"brief": "lists.TableList template",
+"TemplatePage": {
+"show_backcol": false,
+"last_scroll": true,
+"interval": 0,
+"interval_target": null,
+"catch_to_html": null,
+"lang": "en",
+"backcol": "#ffffff",
+"default_error_widget": [
+"header",
+"top_error"
+]
+},
+"head": [
+"Part",
+{
+"tag_name": "head",
+"brief": "The head section of the page",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"ClosedPart",
+{
+"tag_name": "meta",
+"brief": "The charset meta declaration",
+"show": true,
+"attribs": {
+"charset": "utf-8"
+}
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "meta",
+"brief": "The viewport meta declaration",
+"show": true,
+"attribs": {
+"content": "width=device-width, initial-scale=1",
+"name": "viewport"
+}
+}
+],
+[
+"Part",
+{
+"tag_name": "title",
+"brief": "The page title element",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"TableList"
+]
+]
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "link",
+"brief": "css link to w3_css",
+"show": true,
+"attribs": {
+"href": "{w3_css}",
+"rel": "stylesheet",
+"type": "text/css"
+}
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "link",
+"brief": "css link to w3_theme_ski_css",
+"show": true,
+"attribs": {
+"href": "{w3_theme_ski_css}",
+"rel": "stylesheet",
+"type": "text/css"
+}
+}
+],
+[
+"Part",
+{
+"tag_name": "script",
+"brief": "script link to jquery_core",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"src": "{jquery_core}"
+},
+"parts": []
+}
+],
+[
+"Part",
+{
+"tag_name": "script",
+"brief": "script link to skipole_js",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"src": "{skipole_js}"
+},
+"parts": []
+}
+]
+]
+}
+],
+"body": [
+"Part",
+{
+"tag_name": "body",
+"brief": "The body section of the page",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-theme"
+},
+"parts": [
+[
+"Part",
+{
+"tag_name": "div",
+"brief": "containing div",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-container"
+},
+"parts": [
+[
+"SectionPlaceHolder",
+{
+"brief": "title, description and top_error",
+"section_name": "header",
+"placename": "header",
+"multiplier": 0,
+"mtag": "div",
+"show": true
+}
+],
+[
+"Part",
+{
+"tag_name": "div",
+"brief": "div holding form widget",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-container"
+},
+"parts": [
+[
+"Part",
+{
+"tag_name": "p",
+"brief": "Paragraph describing the page contents",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"Below is a TableList widget."
+]
+]
+}
+],
+[
+"Widget",
+{
+"class": "lists.TableList",
+"name": "tablelist",
+"brief": "Illustrates the TableList widget",
+"fields": {
+"button_class": "",
+"contents": [],
+"down_json_ident": "",
+"down_link_ident": "no_javascript",
+"even_class": "",
+"hide": false,
+"maximize_text_col": true,
+"odd_class": "",
+"remove_button_text": "Remove",
+"remove_json_ident": "",
+"remove_link_ident": "no_javascript",
+"show": true,
+"up_json_ident": "",
+"up_link_ident": "no_javascript",
+"widget_class": "",
+"widget_style": ""
+}
+}
+],
+[
+"SectionPlaceHolder",
+{
+"brief": "Section which shows the code",
+"section_name": "codefile",
+"placename": "codefile",
+"multiplier": 0,
+"mtag": "div",
+"show": true
+}
+]
+]
+}
+]
+]
+}
+]
+]
+}
+]
+}
+}
+}
+},
+"pages": {
+"index.html": {
+"ident": 9202,
+"brief": "Sets up title and widget description",
+"RespondPage": {
+"class": "SubmitData",
+"original_args": {
+"allowed_callers": [],
+"fail_ident": "home",
+"submit_list": [
+"lists",
+"tablelist",
+"index"
+],
+"target_ident": 9204
+},
+"original_fields": {}
+}
+}
+}
+},
 "UList1": {
 "ident": 6201,
 "brief": "Folder containing the UList1 widget",
