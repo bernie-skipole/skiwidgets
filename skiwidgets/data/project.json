@@ -3,7 +3,7 @@
 "default_language": "en",
 "brief": "Site illustrating skipole widgets",
 "version": "0.0.1",
-"skipole": "5.5.2",
+"skipole": "5.5.3",
 "specialpages": {
 "audiofile": 6,
 "favicon": 3002,
@@ -7366,22 +7366,7 @@
 "parts": [
 [
 "Text",
-"PLease note: The 'HeadText' heading string above is displayed by a HeadText Widget.\r\nBelow is a SubmitTextInput4 widget, which sends the text data input to an AllowStore responder, which inserts the data received into another HeadText widget shown below."
-]
-]
-}
-],
-[
-"Part",
-{
-"tag_name": "p",
-"brief": "Further paragraph describing page contents",
-"show": true,
-"hide_if_empty": false,
-"parts": [
-[
-"Text",
-"The SubmitTextInput4 widget has been given the name 'setheadertext', and the field containing the sent data has name 'input_text'. Press Submit to send the text, which should then appear in the HeadText widget."
+"PLease note: The 'HeadText' heading string above is displayed by a HeadText Widget.\r\n\r\nBelow is a SubmitTextInput4 widget, and a SubmitDropDown1 widget, which send data to AllowStore responders, which inserts the data received into another HeadText widget shown below."
 ]
 ]
 }
@@ -7432,6 +7417,40 @@
 "title": "",
 "type": "text",
 "widget_class": "w3-section",
+"widget_style": ""
+}
+}
+],
+[
+"Widget",
+{
+"class": "dropdown.SubmitDropDown1",
+"name": "setheadertag",
+"brief": "A form to set the tag",
+"fields": {
+"action": "no_javascript",
+"action_json": "8406",
+"button_class": "w3-button w3-theme-d4 w3-margin-left",
+"button_text": "Submit",
+"clear_error": false,
+"disabled": false,
+"error_class": "w3-panel w3-red",
+"hidden_field1": "",
+"hidden_field2": "",
+"hidden_field3": "",
+"hidden_field4": "",
+"hide": false,
+"inputdiv_class": "w3-section",
+"label": "Select a Tag:",
+"label_class": "",
+"label_style": "display:inline-block;margin-right:1%;text-align:right;width:30%;font-weight:bold;",
+"option_list": [],
+"select_class": "",
+"select_style": "",
+"selectvalue": "h1",
+"show": true,
+"show_error": "",
+"widget_class": "w3-container",
 "widget_style": ""
 }
 }
@@ -7492,6 +7511,30 @@
 "target_ident": 8404
 },
 "original_fields": {}
+}
+},
+"settag": {
+"ident": 8406,
+"brief": "sets the new tag received into the HeadText widget",
+"RespondPage": {
+"class": "AllowStore",
+"original_args": {
+"allowed_callers": [],
+"alternate_ident": "home",
+"fail_ident": 8402,
+"submit_list": [
+"headers",
+"headtext",
+"settag"
+],
+"submit_option": true,
+"target_ident": "general_json",
+"validate_fail_ident": null,
+"validate_option": false
+},
+"original_fields": {
+"setheadertag:selectvalue": ""
+}
 }
 },
 "settext": {

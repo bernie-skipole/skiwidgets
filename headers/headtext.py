@@ -20,6 +20,11 @@ def index(skicall):
     headersection['tomodule','link_ident'] = skicall.makepath('headers')
     skicall.update(headersection)
 
+    # A SubmitDropDown1 widget with name setheadertag needs its option_list setting
+    pd = PageData()
+    pd['setheadertag','option_list'] = ["h6", "h5", "h4", "h3", "h2", "h1", "p"]
+    skicall.update(pd)
+
     # this code file contents is placed in section 'codefile' which contains a
     # PreText widget with name 'pretext'
     codesection = SectionData('codefile')
@@ -41,6 +46,25 @@ def settext(skicall):
 
     pd = PageData()
     pd['headtext','large_text'] = skicall.call_data["setheadertext","input_text"]
+
+    skicall.update(pd)
+
+
+def settag(skicall):
+    """Responds to submission from the SubmitDropDown1 widget form.
+       Called by an AllowStore responder with general_json page as its
+       target so the headtext widget is updated via a JSON responce,
+       and dynamically updates the page."""
+
+    if ("setheadertag","selectvalue") not in skicall.call_data:
+        raise FailPage(message="No submission received")
+
+    if skicall.call_data["setheadertag","selectvalue"] not in ["h6", "h5", "h4", "h3", "h2", "h1", "p"]:
+        raise FailPage(message="Invalid submission received")
+
+    pd = PageData()
+    pd['headtext','tag'] = skicall.call_data["setheadertag","selectvalue"]
+
     skicall.update(pd)
 
     
