@@ -11832,22 +11832,22 @@
 "name": "tablelist",
 "brief": "Illustrates the TableList widget",
 "fields": {
-"button_class": "",
+"button_class": "w3-button w3-block w3-small w3-theme-dark",
 "contents": [],
 "down_json_ident": "",
 "down_link_ident": "no_javascript",
 "even_class": "",
 "hide": false,
 "maximize_text_col": true,
-"odd_class": "",
+"odd_class": "w3-theme-d2",
 "remove_button_text": "Remove",
 "remove_json_ident": "",
 "remove_link_ident": "no_javascript",
 "show": true,
 "up_json_ident": "",
-"up_link_ident": "no_javascript",
-"widget_class": "",
-"widget_style": ""
+"up_link_ident": "9205",
+"widget_class": "w3-table w3-theme-d1 w3-border w3-bordered",
+"widget_style": "margin-left:auto;width:80%;margin-right:auto;"
 }
 }
 ],
@@ -11892,6 +11892,30 @@
 "target_ident": 9204
 },
 "original_fields": {}
+}
+},
+"up": {
+"ident": 9205,
+"brief": "Moves chosen item up",
+"RespondPage": {
+"class": "AllowStore",
+"original_args": {
+"allowed_callers": [],
+"alternate_ident": "home",
+"fail_ident": 9204,
+"submit_list": [
+"lists",
+"tablelist",
+"up"
+],
+"submit_option": true,
+"target_ident": 9204,
+"validate_fail_ident": null,
+"validate_option": false
+},
+"original_fields": {
+"tablelist:contents": ""
+}
 }
 }
 }
