@@ -11835,14 +11835,14 @@
 "button_class": "w3-button w3-block w3-small w3-theme-dark",
 "contents": [],
 "down_json_ident": "",
-"down_link_ident": "no_javascript",
+"down_link_ident": "9206",
 "even_class": "",
 "hide": false,
 "maximize_text_col": true,
 "odd_class": "w3-theme-d2",
 "remove_button_text": "Remove",
 "remove_json_ident": "",
-"remove_link_ident": "no_javascript",
+"remove_link_ident": "9207",
 "show": true,
 "up_json_ident": "",
 "up_link_ident": "9205",
@@ -11876,6 +11876,30 @@
 }
 },
 "pages": {
+"down": {
+"ident": 9206,
+"brief": "Moves chosen item down",
+"RespondPage": {
+"class": "AllowStore",
+"original_args": {
+"allowed_callers": [],
+"alternate_ident": "home",
+"fail_ident": 9204,
+"submit_list": [
+"lists",
+"tablelist",
+"down"
+],
+"submit_option": true,
+"target_ident": 9204,
+"validate_fail_ident": null,
+"validate_option": false
+},
+"original_fields": {
+"tablelist:contents": ""
+}
+}
+},
 "index.html": {
 "ident": 9202,
 "brief": "Sets up title and widget description",
@@ -11892,6 +11916,30 @@
 "target_ident": 9204
 },
 "original_fields": {}
+}
+},
+"remove": {
+"ident": 9207,
+"brief": "Removes chosen row",
+"RespondPage": {
+"class": "AllowStore",
+"original_args": {
+"allowed_callers": [],
+"alternate_ident": "home",
+"fail_ident": 9204,
+"submit_list": [
+"lists",
+"tablelist",
+"remove"
+],
+"submit_option": true,
+"target_ident": 9204,
+"validate_fail_ident": null,
+"validate_option": false
+},
+"original_fields": {
+"tablelist:contents": ""
+}
 }
 },
 "up": {
