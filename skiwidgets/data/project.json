@@ -11834,18 +11834,18 @@
 "fields": {
 "button_class": "w3-button w3-block w3-small w3-theme-dark",
 "contents": [],
-"down_json_ident": "",
-"down_link_ident": "9206",
+"down_json_ident": "9206",
+"down_link_ident": "no_javascript",
 "even_class": "",
 "hide": false,
 "maximize_text_col": true,
 "odd_class": "w3-theme-d2",
 "remove_button_text": "Remove",
-"remove_json_ident": "",
-"remove_link_ident": "9207",
+"remove_json_ident": "9207",
+"remove_link_ident": "no_javascript",
 "show": true,
-"up_json_ident": "",
-"up_link_ident": "9205",
+"up_json_ident": "9205",
+"up_link_ident": "no_javascript",
 "widget_class": "w3-table w3-theme-d1 w3-border w3-bordered",
 "widget_style": "margin-left:auto;width:80%;margin-right:auto;"
 }
@@ -11891,7 +11891,7 @@
 "down"
 ],
 "submit_option": true,
-"target_ident": 9204,
+"target_ident": "general_json",
 "validate_fail_ident": null,
 "validate_option": false
 },
@@ -11933,7 +11933,7 @@
 "remove"
 ],
 "submit_option": true,
-"target_ident": 9204,
+"target_ident": "general_json",
 "validate_fail_ident": null,
 "validate_option": false
 },
@@ -11957,7 +11957,7 @@
 "up"
 ],
 "submit_option": true,
-"target_ident": 9204,
+"target_ident": "general_json",
 "validate_fail_ident": null,
 "validate_option": false
 },

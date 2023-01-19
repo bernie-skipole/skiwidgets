@@ -86,7 +86,6 @@ def up(skicall):
         # no table data has been received
         raise FailPage(message="Invalid submission received")
 
-    index(skicall)
     try:
         # get the row of the table from the button pressed
         row = int(skicall.call_data['tablelist', 'contents'])
@@ -119,7 +118,6 @@ def down(skicall):
         # no table data has been received
         raise FailPage(message="Invalid submission received")
 
-    index(skicall)
     try:
         # get the row of the table from the button pressed
         row = int(skicall.call_data['tablelist', 'contents'])
@@ -153,7 +151,6 @@ def remove(skicall):
         # no table data has been received
         raise FailPage(message="Invalid submission received")
 
-    index(skicall)
     try:
         # get the row of the table from the button pressed
         row = int(skicall.call_data['tablelist', 'contents'])
