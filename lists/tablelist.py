@@ -59,6 +59,7 @@ def _createtablecontents(skicall, indexlist):
        being indexes of the TABLECONTENTS list, and creates the new table
        contents, then updates skicall"""
     if not indexlist:
+        # The table is empty
         pd = PageData()
         pd['tablelist','contents'] = []
         pd['tablelist','hide'] = True
@@ -98,8 +99,7 @@ def up(skicall):
         # the indexes of the TABLECONTENTS list
 
         # move the selected row in the indexlist
-        itemtomove = indexlist[row]
-        indexlist.remove(itemtomove)
+        itemtomove = indexlist.pop(row)
         indexlist.insert(row-1, itemtomove)
     except:
         raise FailPage(message="Invalid submission received")
@@ -131,8 +131,7 @@ def down(skicall):
             return
 
         # move the selected row in the indexlist
-        itemtomove = indexlist[row]
-        indexlist.remove(itemtomove)
+        itemtomove = indexlist.pop(row)
         indexlist.insert(row+1, itemtomove)
     except:
         raise FailPage(message="Invalid submission received")
@@ -160,8 +159,7 @@ def remove(skicall):
         # the indexes of the TABLECONTENTS list
 
         # remove the selected row in the indexlist
-        itemtoremove = indexlist[row]
-        indexlist.remove(itemtoremove)
+        itemtoremove = indexlist.pop(row)
     except:
         raise FailPage(message="Invalid submission received")
 
