@@ -9,37 +9,37 @@
 "favicon": 3002,
 "general_json": 2070,
 "home": 1,
-"jquery_core": "skis,jquery_core",
+"jquery_core": "https://cdn.jsdelivr.net/gh/jquery/jquery@3/dist/jquery.min.js",
 "json_failed": 3,
 "modulewidgets": 4003,
 "no_javascript": 2,
 "redirector": 2030,
 "server_error": 2020,
-"ski_basic": "skis,ski_basic",
-"ski_checkbox": "skis,ski_checkbox",
-"ski_confirm": "skis,ski_confirm",
-"ski_debug_tools": "skis,ski_debug_tools",
-"ski_dropdown": "skis,ski_dropdown",
-"ski_error_messages": "skis,ski_error_messages",
-"ski_footers": "skis,ski_footers",
-"ski_headers": "skis,ski_headers",
-"ski_info": "skis,ski_info",
-"ski_inputforms": "skis,ski_inputforms",
-"ski_inputtables": "skis,ski_inputtables",
-"ski_inputtext": "skis,ski_inputtext",
-"ski_links": "skis,ski_links",
-"ski_lists": "skis,ski_lists",
-"ski_logins": "skis,ski_logins",
-"ski_paras": "skis,ski_paras",
-"ski_paths": "skis,ski_paths",
-"ski_radio": "skis,ski_radio",
-"ski_svgbasics": "skis,ski_svgbasics",
-"ski_svggraphs": "skis,ski_svggraphs",
-"ski_svgmeters": "skis,ski_svgmeters",
-"ski_tables": "skis,ski_tables",
-"ski_textarea": "skis,ski_textarea",
-"ski_upload": "skis,ski_upload",
-"skipole_js": "skis,skipole_js",
+"ski_basic": "https://cdn.jsdelivr.net/gh/bernie-skipole/skipole@5/skipole/skis/static/js/basic.min.js",
+"ski_checkbox": "https://cdn.jsdelivr.net/gh/bernie-skipole/skipole@5/skipole/skis/static/js/checkbox.min.js",
+"ski_confirm": "https://cdn.jsdelivr.net/gh/bernie-skipole/skipole@5/skipole/skis/static/js/confirm.min.js",
+"ski_debug_tools": "https://cdn.jsdelivr.net/gh/bernie-skipole/skipole@5/skipole/skis/static/js/debug_tools.min.js",
+"ski_dropdown": "https://cdn.jsdelivr.net/gh/bernie-skipole/skipole@5/skipole/skis/static/js/dropdown.min.js",
+"ski_error_messages": "https://cdn.jsdelivr.net/gh/bernie-skipole/skipole@5/skipole/skis/static/js/error_messages.min.js",
+"ski_footers": "https://cdn.jsdelivr.net/gh/bernie-skipole/skipole@5/skipole/skis/static/js/footers.min.js",
+"ski_headers": "https://cdn.jsdelivr.net/gh/bernie-skipole/skipole@5/skipole/skis/static/js/headers.min.js",
+"ski_info": "https://cdn.jsdelivr.net/gh/bernie-skipole/skipole@5/skipole/skis/static/js/info.min.js",
+"ski_inputforms": "https://cdn.jsdelivr.net/gh/bernie-skipole/skipole@5/skipole/skis/static/js/inputforms.min.js",
+"ski_inputtables": "https://cdn.jsdelivr.net/gh/bernie-skipole/skipole@5/skipole/skis/static/js/inputtables.min.js",
+"ski_inputtext": "https://cdn.jsdelivr.net/gh/bernie-skipole/skipole@5/skipole/skis/static/js/inputtext.min.js",
+"ski_links": "https://cdn.jsdelivr.net/gh/bernie-skipole/skipole@5/skipole/skis/static/js/links.min.js",
+"ski_lists": "https://cdn.jsdelivr.net/gh/bernie-skipole/skipole@5/skipole/skis/static/js/lists.min.js",
+"ski_logins": "https://cdn.jsdelivr.net/gh/bernie-skipole/skipole@5/skipole/skis/static/js/logins.min.js",
+"ski_paras": "https://cdn.jsdelivr.net/gh/bernie-skipole/skipole@5/skipole/skis/static/js/paras.min.js",
+"ski_paths": "https://cdn.jsdelivr.net/gh/bernie-skipole/skipole@5/skipole/skis/static/js/paths.min.js",
+"ski_radio": "https://cdn.jsdelivr.net/gh/bernie-skipole/skipole@5/skipole/skis/static/js/radio.min.js",
+"ski_svgbasics": "https://cdn.jsdelivr.net/gh/bernie-skipole/skipole@5/skipole/skis/static/js/svgbasics.min.js",
+"ski_svggraphs": "https://cdn.jsdelivr.net/gh/bernie-skipole/skipole@5/skipole/skis/static/js/svggraphs.min.js",
+"ski_svgmeters": "https://cdn.jsdelivr.net/gh/bernie-skipole/skipole@5/skipole/skis/static/js/svgmeters.min.js",
+"ski_tables": "https://cdn.jsdelivr.net/gh/bernie-skipole/skipole@5/skipole/skis/static/js/tables.min.js",
+"ski_textarea": "https://cdn.jsdelivr.net/gh/bernie-skipole/skipole@5/skipole/skis/static/js/textarea.min.js",
+"ski_upload": "https://cdn.jsdelivr.net/gh/bernie-skipole/skipole@5/skipole/skis/static/js/upload.min.js",
+"skipole_js": "https://cdn.jsdelivr.net/gh/bernie-skipole/skipole@5/skipole/skis/static/js/skipole.min.js",
 "url_not_found": 2080,
 "validate_error": 2010,
 "w3_css": "skis,w3_css",
@@ -2990,7 +2990,7 @@
 "parts": [
 [
 "Text",
-"All these test pages have a ShowCallData widget set in a section, which can be seen below."
+"All these test pages have a ShowCallData widget set in a section, which can be seen below. Submitting text with the form above illustrates the input field appearing in the skicall.call_data dictionary, and hence is available to your Python functions."
 ]
 ]
 }
@@ -3262,88 +3262,9 @@
 "parts": [
 [
 "Text",
-"Below is a SubmitTextInput4 widget, which sends text data which can be seen as the environ variable 'QUERY_STRING'."
+"Below is a ShowEnviron widget, which displays the contents of the wsgi environ dictionary. It is also available to your Python functions as attribute skicall.environ."
 ]
 ]
-}
-],
-[
-"Part",
-{
-"tag_name": "p",
-"brief": "Further paragraph describing page contents",
-"show": true,
-"hide_if_empty": false,
-"parts": [
-[
-"Text",
-"The SubmitTextInput4 widget has been given the name 'setenviron', and the field containing the sent data has name 'input_text'. Press Submit to send the text."
-]
-]
-}
-],
-[
-"Widget",
-{
-"class": "inputtext.SubmitTextInput4",
-"name": "setenviron",
-"brief": "A form to send text data",
-"fields": {
-"action": "no_javascript",
-"action_json": "7605",
-"button_class": "w3-button w3-theme-d4",
-"button_text": "Submit",
-"buttondiv_class": "w3-container w3-cell",
-"buttondiv_style": "",
-"clear_error": false,
-"error_class": "w3-panel w3-red",
-"formdiv_class": "w3-cell-row",
-"formdiv_style": "",
-"hidden_field1": "",
-"hidden_field2": "",
-"hidden_field3": "",
-"hidden_field4": "",
-"hide": false,
-"input_accepted_class": "w3-pale-green",
-"input_class": "",
-"input_errored_class": "w3-pale-red",
-"input_style": "padding:8px;border:2px solid #ccc;width:100%",
-"input_text": "Set any text here",
-"inputdiv_class": "w3-container w3-cell",
-"inputdiv_style": "width : 32%;",
-"left_class": "w3-right-align",
-"left_style": "font-weight : bold;",
-"left_text": "Your input:",
-"leftdiv_class": "w3-container w3-cell",
-"leftdiv_style": "width : 32%;",
-"maxlength": "",
-"pattern": "",
-"required": false,
-"set_input_accepted": false,
-"set_input_errored": false,
-"show": true,
-"show_error": "",
-"size": "",
-"target": "",
-"title": "",
-"type": "text",
-"widget_class": "w3-section",
-"widget_style": ""
-}
-}
-],
-[
-"Widget",
-{
-"class": "paras.ParaText",
-"name": "result",
-"brief": "Paragraph showing a result message",
-"fields": {
-"para_text": "",
-"show": true,
-"widget_class": "",
-"widget_style": ""
-}
 }
 ],
 [
@@ -3358,7 +3279,7 @@
 "para_class": "",
 "show": true,
 "show_error": "",
-"toptext": "Below is the ShowEnviron widget:",
+"toptext": "",
 "widget_class": "",
 "widget_style": ""
 }
@@ -3405,30 +3326,6 @@
 "target_ident": 7604
 },
 "original_fields": {}
-}
-},
-"responce": {
-"ident": 7605,
-"brief": "Called to set contents into skicall.call_data",
-"RespondPage": {
-"class": "AllowStore",
-"original_args": {
-"allowed_callers": [],
-"alternate_ident": "home",
-"fail_ident": 7602,
-"submit_list": [
-"debug_tools",
-"showenviron",
-"respond"
-],
-"submit_option": true,
-"target_ident": "general_json",
-"validate_fail_ident": null,
-"validate_option": false
-},
-"original_fields": {
-"setenviron:input_text": ""
-}
 }
 }
 }
@@ -3711,7 +3608,7 @@
 "parts": [
 [
 "Text",
-"The table below listing Responders is a ShowResponders widgit."
+"The table below listing Responders is a ShowResponders widgit. On submitting text using the form above you should be able to see which Responder was called. The AllowStore responder calls the Python function that deals with the submitted data."
 ]
 ]
 }

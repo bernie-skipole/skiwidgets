@@ -29,17 +29,3 @@ def index(skicall):
     skicall.update(codesection)
 
 
-def respond(skicall):
-    """Responds to submission from the SubmitTextInput4 widget form.
-       Called by an AllowStore responder with general_json page as its
-       target so the result widget is updated via a JSON responce,
-       and dynamically updates the page."""
-
-    if ('setenviron', 'input_text') not in skicall.call_data:
-        raise FailPage(message="No submission received")
-
-    value = skicall.call_data['setenviron', 'input_text']
-    pd = PageData()
-    pd['result','para_text'] = f"Received: {value}"
-    skicall.update(pd)
-
