@@ -3,7 +3,7 @@
 "default_language": "en",
 "brief": "Site illustrating skipole widgets",
 "version": "0.0.1",
-"skipole": "5.5.4",
+"skipole": "5.5.5",
 "specialpages": {
 "audiofile": 6,
 "favicon": 3002,
@@ -11735,11 +11735,13 @@
 "down_link_ident": "no_javascript",
 "even_class": "",
 "hide": false,
+"highlight_class": "",
 "maximize_text_col": true,
 "odd_class": "w3-theme-d2",
 "remove_button_text": "Remove",
 "remove_json_ident": "9207",
 "remove_link_ident": "no_javascript",
+"set_highlight": false,
 "show": true,
 "up_json_ident": "9205",
 "up_link_ident": "no_javascript",
@@ -12143,7 +12145,9 @@
 "fields": {
 "contents": [],
 "even_class": "",
+"highlight_class": "",
 "odd_class": "",
+"set_highlight": false,
 "show": true,
 "widget_class": "",
 "widget_style": ""
@@ -12404,6 +12408,9 @@
 [
 "Text",
 "The button below toggles the list content, and also the widget highlight class."
+]
+]
+}
 ],
 [
 "Widget",
@@ -12430,9 +12437,6 @@
 "widget_class": "w3-container",
 "widget_style": ""
 }
-}
-]
-]
 }
 ],
 [
