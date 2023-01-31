@@ -10102,7 +10102,51 @@
 "name": "pagedescription",
 "brief": "A PageDescription widget",
 "fields": {
-"page_ident": null,
+"page_ident": "",
+"show": true,
+"span_text": "",
+"widget_class": "",
+"widget_style": ""
+}
+}
+]
+]
+}
+],
+[
+"Part",
+{
+"tag_name": "p",
+"brief": "Paragraph describing the page contents",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"And here's another PageDescription widget for the page pointed to by label \"w3_css\":"
+]
+]
+}
+],
+[
+"Part",
+{
+"tag_name": "p",
+"brief": "Paragraph to hold the page description",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-yellow"
+},
+"parts": [
+[
+"Widget",
+{
+"class": "info.PageDescription",
+"name": "pagedescription2",
+"brief": "A PageDescription widget",
+"fields": {
+"page_ident": "w3_css",
 "show": true,
 "span_text": "",
 "widget_class": "",
@@ -10365,7 +10409,51 @@
 "name": "pageident",
 "brief": "Illustrates the PageIdent widget",
 "fields": {
-"page_ident": null,
+"page_label": "",
+"show": true,
+"span_text": "",
+"widget_class": "",
+"widget_style": ""
+}
+}
+]
+]
+}
+],
+[
+"Part",
+{
+"tag_name": "p",
+"brief": "Paragraph describing the page contents",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"And here's another PageIdent widget for the page pointed to by label \"w3_css\":"
+]
+]
+}
+],
+[
+"Part",
+{
+"tag_name": "p",
+"brief": "Paragraph to hold the page description",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-yellow"
+},
+"parts": [
+[
+"Widget",
+{
+"class": "info.PageIdent",
+"name": "pageident2",
+"brief": "Illustrates the PageIdent widget",
+"fields": {
+"page_label": "w3_css",
 "show": true,
 "span_text": "",
 "widget_class": "",
@@ -10628,7 +10716,51 @@
 "name": "pagename",
 "brief": "Illustrates the PageName widget",
 "fields": {
-"page_ident": null,
+"page_ident": "",
+"show": true,
+"span_text": "",
+"widget_class": "",
+"widget_style": ""
+}
+}
+]
+]
+}
+],
+[
+"Part",
+{
+"tag_name": "p",
+"brief": "Paragraph describing the page contents",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"And here's another PageName widget for the page pointed to by label \"w3_css\":"
+]
+]
+}
+],
+[
+"Part",
+{
+"tag_name": "p",
+"brief": "Paragraph to hold the page description",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-yellow"
+},
+"parts": [
+[
+"Widget",
+{
+"class": "info.PageName",
+"name": "pagename2",
+"brief": "Illustrates the PageName widget",
+"fields": {
+"page_ident": "w3_css",
 "show": true,
 "span_text": "",
 "widget_class": "",

@@ -2,6 +2,16 @@
 
 import os
 
+
+####### Using local development versions #########
+import sys
+
+sys.path.insert(0, "/home/bernard/git/skipole")
+sys.path.insert(0, "/home/bernard/git/skilift")
+###################################################
+
+
+
 from skipole import WSGIApplication, FailPage, GoTo, ValidateError, ServerError, ServeFile, use_submit_list, skis, PageData, SectionData, set_debug, widget_modules
 
 import modulelist
