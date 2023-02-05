@@ -42,7 +42,7 @@
   "widgets.headers.TabButtons1": "A div, containing tab buttons which can hide/display portions of the page.",
   "widgets.headers.module": "Widgets to be typically used in a page header section.",
   "widgets.info.PageDescription": "A widget displaying a span with the brief description of the page with the given ident. If no page ident is given, shows the brief of the current page.",
-  "widgets.info.PageIdent": "A span displaying the ident of the page containing the widget. The ident can be overwriiten if the field page_ident is given a value. ",
+  "widgets.info.PageIdent": "A span displaying the ident of the page containing the widget. If the field page_label is given a value, the ident this label points to will be shown instead.",
   "widgets.info.PageName": "A widget containing the name of the given page ident which is set within the text. If no page ident is given, shows name of the current page.",
   "widgets.info.ProgressBar1": "A div, containing label and progress tag elements.",
   "widgets.info.ProjectName": "A span showing the name of the project the page is in.",
