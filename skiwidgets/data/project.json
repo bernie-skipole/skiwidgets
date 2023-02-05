@@ -10815,6 +10815,791 @@
 }
 }
 }
+},
+"ServerTimeStamp": {
+"ident": 9601,
+"brief": "Folder containing the ServerTimeStamp widget",
+"default_page_name": "index.html",
+"restricted": false,
+"folders": {
+"restricted": {
+"ident": 9603,
+"brief": "Contains templates",
+"default_page_name": "index",
+"restricted": true,
+"folders": {},
+"pages": {
+"index": {
+"ident": 9604,
+"brief": "This page is a template for the info.ServerTimeStamp widget",
+"TemplatePage": {
+"show_backcol": false,
+"last_scroll": true,
+"interval": 0,
+"interval_target": null,
+"catch_to_html": null,
+"lang": "en",
+"backcol": "#ffffff",
+"default_error_widget": [
+"header",
+"top_error"
+]
+},
+"head": [
+"Part",
+{
+"tag_name": "head",
+"brief": "The head section of the page",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"ClosedPart",
+{
+"tag_name": "meta",
+"brief": "The charset meta declaration",
+"show": true,
+"attribs": {
+"charset": "utf-8"
+}
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "meta",
+"brief": "The viewport meta declaration",
+"show": true,
+"attribs": {
+"content": "width=device-width, initial-scale=1",
+"name": "viewport"
+}
+}
+],
+[
+"Part",
+{
+"tag_name": "title",
+"brief": "The page title element",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"ServerTimeStamp"
+]
+]
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "link",
+"brief": "css link to w3_css",
+"show": true,
+"attribs": {
+"href": "{w3_css}",
+"rel": "stylesheet",
+"type": "text/css"
+}
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "link",
+"brief": "css link to w3_theme_ski_css",
+"show": true,
+"attribs": {
+"href": "{w3_theme_ski_css}",
+"rel": "stylesheet",
+"type": "text/css"
+}
+}
+],
+[
+"Part",
+{
+"tag_name": "script",
+"brief": "script link to jquery_core",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"src": "{jquery_core}"
+},
+"parts": []
+}
+],
+[
+"Part",
+{
+"tag_name": "script",
+"brief": "script link to skipole_js",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"src": "{skipole_js}"
+},
+"parts": []
+}
+]
+]
+}
+],
+"body": [
+"Part",
+{
+"tag_name": "body",
+"brief": "The body section of the page",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-theme"
+},
+"parts": [
+[
+"Part",
+{
+"tag_name": "div",
+"brief": "containing div",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-container"
+},
+"parts": [
+[
+"SectionPlaceHolder",
+{
+"brief": "title, description and top_error",
+"section_name": "header",
+"placename": "header",
+"multiplier": 0,
+"mtag": "div",
+"show": true
+}
+],
+[
+"Part",
+{
+"tag_name": "div",
+"brief": "div holding form widget",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-container"
+},
+"parts": [
+[
+"Part",
+{
+"tag_name": "p",
+"brief": "Paragraph describing the page contents",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"Here is the text produced by the ServerTimeStamp widget showing UTC time:"
+]
+]
+}
+],
+[
+"Part",
+{
+"tag_name": "p",
+"brief": "Paragraph to hold the widget",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-yellow"
+},
+"parts": [
+[
+"Widget",
+{
+"class": "info.ServerTimeStamp",
+"name": "servertimestamp",
+"brief": "Illustrates the ServerTimeStamp widget",
+"fields": {
+"show": true,
+"timestamp": "",
+"utc": true,
+"widget_class": "",
+"widget_style": ""
+}
+}
+]
+]
+}
+],
+[
+"SectionPlaceHolder",
+{
+"brief": "Section which shows the code",
+"section_name": "codefile",
+"placename": "codefile",
+"multiplier": 0,
+"mtag": "div",
+"show": true
+}
+]
+]
+}
+]
+]
+}
+]
+]
+}
+]
+}
+}
+}
+},
+"pages": {
+"index.html": {
+"ident": 9602,
+"brief": "Sets up title and widget description",
+"RespondPage": {
+"class": "SubmitData",
+"original_args": {
+"allowed_callers": [],
+"fail_ident": "home",
+"submit_list": [
+"info",
+"servertimestamp",
+"index"
+],
+"target_ident": 9604
+},
+"original_fields": {}
+}
+}
+}
+},
+"SkipoleVersion": {
+"ident": 9701,
+"brief": "Folder containing the SkipoleVersion widget",
+"default_page_name": "index.html",
+"restricted": false,
+"folders": {
+"restricted": {
+"ident": 9703,
+"brief": "Contains templates",
+"default_page_name": "index",
+"restricted": true,
+"folders": {},
+"pages": {
+"index": {
+"ident": 9704,
+"brief": "This page is a template for the info.SkipoleVersion widget",
+"TemplatePage": {
+"show_backcol": false,
+"last_scroll": true,
+"interval": 0,
+"interval_target": null,
+"catch_to_html": null,
+"lang": "en",
+"backcol": "#ffffff",
+"default_error_widget": [
+"header",
+"top_error"
+]
+},
+"head": [
+"Part",
+{
+"tag_name": "head",
+"brief": "The head section of the page",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"ClosedPart",
+{
+"tag_name": "meta",
+"brief": "The charset meta declaration",
+"show": true,
+"attribs": {
+"charset": "utf-8"
+}
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "meta",
+"brief": "The viewport meta declaration",
+"show": true,
+"attribs": {
+"content": "width=device-width, initial-scale=1",
+"name": "viewport"
+}
+}
+],
+[
+"Part",
+{
+"tag_name": "title",
+"brief": "The page title element",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"SkipoleVersion"
+]
+]
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "link",
+"brief": "css link to w3_css",
+"show": true,
+"attribs": {
+"href": "{w3_css}",
+"rel": "stylesheet",
+"type": "text/css"
+}
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "link",
+"brief": "css link to w3_theme_ski_css",
+"show": true,
+"attribs": {
+"href": "{w3_theme_ski_css}",
+"rel": "stylesheet",
+"type": "text/css"
+}
+}
+],
+[
+"Part",
+{
+"tag_name": "script",
+"brief": "script link to jquery_core",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"src": "{jquery_core}"
+},
+"parts": []
+}
+],
+[
+"Part",
+{
+"tag_name": "script",
+"brief": "script link to skipole_js",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"src": "{skipole_js}"
+},
+"parts": []
+}
+]
+]
+}
+],
+"body": [
+"Part",
+{
+"tag_name": "body",
+"brief": "The body section of the page",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-theme"
+},
+"parts": [
+[
+"Part",
+{
+"tag_name": "div",
+"brief": "containing div",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-container"
+},
+"parts": [
+[
+"SectionPlaceHolder",
+{
+"brief": "title, description and top_error",
+"section_name": "header",
+"placename": "header",
+"multiplier": 0,
+"mtag": "div",
+"show": true
+}
+],
+[
+"Part",
+{
+"tag_name": "div",
+"brief": "div holding form widget",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-container"
+},
+"parts": [
+[
+"Part",
+{
+"tag_name": "p",
+"brief": "Paragraph describing the page contents",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"Here is the text produced by the SkipoleVersion widget:"
+]
+]
+}
+],
+[
+"Part",
+{
+"tag_name": "p",
+"brief": "Paragraph to hold the page description",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-yellow"
+},
+"parts": [
+[
+"Widget",
+{
+"class": "info.SkipoleVersion",
+"name": "skipoleversion",
+"brief": "Illustrates the SkipoleVersion widget",
+"fields": {
+"show": true,
+"widget_class": "",
+"widget_style": ""
+}
+}
+]
+]
+}
+],
+[
+"SectionPlaceHolder",
+{
+"brief": "Section which shows the code",
+"section_name": "codefile",
+"placename": "codefile",
+"multiplier": 0,
+"mtag": "div",
+"show": true
+}
+]
+]
+}
+]
+]
+}
+]
+]
+}
+]
+}
+}
+}
+},
+"pages": {
+"index.html": {
+"ident": 9702,
+"brief": "Sets up title and widget description",
+"RespondPage": {
+"class": "SubmitData",
+"original_args": {
+"allowed_callers": [],
+"fail_ident": "home",
+"submit_list": [
+"info",
+"skipoleversion",
+"index"
+],
+"target_ident": 9704
+},
+"original_fields": {}
+}
+}
+}
+},
+"Version": {
+"ident": 9801,
+"brief": "Folder containing the Version widget",
+"default_page_name": "index.html",
+"restricted": false,
+"folders": {
+"restricted": {
+"ident": 9803,
+"brief": "Contains templates",
+"default_page_name": "index",
+"restricted": true,
+"folders": {},
+"pages": {
+"index": {
+"ident": 9804,
+"brief": "This page is a template for the info.Version widget",
+"TemplatePage": {
+"show_backcol": false,
+"last_scroll": true,
+"interval": 0,
+"interval_target": null,
+"catch_to_html": null,
+"lang": "en",
+"backcol": "#ffffff",
+"default_error_widget": [
+"header",
+"top_error"
+]
+},
+"head": [
+"Part",
+{
+"tag_name": "head",
+"brief": "The head section of the page",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"ClosedPart",
+{
+"tag_name": "meta",
+"brief": "The charset meta declaration",
+"show": true,
+"attribs": {
+"charset": "utf-8"
+}
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "meta",
+"brief": "The viewport meta declaration",
+"show": true,
+"attribs": {
+"content": "width=device-width, initial-scale=1",
+"name": "viewport"
+}
+}
+],
+[
+"Part",
+{
+"tag_name": "title",
+"brief": "The page title element",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"Version"
+]
+]
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "link",
+"brief": "css link to w3_css",
+"show": true,
+"attribs": {
+"href": "{w3_css}",
+"rel": "stylesheet",
+"type": "text/css"
+}
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "link",
+"brief": "css link to w3_theme_ski_css",
+"show": true,
+"attribs": {
+"href": "{w3_theme_ski_css}",
+"rel": "stylesheet",
+"type": "text/css"
+}
+}
+],
+[
+"Part",
+{
+"tag_name": "script",
+"brief": "script link to jquery_core",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"src": "{jquery_core}"
+},
+"parts": []
+}
+],
+[
+"Part",
+{
+"tag_name": "script",
+"brief": "script link to skipole_js",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"src": "{skipole_js}"
+},
+"parts": []
+}
+]
+]
+}
+],
+"body": [
+"Part",
+{
+"tag_name": "body",
+"brief": "The body section of the page",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-theme"
+},
+"parts": [
+[
+"Part",
+{
+"tag_name": "div",
+"brief": "containing div",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-container"
+},
+"parts": [
+[
+"SectionPlaceHolder",
+{
+"brief": "title, description and top_error",
+"section_name": "header",
+"placename": "header",
+"multiplier": 0,
+"mtag": "div",
+"show": true
+}
+],
+[
+"Part",
+{
+"tag_name": "div",
+"brief": "div holding form widget",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-container"
+},
+"parts": [
+[
+"Part",
+{
+"tag_name": "p",
+"brief": "Paragraph describing the page contents",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"Here is the text produced by the Version widget:"
+]
+]
+}
+],
+[
+"Part",
+{
+"tag_name": "p",
+"brief": "Paragraph to hold the widget",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-yellow"
+},
+"parts": [
+[
+"Widget",
+{
+"class": "info.Version",
+"name": "version",
+"brief": "Illustrates the Version widget",
+"fields": {
+"show": true,
+"widget_class": "",
+"widget_style": ""
+}
+}
+]
+]
+}
+],
+[
+"SectionPlaceHolder",
+{
+"brief": "Section which shows the code",
+"section_name": "codefile",
+"placename": "codefile",
+"multiplier": 0,
+"mtag": "div",
+"show": true
+}
+]
+]
+}
+]
+]
+}
+]
+]
+}
+]
+}
+}
+}
+},
+"pages": {
+"index.html": {
+"ident": 9802,
+"brief": "Sets up title and widget description",
+"RespondPage": {
+"class": "SubmitData",
+"original_args": {
+"allowed_callers": [],
+"fail_ident": "home",
+"submit_list": [
+"info",
+"version",
+"index"
+],
+"target_ident": 9804
+},
+"original_fields": {}
+}
+}
+}
 }
 },
 "pages": {}
