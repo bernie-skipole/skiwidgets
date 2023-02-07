@@ -10,9 +10,9 @@ def index(skicall):
     # HeadText widget with name 'title' and a TextBlockPara widget with name 'widgetdesc'
     # It also has a ButtonLink2 widget with name 'tomodule'
     headersection = SectionData('header')
-    headersection['title', 'large_text'] = 'ProgressBar1'
+    headersection['title', 'large_text'] = 'ProgressBar2'
     # A textblock contains the widget description
-    ref = "widgets.info.ProgressBar1"
+    ref = "widgets.info.ProgressBar2"
     headersection['widgetdesc','textblock_ref'] = ref
     headersection['widgetdesc','text_refnotfound'] = f'Textblock reference {ref} not found'
     # link to this widgets module page
@@ -41,30 +41,25 @@ def refreshbar(skicall):
         barzero = float(skicall.ident_data)
     except:
         # invalid value in ident_data, so start bar from zero
-        pd["progressbar1", "value"] = 0
-        pd["progressbar1", "text"] = "0%"
+        pd["progressbar2", "value"] = 0
         pd.ident_data = str(time.time())
         skicall.update(pd)
         return
     timenow = time.time()
     if timenow < barzero:
         # something wrong, server time change? so start again
-        pd["progressbar1", "value"] = 0
-        pd["progressbar1", "text"] = "0%"
+        pd["progressbar2", "value"] = 0
         pd.ident_data = str(time.time())
         skicall.update(pd)
         return
     if timenow >= barzero+30:
         # bar is complete
-        pd["progressbar1", "value"] = 100
-        pd["progressbar1", "text"] = "100%"
+        pd["progressbar2", "value"] = 100
         pd.interval = 0
         skicall.update(pd)
         return
     # so timenow is between barzero and barzero + 30
-    value = (100 * (timenow - barzero))//30
-    pd["progressbar1", "value"] = value
-    pd["progressbar1", "text"] = f"{value}%"
+    pd["progressbar2", "value"] = (100 * (timenow - barzero))//30
     skicall.update(pd)
 
  
