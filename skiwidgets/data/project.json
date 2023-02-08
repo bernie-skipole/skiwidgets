@@ -11295,17 +11295,6 @@
 }
 ],
 [
-"Part",
-{
-"tag_name": "p",
-"brief": "Paragraph to hold the widget",
-"show": true,
-"hide_if_empty": false,
-"attribs": {
-"class": "w3-yellow"
-},
-"parts": [
-[
 "Widget",
 {
 "class": "info.ProgressBar2",
@@ -11316,11 +11305,8 @@
 "show": true,
 "value": "0",
 "widget_class": "w3-light-grey w3-round",
-"widget_style": ""
+"widget_style": "margin-left:auto;width:60%;margin-right:auto;"
 }
-}
-]
-]
 }
 ],
 [

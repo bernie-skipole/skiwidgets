@@ -45,6 +45,7 @@
   "widgets.info.PageIdent": "A span displaying the ident of the page containing the widget. If the field page_label is given a value, the ident this label points to will be shown instead.",
   "widgets.info.PageName": "A widget containing the name of the given page ident which is set within the text. If no page ident is given, shows name of the current page.",
   "widgets.info.ProgressBar1": "A div, containing label and progress tag elements.",
+  "widgets.info.ProgressBar2": "A progress bar formed from Divs, not using the progress tag.",
   "widgets.info.ProjectName": "A span showing the name of the project the page is in.",
   "widgets.info.Redirector": "A widget containing javascript which redirects the page to the given url.\r\nOnce the page is loaded, the redirection occurs, so normally this is the only widget on the page.\r\nA TextBlock is displayed with the link to the url if the client has javascript disabled.",
   "widgets.info.ServerTimeStamp": "A span containing the server date and time.",
