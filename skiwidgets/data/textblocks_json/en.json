@@ -47,7 +47,7 @@
   "widgets.info.ProgressBar1": "A div, containing label and progress tag elements.",
   "widgets.info.ProgressBar2": "A progress bar formed from Divs, not using the progress tag.",
   "widgets.info.ProjectName": "A span showing the project ident (usually the project name unless set otherwise).",
-  "widgets.info.Redirector": "A widget containing javascript which redirects the page to the given url.\r\nOnce the page is loaded, the redirection occurs, so normally this is the only widget on the page.\r\nA TextBlock is displayed with the link to the url if the client has javascript disabled.",
+  "widgets.info.Redirector": "A widget which redirects the page to the given URL (or label resolving to a URL).\r\nOnce the page is loaded, the redirection occurs, so normally this is the only widget on the page.\r\nA TextBlock is displayed with the link to the URL if the client has javascript disabled.\r\nIf this widget is used as the target widget to display an error, the error message should be a URL, so the widget will cause a redirection on the error being raised.",
   "widgets.info.ServerTimeStamp": "A span containing the server date and time.",
   "widgets.info.SkipoleVersion": "A span showing the version of the skipole framework.",
   "widgets.info.Version": "A span showing the project version of the page it is in.",

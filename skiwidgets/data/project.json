@@ -11819,7 +11819,7 @@
 "parts": [
 [
 "Text",
-"This page contains a Redirector widget - however if it was working, then you would not see the page, hence it is purposely shown here with an invalid external address."
+"This page contains a Redirector widget - however if it was working, then you would not see the page, hence it is purposely shown here with an invalid URL."
 ]
 ]
 }
@@ -11854,7 +11854,7 @@
 "parts": [
 [
 "Text",
-"You can submit a URL to an external site here, which will be inserted into the redirector, and the page will be called again - and you should be redirected to the external site."
+"You can submit a URL here, which will be inserted into the Redirector widget, and the page will be called again - and you should be redirected to the given URL."
 ]
 ]
 }

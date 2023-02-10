@@ -36,7 +36,7 @@ def start_call(called_ident, skicall):
 
 @use_submit_list
 def submit_data(skicall):
-    """The use_submit_list decorator redirects calls to othe packages, modules and functions"""
+    """The use_submit_list decorator redirects calls to packages, modules and functions"""
     raise ServerError(message=f"Responder {skicall.ident_list[-1]} does not have a correct submit list set")
 
 def end_call(page_ident, page_type, skicall):
