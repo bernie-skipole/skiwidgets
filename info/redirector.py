@@ -35,6 +35,16 @@ def submit_redirection(skicall):
     if ('submittext', 'input_text') not in skicall.call_data:
         raise FailPage(message="No submission received")
 
+    newurl = skicall.call_data['submittext', 'input_text']
+    # sanitise newurl
+    if not newurl:
+        raise FailPage("URL not accepted")
+    if not newurl.isascii():
+        raise FailPage("URL not accepted: This example only accepts simple URL's")
+    for c in " <>%&+=\"\'?(),{}":
+        if c in newurl:
+            raise FailPage("URL not accepted: This example only accepts simple URL's")
+
     pd = PageData()
-    pd["redirector","url"] = skicall.call_data['submittext', 'input_text']
+    pd["redirector","url"] = newurl
     skicall.update(pd)
