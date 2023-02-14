@@ -10,9 +10,9 @@ def index(skicall):
     # HeadText widget with name 'title' and a TextBlockPara widget with name 'widgetdesc'
     # It also has a ButtonLink2 widget with name 'tomodule'
     headersection = SectionData('header')
-    headersection['title', 'large_text'] = 'HiddenLocalStorage'
+    headersection['title', 'large_text'] = 'HiddenSessionStorage'
     # A textblock contains the widget description
-    ref = "widgets.inputforms.HiddenLocalStorage"
+    ref = "widgets.inputforms.HiddenSessionStorage"
     headersection['widgetdesc','textblock_ref'] = ref
     headersection['widgetdesc','text_refnotfound'] = f'Textblock reference {ref} not found'
     # link to this widgets module page
@@ -28,9 +28,9 @@ def index(skicall):
         codesection['pretext', 'pre_text'] = f.read()
     skicall.update(codesection)
 
-    # Some data is stored in the browser local storage, under key 'localone'
+    # Some data is stored in the browser session storage, under key 'sessionone'
     pd = PageData()
-    pd.localStorage = {'localone':'Stored Local data 1'}
+    pd.sessionStorage = {'sessionone':'Stored Session data 1'}
     skicall.update(pd)
 
  
@@ -45,12 +45,12 @@ def submit_fields(skicall):
     if ('textinput2', 'input_text') not in skicall.call_data:
         raise FailPage(message="No submission received")
 
-    if ('hiddenlocalstorage', 'local_key') not in skicall.call_data:
+    if ('hiddensessionstorage', 'session_key') not in skicall.call_data:
         raise FailPage(message="No submission received")
 
     pd = PageData()
     pd['result','para_text'] = "Text Received : " + skicall.call_data['textinput2', 'input_text']
-    pd['result2','para_text'] = "Hidden Stored Text Received : " + skicall.call_data['hiddenlocalstorage', 'local_key']
+    pd['result2','para_text'] = "Hidden Stored Text Received : " + skicall.call_data['hiddensessionstorage', 'session_key']
     # And fill in the textinput2 field so the last submission remains visible
     if skicall.call_data['textinput2', 'input_text']:
         pd['textinput2', 'input_text'] = skicall.call_data['textinput2', 'input_text']
