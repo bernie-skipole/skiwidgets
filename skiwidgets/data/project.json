@@ -13132,6 +13132,400 @@
 }
 }
 }
+},
+"HiddenField": {
+"ident": 10301,
+"brief": "Folder containing the HiddenField widget",
+"default_page_name": "index.html",
+"restricted": false,
+"folders": {
+"restricted": {
+"ident": 10303,
+"brief": "Contains templates",
+"default_page_name": "index",
+"restricted": true,
+"folders": {},
+"pages": {
+"index": {
+"ident": 10304,
+"brief": "This page is a template for the inputforms.HiddenField widget",
+"TemplatePage": {
+"show_backcol": false,
+"last_scroll": true,
+"interval": 0,
+"interval_target": null,
+"catch_to_html": null,
+"lang": "en",
+"backcol": "#ffffff",
+"default_error_widget": [
+"header",
+"top_error"
+]
+},
+"head": [
+"Part",
+{
+"tag_name": "head",
+"brief": "The head section of the page",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"ClosedPart",
+{
+"tag_name": "meta",
+"brief": "The charset meta declaration",
+"show": true,
+"attribs": {
+"charset": "utf-8"
+}
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "meta",
+"brief": "The viewport meta declaration",
+"show": true,
+"attribs": {
+"content": "width=device-width, initial-scale=1",
+"name": "viewport"
+}
+}
+],
+[
+"Part",
+{
+"tag_name": "title",
+"brief": "The page title element",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"HiddenField"
+]
+]
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "link",
+"brief": "css link to w3_css",
+"show": true,
+"attribs": {
+"href": "{w3_css}",
+"rel": "stylesheet",
+"type": "text/css"
+}
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "link",
+"brief": "css link to w3_theme_ski_css",
+"show": true,
+"attribs": {
+"href": "{w3_theme_ski_css}",
+"rel": "stylesheet",
+"type": "text/css"
+}
+}
+],
+[
+"Part",
+{
+"tag_name": "script",
+"brief": "script link to jquery_core",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"src": "{jquery_core}"
+},
+"parts": []
+}
+],
+[
+"Part",
+{
+"tag_name": "script",
+"brief": "script link to skipole_js",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"src": "{skipole_js}"
+},
+"parts": []
+}
+]
+]
+}
+],
+"body": [
+"Part",
+{
+"tag_name": "body",
+"brief": "The body section of the page",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-theme"
+},
+"parts": [
+[
+"Part",
+{
+"tag_name": "div",
+"brief": "containing div",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-container"
+},
+"parts": [
+[
+"SectionPlaceHolder",
+{
+"brief": "title, description and top_error",
+"section_name": "header",
+"placename": "header",
+"multiplier": 0,
+"mtag": "div",
+"show": true
+}
+],
+[
+"Part",
+{
+"tag_name": "div",
+"brief": "div holding form widget",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-container"
+},
+"parts": [
+[
+"Part",
+{
+"tag_name": "p",
+"brief": "Paragraph describing the page contents",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"Below is a Form1 widget, containing a TextInput2 widget, a HiddenField widget and a SubmitButton2 widget. The HiddenField widget has it 'hidden_field' value set to the string \"abcd\" which will be sent when the form is submitted."
+]
+]
+}
+],
+[
+"Widget",
+{
+"class": "inputforms.Form1",
+"name": "form1",
+"brief": "A Form1 widget",
+"fields": {
+"action": "10305",
+"clear_error": false,
+"container_class": "",
+"enctype": "",
+"error_class": "",
+"hidden_field1": "",
+"hidden_field2": "",
+"hidden_field3": "",
+"hidden_field4": "",
+"show": true,
+"show_error": "",
+"widget_class": "w3-section",
+"widget_style": ""
+},
+"container_0": [
+[
+"Widget",
+{
+"class": "inputtext.TextInput2",
+"name": "textinput2",
+"brief": "A textinput2 field contained in form1",
+"fields": {
+"clear_error": false,
+"disabled": false,
+"error_class": "w3-panel w3-red",
+"input_accepted_class": "w3-pale-green",
+"input_class": "",
+"input_disabled_class": "",
+"input_errored_class": "w3-pale-red",
+"input_text": "",
+"inputdiv_class": "",
+"label": "Your Input:",
+"label_class": "",
+"label_style": "display:inline-block;margin-right:1%;text-align:right;width:30%;",
+"maxlength": "",
+"pattern": "",
+"redstar": false,
+"redstar_class": "w3-margin-left",
+"redstar_style": "color:red",
+"required": false,
+"set_input_accepted": false,
+"set_input_errored": false,
+"show": true,
+"show_error": "",
+"size": "",
+"title": "",
+"type": "text",
+"widget_class": "w3-container",
+"widget_style": ""
+}
+}
+],
+[
+"Part",
+{
+"tag_name": "div",
+"brief": "Create spacing for the button",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-section",
+"style": "margin-left: 30%;"
+},
+"parts": [
+[
+"ClosedWidget",
+{
+"class": "inputforms.SubmitButton2",
+"name": "submitbutton2",
+"brief": "Submit button in form1",
+"fields": {
+"button_text": "Submit",
+"show": true,
+"widget_class": "w3-button w3-theme-d4 w3-margin-left",
+"widget_style": ""
+}
+}
+],
+[
+"ClosedWidget",
+{
+"class": "inputforms.HiddenField",
+"name": "hiddenfield",
+"brief": "Illustrates the HiddenField widget",
+"fields": {
+"hidden_field": "abcd",
+"show": true,
+"widget_class": "",
+"widget_style": ""
+}
+}
+]
+]
+}
+]
+]
+}
+],
+[
+"Widget",
+{
+"class": "paras.ParaText",
+"name": "result",
+"brief": "Paragraph showing text input",
+"fields": {
+"para_text": "",
+"show": true,
+"widget_class": "",
+"widget_style": ""
+}
+}
+],
+[
+"Widget",
+{
+"class": "paras.ParaText",
+"name": "result2",
+"brief": "Paragraph showing hiddden input",
+"fields": {
+"para_text": "",
+"show": true,
+"widget_class": "",
+"widget_style": ""
+}
+}
+],
+[
+"SectionPlaceHolder",
+{
+"brief": "Section which shows the code",
+"section_name": "codefile",
+"placename": "codefile",
+"multiplier": 0,
+"mtag": "div",
+"show": true
+}
+]
+]
+}
+]
+]
+}
+]
+]
+}
+]
+}
+}
+}
+},
+"pages": {
+"index.html": {
+"ident": 10302,
+"brief": "Sets up the hiddenfield page",
+"RespondPage": {
+"class": "SubmitData",
+"original_args": {
+"allowed_callers": [],
+"fail_ident": "home",
+"submit_list": [
+"inputforms",
+"hiddenfield",
+"index"
+],
+"target_ident": 10304
+},
+"original_fields": {}
+}
+},
+"submitfield": {
+"ident": 10305,
+"brief": "submit form with hidden field",
+"RespondPage": {
+"class": "AllowStore",
+"original_args": {
+"allowed_callers": [
+10304
+],
+"alternate_ident": "home",
+"fail_ident": 10302,
+"submit_list": [
+"inputforms",
+"hiddenfield",
+"submit_fields"
+],
+"submit_option": true,
+"target_ident": 10302,
+"validate_fail_ident": null,
+"validate_option": false
+},
+"original_fields": {
+"hiddenfield:hidden_field": "",
+"textinput2:input_text": ""
+}
+}
+}
+}
 }
 },
 "pages": {}
