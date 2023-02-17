@@ -2,16 +2,6 @@
 
 import os
 
-
-####### Using local development versions #########
-import sys
-
-sys.path.insert(0, "/home/bernard/git/skipole")
-sys.path.insert(0, "/home/bernard/git/skilift")
-###################################################
-
-
-
 from skipole import WSGIApplication, FailPage, GoTo, ValidateError, ServerError, ServeFile, use_submit_list, skis, PageData, SectionData, set_debug, widget_modules
 
 import modulelist
@@ -51,14 +41,14 @@ application = WSGIApplication(project=PROJECT,
                               start_call=start_call,
                               submit_data=submit_data,
                               end_call=end_call,
-                              url="/skiwidgets")
+                              url=f"/{PROJECT}")
 
 
 # Add the 'skis' application which serves javascript and css files required by
 # the framework widgets.
 
 skis_application = skis.makeapp()
-application.add_project(skis_application, url='/skiwidgets/lib')
+application.add_project(skis_application, url=f'/{PROJECT}/lib')
 
 # The above shows the main application served at "/skiwidgets" and the skis library
 # project served at "/skiwidgets/lib"
@@ -72,11 +62,11 @@ if __name__ == "__main__":
 
     from skilift import make_skiadmin, development_server
 
-    skiadmin_application = make_skiadmin(editedprojname=PROJECT, examples="http://www.webparametrics.co.uk/skiwidgets/")
-    application.add_project(skiadmin_application, url='/skiwidgets/skiadmin')
+    skiadmin_application = make_skiadmin(editedprojname=PROJECT, examples=f"http://www.webparametrics.co.uk/{PROJECT}/")
+    application.add_project(skiadmin_application, url=f'/{PROJECT}/skiadmin')
 
     # if using the development server from skilift
-    print("Serving %s on port %s. Call http://localhost:%s/skiwidgets/skiadmin to edit." % (PROJECT, port, port))
+    print(f"Serving {PROJECT} on port {port}. Call http://localhost:{port}/{PROJECT}/skiadmin to edit.")
     development_server(host, port, application)
 
 
