@@ -101,6 +101,7 @@
   "widgets.links.Table2_Button": "A table of two text and one button link columns.",
   "widgets.links.Table3_Buttons2": "A table of three text columns and two button link columns.",
   "widgets.links.module": "Links, including links to page idents, and tables of links with get fields and link text.",
+  "widgets.lists.FileList": "A div, containing button links to downloadable files.",
   "widgets.lists.TableList": "A table of one text column, and three further button columns of up and down arrows and a Remove button.",
   "widgets.lists.UList1": "A UL list with JSON settable text content.",
   "widgets.lists.UList2": "A UL list with JSON settable html content.",
