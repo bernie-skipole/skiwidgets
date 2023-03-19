@@ -14930,6 +14930,7 @@
 "col2": [],
 "col2_class": "",
 "col3_class": "",
+"col3_style": "width:1px; white-space: nowrap;",
 "col4_class": "w3-left-align",
 "col4_style": "width:1px; white-space: nowrap;",
 "down_class": "w3-button w3-padding-small w3-small w3-theme-l2 w3-border w3-border-black",
@@ -14956,11 +14957,11 @@
 "up_getfield1": [],
 "up_getfield2": [],
 "up_hide": [],
-"up_json_ident": "",
+"up_json_ident": "10707",
 "up_link_ident": "no_javascript",
 "up_style": "margin-right:2px;",
 "widget_class": "w3-table w3-theme-d1 w3-border w3-bordered",
-"widget_style": ""
+"widget_style": "margin-left:auto;width:60%;margin-right:auto;"
 }
 }
 ],
@@ -14984,8 +14985,8 @@
 "fields": {
 "button_text": "Submit",
 "show": true,
-"widget_class": "w3-button w3-theme-d4 w3-margin-left",
-"widget_style": ""
+"widget_class": "w3-button w3-theme-d4",
+"widget_style": "margin-left:40%;width:8em;margin-right:auto;"
 }
 }
 ]
@@ -15057,6 +15058,31 @@
 "widgfield": "inputtable3:inputdict"
 },
 "original_fields": {}
+}
+},
+"up": {
+"ident": 10707,
+"brief": "Up arrow pressed",
+"RespondPage": {
+"class": "AllowStore",
+"original_args": {
+"allowed_callers": [],
+"alternate_ident": "home",
+"fail_ident": "general_json",
+"submit_list": [
+"inputtables",
+"inputtable3",
+"up"
+],
+"submit_option": true,
+"target_ident": "general_json",
+"validate_fail_ident": null,
+"validate_option": false
+},
+"original_fields": {
+"inputtable3:getfield3": "",
+"inputtable3:up_getfield1": ""
+}
 }
 }
 }

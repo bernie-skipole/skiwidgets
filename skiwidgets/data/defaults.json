@@ -198,6 +198,7 @@
 },
 "InputTable3": {
 "col3_class": "",
+"col3_style": "width:1px; white-space: nowrap;",
 "col4_class": "w3-left-align",
 "col4_style": "width:1px; white-space: nowrap;",
 "down_class": "w3-button w3-padding-small w3-small w3-theme-l2 w3-border w3-border-black",

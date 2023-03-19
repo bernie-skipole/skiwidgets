@@ -33,15 +33,14 @@ def index(skicall):
         codesection['pretext', 'pre_text'] = f.read()
     skicall.update(codesection)
 
-    if 'tabledone' in skicall.call_data:
-        # table is populated, no need to set contents here
-        return
-
     # illustrate the table by filling in initial global values
     pd = PageData()
+    pd['inputtable3','up_getfield1'] = ['aaa', 'bbb', 'ccc', 'ddd']
     pd['inputtable3','col1'] = TABLECOL1
     pd['inputtable3','col2'] = TABLECOL2
-    pd['inputtable3', 'inputdict'] = TABLEINPUT.copy()
+    
+    if 'tabledone' not in skicall.call_data:
+        pd['inputtable3', 'inputdict'] = TABLEINPUT.copy()
 
     skicall.update(pd)
 
@@ -76,5 +75,32 @@ def renew(skicall):
     # now call index(skicall) to fill in the page again, but flag data is present
     skicall.call_data['tabledone'] = True
     index(skicall)
-    
+
+
+def up(skicall):
+    """Up arrow received, increment value"""
+    if ('inputtable3','up_getfield1') not in skicall.call_data:
+        raise FailPage(message="No submission received")
+    if ('inputtable3','getfield3') not in skicall.call_data:
+        raise FailPage(message="No submission received")
+    try:
+        key = skicall.call_data['inputtable3','up_getfield1']
+        value = int(skicall.call_data['inputtable3','getfield3'])
+        if key == 'aaa':
+            value = value+1
+        elif key == 'bbb':
+            value = value+10
+        elif key == 'ccc':
+            value = value+100
+        elif key == 'ddd':
+            value = value+1000
+        else:
+            raise FailPage(message="Invalid submission received")
+        inputdict = TABLEINPUT.copy()
+        inputdict[key] = value       
+        pd = PageData()
+        pd['inputtable3', 'inputdict'] = inputdict
+        skicall.update(pd)
+    except:
+        raise FailPage(message="Invalid submission received")
 
