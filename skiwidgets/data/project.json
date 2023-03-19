@@ -14365,7 +14365,7 @@
 },
 "index": {
 "ident": 5404,
-"brief": "This page is a template for the inputforms.Form1 widget",
+"brief": "This page is a template for the inputtables.InputTable1 widget",
 "TemplatePage": {
 "show_backcol": false,
 "last_scroll": true,
@@ -14675,6 +14675,386 @@
 ],
 "target_ident": 5406,
 "widgfield": "inputtable1:inputdict"
+},
+"original_fields": {}
+}
+}
+}
+},
+"InputTable3": {
+"ident": 10701,
+"brief": "Folder containing the InputTable3 widget",
+"default_page_name": "index.html",
+"restricted": false,
+"folders": {
+"restricted": {
+"ident": 10703,
+"brief": "Contains templates",
+"default_page_name": "index",
+"restricted": true,
+"folders": {},
+"pages": {
+"allowstore": {
+"ident": 10706,
+"brief": "sets data into call_data",
+"RespondPage": {
+"class": "AllowStore",
+"original_args": {
+"allowed_callers": [
+10705
+],
+"alternate_ident": "home",
+"fail_ident": 10702,
+"submit_list": [
+"inputtables",
+"inputtable3",
+"renew"
+],
+"submit_option": true,
+"target_ident": 10704,
+"validate_fail_ident": null,
+"validate_option": false
+},
+"original_fields": {
+"inputtable3:inputdict": ""
+}
+}
+},
+"index": {
+"ident": 10704,
+"brief": "This page is a template for the inputtables.InputTable3 widget",
+"TemplatePage": {
+"show_backcol": false,
+"last_scroll": true,
+"interval": 0,
+"interval_target": null,
+"catch_to_html": null,
+"lang": "en",
+"backcol": "#ffffff",
+"default_error_widget": [
+"header",
+"top_error"
+]
+},
+"head": [
+"Part",
+{
+"tag_name": "head",
+"brief": "The head section of the page",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"ClosedPart",
+{
+"tag_name": "meta",
+"brief": "The charset meta declaration",
+"show": true,
+"attribs": {
+"charset": "utf-8"
+}
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "meta",
+"brief": "The viewport meta declaration",
+"show": true,
+"attribs": {
+"content": "width=device-width, initial-scale=1",
+"name": "viewport"
+}
+}
+],
+[
+"Part",
+{
+"tag_name": "title",
+"brief": "The page title element",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"InputTable3"
+]
+]
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "link",
+"brief": "css link to w3_css",
+"show": true,
+"attribs": {
+"href": "{w3_css}",
+"rel": "stylesheet",
+"type": "text/css"
+}
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "link",
+"brief": "css link to w3_theme_ski_css",
+"show": true,
+"attribs": {
+"href": "{w3_theme_ski_css}",
+"rel": "stylesheet",
+"type": "text/css"
+}
+}
+],
+[
+"Part",
+{
+"tag_name": "script",
+"brief": "script link to jquery_core",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"src": "{jquery_core}"
+},
+"parts": []
+}
+],
+[
+"Part",
+{
+"tag_name": "script",
+"brief": "script link to skipole_js",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"src": "{skipole_js}"
+},
+"parts": []
+}
+]
+]
+}
+],
+"body": [
+"Part",
+{
+"tag_name": "body",
+"brief": "The body section of the page",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-theme"
+},
+"parts": [
+[
+"Part",
+{
+"tag_name": "div",
+"brief": "containing div",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-container"
+},
+"parts": [
+[
+"SectionPlaceHolder",
+{
+"brief": "title, description and top_error",
+"section_name": "header",
+"placename": "header",
+"multiplier": 0,
+"mtag": "div",
+"show": true
+}
+],
+[
+"Part",
+{
+"tag_name": "div",
+"brief": "div holding form widget",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-container"
+},
+"parts": [
+[
+"Part",
+{
+"tag_name": "p",
+"brief": "Paragraph describing the page contents",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"Below is a Form1 widget, containing an InputTable3 widget and a SubmitButton2 widget. Submitting the table submits all input fields, clicking an arrow link increments or decrements the corresponding field."
+]
+]
+}
+],
+[
+"Widget",
+{
+"class": "inputforms.Form1",
+"name": "form1",
+"brief": "A Form1 widget",
+"fields": {
+"action": "10705",
+"clear_error": false,
+"container_class": "",
+"enctype": "",
+"error_class": "",
+"hidden_field1": "",
+"hidden_field2": "",
+"hidden_field3": "",
+"hidden_field4": "",
+"show": true,
+"show_error": "",
+"widget_class": "w3-section",
+"widget_style": ""
+},
+"container_0": [
+[
+"Widget",
+{
+"class": "inputtables.InputTable3",
+"name": "inputtable3",
+"brief": "Illustrates the inputtable3 widget",
+"fields": {
+"col1": [],
+"col1_class": "",
+"col2": [],
+"col2_class": "",
+"col3_class": "",
+"col4_class": "w3-left-align",
+"col4_style": "width:1px; white-space: nowrap;",
+"down_class": "w3-button w3-padding-small w3-small w3-theme-l2 w3-border w3-border-black",
+"down_getfield1": [],
+"down_getfield2": [],
+"down_hide": [],
+"down_json_ident": "",
+"down_link_ident": "no_javascript",
+"down_style": "",
+"getfield3": [],
+"header_class": "w3-theme-d3",
+"input_class": "",
+"input_style": "",
+"inputdict": {},
+"maxlength": "",
+"row_classes": [],
+"show": true,
+"size": "",
+"title1": "Col 1",
+"title2": "Col 2",
+"title3": "Input",
+"title4": "Move",
+"up_class": "w3-button w3-padding-small w3-small w3-theme-l2 w3-border w3-border-black",
+"up_getfield1": [],
+"up_getfield2": [],
+"up_hide": [],
+"up_json_ident": "",
+"up_link_ident": "no_javascript",
+"up_style": "margin-right:2px;",
+"widget_class": "w3-table w3-theme-d1 w3-border w3-bordered",
+"widget_style": ""
+}
+}
+],
+[
+"Part",
+{
+"tag_name": "div",
+"brief": "Create spacing for the button",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-section"
+},
+"parts": [
+[
+"ClosedWidget",
+{
+"class": "inputforms.SubmitButton2",
+"name": "submitbutton2",
+"brief": "Submit button in form1",
+"fields": {
+"button_text": "Submit",
+"show": true,
+"widget_class": "w3-button w3-theme-d4 w3-margin-left",
+"widget_style": ""
+}
+}
+]
+]
+}
+]
+]
+}
+],
+[
+"SectionPlaceHolder",
+{
+"brief": "Section which shows the code",
+"section_name": "codefile",
+"placename": "codefile",
+"multiplier": 0,
+"mtag": "div",
+"show": true
+}
+]
+]
+}
+]
+]
+}
+]
+]
+}
+]
+}
+}
+}
+},
+"pages": {
+"index.html": {
+"ident": 10702,
+"brief": "Sets up title and widget description",
+"RespondPage": {
+"class": "SubmitData",
+"original_args": {
+"allowed_callers": [],
+"fail_ident": "home",
+"submit_list": [
+"inputtables",
+"inputtable3",
+"index"
+],
+"target_ident": 10704
+},
+"original_fields": {}
+}
+},
+"responce": {
+"ident": 10705,
+"brief": "Responce to a Form1 submission",
+"RespondPage": {
+"class": "GetDictionaryDefaults",
+"original_args": {
+"allowed_callers": [
+10704
+],
+"fail_ident": 10702,
+"submit_list": [
+"inputtables",
+"inputtable3",
+"respond"
+],
+"target_ident": 10706,
+"widgfield": "inputtable3:inputdict"
 },
 "original_fields": {}
 }
