@@ -35,7 +35,7 @@ def index(skicall):
 
     # illustrate the table by filling in initial global values
     pd = PageData()
-    pd['inputtable3','up_getfield1'] = ['aaa', 'bbb', 'ccc', 'ddd']
+    pd['inputtable3','up_getfield1'] = list(TABLEINPUT.keys())
     pd['inputtable3','col1'] = TABLECOL1
     pd['inputtable3','col2'] = TABLECOL2
     
@@ -55,9 +55,10 @@ def respond(skicall):
        into skicall.call_data"""
 
     # This function is necessary since any empty contents may be missing from
-    # the submission, and this ensures they are all present
+    # the submission, and this ensures they are all present, it returns a
+    # dictionary of all the key with empty values
 
-    return {'aaa':'', 'bbb':'', 'ccc':'', 'ddd':''}
+    return { key:'' for key in TABLEINPUT.keys()}
 
 
 def renew(skicall):
@@ -66,9 +67,8 @@ def renew(skicall):
         raise FailPage(message="No submission received")
     try:
         inputdict = skicall.call_data['inputtable3', 'inputdict']
-        rowlist = ['aaa', 'bbb', 'ccc', 'ddd']
         pd = PageData()
-        pd['inputtable3', 'inputdict'] = {key:inputdict[key] for key in rowlist}
+        pd['inputtable3', 'inputdict'] = {key:inputdict[key] for key in TABLEINPUT.keys()}
         skicall.update(pd)
     except:
         raise FailPage(message="Invalid submission received")
@@ -87,17 +87,15 @@ def up(skicall):
         key = skicall.call_data['inputtable3','up_getfield1']
         value = int(skicall.call_data['inputtable3','getfield3'])
         if key == 'aaa':
-            value = value+1
+            inputdict = { key:value+1 }  
         elif key == 'bbb':
-            value = value+10
+             inputdict = { key:value+10 }
         elif key == 'ccc':
-            value = value+100
+             inputdict = { key:value+100 }
         elif key == 'ddd':
-            value = value+1000
+            inputdict = { key:value+1000 }
         else:
             raise FailPage(message="Invalid submission received")
-        inputdict = TABLEINPUT.copy()
-        inputdict[key] = value       
         pd = PageData()
         pd['inputtable3', 'inputdict'] = inputdict
         skicall.update(pd)
