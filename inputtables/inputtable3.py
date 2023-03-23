@@ -74,6 +74,10 @@ def renew(skicall):
         stylelist = _set_limit_colours(valuedict)
         if stylelist:
             pd['inputtable3','cell_style'] = stylelist
+        # note, listing inputdict by order of key in KEYS ensures
+        # the list is kept in the right order
+        pd['result', 'contents'] = list(inputdict[key] for key in KEYS)
+        pd['result', 'show'] = True
         skicall.update(pd)
     except:
         raise FailPage(message="Invalid submission received")

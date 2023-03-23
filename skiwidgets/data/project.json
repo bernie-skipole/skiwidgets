@@ -14953,7 +14953,7 @@
 "title1": "Maximum",
 "title2": "Minimum",
 "title3": "Input",
-"title4": "Move",
+"title4": "",
 "up_class": "w3-button w3-padding-small w3-small w3-theme-l2 w3-border w3-border-black",
 "up_getfield1": [],
 "up_getfield2": [],
@@ -14995,6 +14995,39 @@
 }
 ]
 ]
+}
+],
+[
+"Part",
+{
+"tag_name": "p",
+"brief": "Describes result",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"On Submit being pressed, the results are shown here:"
+]
+]
+}
+],
+[
+"Widget",
+{
+"class": "lists.UList1",
+"name": "result",
+"brief": "Shows the four input fields on submission",
+"fields": {
+"contents": [],
+"even_class": "w3-bar-item",
+"highlight_class": "",
+"odd_class": "w3-bar-item",
+"set_highlight": false,
+"show": false,
+"widget_class": "w3-bar",
+"widget_style": ""
+}
 }
 ],
 [
