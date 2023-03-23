@@ -14930,7 +14930,7 @@
 "col1_class": "",
 "col2": [],
 "col2_class": "",
-"col3_class": "",
+"col3_class": "w3-right-align",
 "col3_style": "width:1px; white-space: nowrap;",
 "col4_class": "w3-left-align",
 "col4_style": "width:1px; white-space: nowrap;",
