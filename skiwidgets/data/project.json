@@ -14568,8 +14568,13 @@
 "name": "inputtable1",
 "brief": "An InputTable1 Widget",
 "fields": {
+"cell_style": [],
 "col1": [],
+"col1_class": "",
 "col2": [],
+"col2_class": "",
+"col3_class": "",
+"col3_style": "width:1px; white-space: nowrap;",
 "header_class": "w3-theme-d3",
 "inputdict": {},
 "maxlength": "10",
@@ -14580,7 +14585,7 @@
 "title2": "col2",
 "title3": "col3",
 "widget_class": "w3-table w3-theme-d1 w3-border w3-bordered",
-"widget_style": ""
+"widget_style": "margin-left:auto;width:60%;margin-right:auto;"
 }
 }
 ],
@@ -14604,8 +14609,8 @@
 "fields": {
 "button_text": "Submit",
 "show": true,
-"widget_class": "w3-button w3-theme-d4 w3-margin-left",
-"widget_style": ""
+"widget_class": "w3-button w3-theme-d4",
+"widget_style": "margin-left:40%;width:8em;margin-right:auto;"
 }
 }
 ]

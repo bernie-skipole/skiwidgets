@@ -2,6 +2,11 @@ import os
 
 from skipole import FailPage, GoTo, ValidateError, ServerError, ServeFile, PageData, SectionData
 
+# Normally table data would be taken from a file or database or other source of data.
+TABLECOL1 = ["1 one", "1 two", "1 three", "1 four"]
+TABLECOL2 = ["2 one", "2 two", "2 three", "2 four"]
+TABLEINPUT = {'aaa':'input1', 'bbb':'input2', 'ccc':'input3', 'ddd':'input4'}
+KEYS = list(TABLEINPUT.keys())
 
 def index(skicall):
     "Called by a SubmitData responder, and sets up the page"
@@ -31,24 +36,22 @@ def index(skicall):
     # illustrate the table by accepting data from the inputs, and using it to populate col1
     pd = PageData()
     # col2 is static
-    pd['inputtable1','col2'] = ["2 one", "2 two", "2 three", "2 four"]
+    pd['inputtable1','col2'] = TABLECOL2
 
     # col1 is updated with submitted values if they have been received
     if ('inputtable1', 'inputdict') not in skicall.call_data:
         # on the first call to this page ('inputtable1', 'inputdict') will
         # not be in skicall.call_data, so col1 and inputdict are set with initial values
-        pd['inputtable1','col1'] = ["1 one", "1 two", "1 three", "1 four"]
-        pd['inputtable1', 'inputdict'] = {'aaa':'input1', 'bbb':'input2', 'ccc':'input3', 'ddd':'input4'}
+        pd['inputtable1','col1'] = TABLECOL1
+        pd['inputtable1', 'inputdict'] = TABLEINPUT
     else:
-        # however, after data submission, inputdict will be defined, so update col1
-        # and inputdict with the vaues received
+        # however, after data submission, call_data will be defined, so update col1
+        # and inputdict with the values received
         call_data = skicall.call_data['inputtable1', 'inputdict']
-        pd['inputtable1','col1'] = [call_data['aaa'], call_data['bbb'], call_data['ccc'], call_data['ddd']]
-        pd['inputtable1', 'inputdict'] = {'aaa':call_data['aaa'],
-                                          'bbb':call_data['bbb'],
-                                          'ccc':call_data['ccc'],
-                                          'ddd':call_data['ddd']
-                                         }
+        # note, listing received data by order of key in KEYS ensures
+        # the list is kept in the right order
+        pd['inputtable1', 'col1'] = list(call_data[key] for key in KEYS)
+        pd['inputtable1', 'inputdict'] = {key:call_data[key] for key in KEYS}
 
     skicall.update(pd)
 
@@ -64,5 +67,5 @@ def respond(skicall):
     # This function is necessary since any empty contents may be missing from
     # the submission, and this ensures they are all present
 
-    return {'aaa':'', 'bbb':'', 'ccc':'', 'ddd':''}
+    return { key:'' for key in KEYS}
 
