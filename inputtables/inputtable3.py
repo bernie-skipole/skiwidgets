@@ -6,6 +6,7 @@ from skipole import FailPage, GoTo, ValidateError, ServerError, ServeFile, PageD
 TABLECOL1 = [10, 100, 1000, 10000]
 TABLECOL2 = [2, 20, 200, 2000]
 TABLEINPUT = {'aaa':5, 'bbb':50, 'ccc':500, 'ddd':5000}
+KEYS = list(TABLEINPUT.keys())
 
 
 def index(skicall):
@@ -35,17 +36,17 @@ def index(skicall):
 
     # illustrate the table by filling in initial global values
     pd = PageData()
-    pd['inputtable3','up_getfield1'] = list(TABLEINPUT.keys())
+    pd['inputtable3','up_getfield1'] = KEYS
+    pd['inputtable3','down_getfield1'] = KEYS
     pd['inputtable3','col1'] = TABLECOL1
     pd['inputtable3','col2'] = TABLECOL2
-    
+
     if 'tabledone' not in skicall.call_data:
         pd['inputtable3', 'inputdict'] = TABLEINPUT.copy()
 
     skicall.update(pd)
 
 
- 
 def respond(skicall):
     """Called by a GetDictionaryDefaults responder having received a submission
        from inputtable3.
@@ -56,9 +57,9 @@ def respond(skicall):
 
     # This function is necessary since any empty contents may be missing from
     # the submission, and this ensures they are all present, it returns a
-    # dictionary of all the key with empty values
+    # dictionary of all the keys with empty values
 
-    return { key:'' for key in TABLEINPUT.keys()}
+    return { key:'' for key in KEYS}
 
 
 def renew(skicall):
@@ -68,7 +69,11 @@ def renew(skicall):
     try:
         inputdict = skicall.call_data['inputtable3', 'inputdict']
         pd = PageData()
-        pd['inputtable3', 'inputdict'] = {key:inputdict[key] for key in TABLEINPUT.keys()}
+        valuedict = {key:inputdict[key] for key in KEYS}
+        pd['inputtable3', 'inputdict'] = valuedict
+        stylelist = _set_limit_colours(valuedict)
+        if stylelist:
+            pd['inputtable3','cell_style'] = stylelist
         skicall.update(pd)
     except:
         raise FailPage(message="Invalid submission received")
@@ -77,8 +82,32 @@ def renew(skicall):
     index(skicall)
 
 
+def _set_limit_colours(valuedict):
+    "Returns a style list, setting cell colours if max or min value has been reached"
+    # stylelist is a list of lists, each being [row, col, cssstyle] with row, col
+    # being the table body row and column (starting at 1 rather than zero).
+    # In this example, colours are set if minimum, or maximum values have
+    # been reached
+    stylelist = []
+    for row, key in enumerate(KEYS):
+        if key not in valuedict:
+            continue
+        value = valuedict[key]
+        # maximums
+        if value == TABLECOL1[row]:
+            stylelist.append([row+1, 1, 'background-color:Yellow;color:Black;'])
+        if value > TABLECOL1[row]:
+            stylelist.append([row+1, 1, 'background-color:Red;color:Yellow;'])
+        # minimums
+        if value == TABLECOL2[row]:
+            stylelist.append([row+1, 2, 'background-color:Yellow;color:Black;'])
+        if value < TABLECOL2[row]:
+            stylelist.append([row+1, 2, 'background-color:Red;color:Yellow;'])
+    return stylelist
+
+
 def up(skicall):
-    """Up arrow received, increment value"""
+    """Up arrow received, increment value, returns JSON update"""
     if ('inputtable3','up_getfield1') not in skicall.call_data:
         raise FailPage(message="No submission received")
     if ('inputtable3','getfield3') not in skicall.call_data:
@@ -87,7 +116,7 @@ def up(skicall):
         key = skicall.call_data['inputtable3','up_getfield1']
         value = int(skicall.call_data['inputtable3','getfield3'])
         if key == 'aaa':
-            inputdict = { key:value+1 }  
+            inputdict = { key:value+1 }
         elif key == 'bbb':
              inputdict = { key:value+10 }
         elif key == 'ccc':
@@ -97,8 +126,39 @@ def up(skicall):
         else:
             raise FailPage(message="Invalid submission received")
         pd = PageData()
+        stylelist = _set_limit_colours(inputdict)
+        if stylelist:
+            pd['inputtable3','cell_style'] = stylelist
         pd['inputtable3', 'inputdict'] = inputdict
         skicall.update(pd)
     except:
         raise FailPage(message="Invalid submission received")
 
+
+def down(skicall):
+    """Down arrow received, decrement value, returns JSON update"""
+    if ('inputtable3','down_getfield1') not in skicall.call_data:
+        raise FailPage(message="No submission received")
+    if ('inputtable3','getfield3') not in skicall.call_data:
+        raise FailPage(message="No submission received")
+    try:
+        key = skicall.call_data['inputtable3','down_getfield1']
+        value = int(skicall.call_data['inputtable3','getfield3'])
+        if key == 'aaa':
+            inputdict = { key:value-1 }
+        elif key == 'bbb':
+             inputdict = { key:value-10 }
+        elif key == 'ccc':
+             inputdict = { key:value-100 }
+        elif key == 'ddd':
+            inputdict = { key:value-1000 }
+        else:
+            raise FailPage(message="Invalid submission received")
+        pd = PageData()
+        stylelist = _set_limit_colours(inputdict)
+        if stylelist:
+            pd['inputtable3','cell_style'] = stylelist
+        pd['inputtable3', 'inputdict'] = inputdict
+        skicall.update(pd)
+    except:
+        raise FailPage(message="Invalid submission received")
