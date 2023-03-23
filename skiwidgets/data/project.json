@@ -14925,6 +14925,7 @@
 "name": "inputtable3",
 "brief": "Illustrates the inputtable3 widget",
 "fields": {
+"cell_style": [],
 "col1": [],
 "col1_class": "",
 "col2": [],
@@ -14937,7 +14938,7 @@
 "down_getfield1": [],
 "down_getfield2": [],
 "down_hide": [],
-"down_json_ident": "",
+"down_json_ident": "10708",
 "down_link_ident": "no_javascript",
 "down_style": "",
 "getfield3": [],
@@ -14949,8 +14950,8 @@
 "row_classes": [],
 "show": true,
 "size": "",
-"title1": "Col 1",
-"title2": "Col 2",
+"title1": "Maximum",
+"title2": "Minimum",
 "title3": "Input",
 "title4": "Move",
 "up_class": "w3-button w3-padding-small w3-small w3-theme-l2 w3-border w3-border-black",
@@ -15021,6 +15022,31 @@
 }
 },
 "pages": {
+"down": {
+"ident": 10708,
+"brief": "Down arrow pressed",
+"RespondPage": {
+"class": "AllowStore",
+"original_args": {
+"allowed_callers": [],
+"alternate_ident": "home",
+"fail_ident": "general_json",
+"submit_list": [
+"inputtables",
+"inputtable3",
+"down"
+],
+"submit_option": true,
+"target_ident": "general_json",
+"validate_fail_ident": null,
+"validate_option": false
+},
+"original_fields": {
+"inputtable3:down_getfield1": "",
+"inputtable3:getfield3": ""
+}
+}
+},
 "index.html": {
 "ident": 10702,
 "brief": "Sets up title and widget description",

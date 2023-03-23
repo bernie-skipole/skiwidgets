@@ -69,7 +69,7 @@ def renew(skicall):
     try:
         inputdict = skicall.call_data['inputtable3', 'inputdict']
         pd = PageData()
-        valuedict = {key:inputdict[key] for key in KEYS}
+        valuedict = {key:int(inputdict[key]) for key in KEYS}
         pd['inputtable3', 'inputdict'] = valuedict
         stylelist = _set_limit_colours(valuedict)
         if stylelist:
@@ -96,13 +96,17 @@ def _set_limit_colours(valuedict):
         # maximums
         if value == TABLECOL1[row]:
             stylelist.append([row+1, 1, 'background-color:Yellow;color:Black;'])
-        if value > TABLECOL1[row]:
+        elif value > TABLECOL1[row]:
             stylelist.append([row+1, 1, 'background-color:Red;color:Yellow;'])
+        else:
+           stylelist.append([row+1, 1, ''])
         # minimums
         if value == TABLECOL2[row]:
             stylelist.append([row+1, 2, 'background-color:Yellow;color:Black;'])
-        if value < TABLECOL2[row]:
+        elif value < TABLECOL2[row]:
             stylelist.append([row+1, 2, 'background-color:Red;color:Yellow;'])
+        else:
+           stylelist.append([row+1, 2, ''])
     return stylelist
 
 
