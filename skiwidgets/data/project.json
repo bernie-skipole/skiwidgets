@@ -14621,6 +14621,71 @@
 }
 ],
 [
+"Part",
+{
+"tag_name": "div",
+"brief": "Test buttons",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-section"
+},
+"parts": [
+[
+"Part",
+{
+"tag_name": "p",
+"brief": "Description",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"Choose a button to test : The tests are described in the code docstrings of each corresponding function."
+]
+]
+}
+],
+[
+"Part",
+{
+"tag_name": "div",
+"brief": "buttons",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Widget",
+{
+"class": "links.JSONButtonLink",
+"name": "test1",
+"brief": "Link to test1",
+"fields": {
+"button_text": "",
+"button_wait_text": "Please wait...",
+"clear_error": false,
+"error_class": "w3-button w3-block w3-theme-action",
+"get_field1": "",
+"get_field2": "",
+"hide": false,
+"json_ident": "",
+"link_ident": "no_javascript",
+"local_storage": "",
+"session_storage": "",
+"show": true,
+"show_error": "",
+"widget_class": "w3-button w3-block w3-theme-d4",
+"widget_style": ""
+}
+}
+]
+]
+}
+]
+]
+}
+],
+[
 "SectionPlaceHolder",
 {
 "brief": "Section which shows the code",
