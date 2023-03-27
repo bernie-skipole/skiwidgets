@@ -55,7 +55,7 @@ def index(skicall):
 
     skicall.update(pd)
 
- 
+
 def respond(skicall):
     """Called by a GetDictionaryDefaults responder having received a submission
        from inputtable1.
@@ -69,3 +69,26 @@ def respond(skicall):
 
     return { key:'' for key in KEYS}
 
+
+def test(skicall):
+    """Chooses which test to run, depending on button pressed
+       The responder calling this has general_json as its target
+       so the PageData values are sent as a JSON call"""
+    if skicall.call_data.get(('test1', 'get_field1')) == 'test1':
+        _test1(skicall)
+    elif skicall.call_data.get(('test2', 'get_field1')) == 'test2':
+        _test2(skicall)
+
+
+def _test1(skicall):
+    "Places string 'test1' into the third input field"
+    pd = PageData()
+    pd['inputtable1','inputdict'] = {'ccc':'test1'}
+    skicall.update(pd)
+
+
+def _test2(skicall):
+    "Places style strings into two table cells"
+    pd = PageData()
+    pd['inputtable1','cell_style'] = [[1,1,"background-color:Red;color:Yellow;"], [2,2,"background-color:Yellow;color:Black;"]]
+    skicall.update(pd)
