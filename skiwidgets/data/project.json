@@ -14706,6 +14706,31 @@
 "widget_style": "width:6em;"
 }
 }
+],
+[
+"Widget",
+{
+"class": "links.JSONButtonLink",
+"name": "test3",
+"brief": "Link to test3",
+"fields": {
+"button_text": "Test3",
+"button_wait_text": "Please wait...",
+"clear_error": false,
+"error_class": "w3-button w3-block w3-theme-action",
+"get_field1": "test3",
+"get_field2": "",
+"hide": false,
+"json_ident": "5409",
+"link_ident": "no_javascript",
+"local_storage": "",
+"session_storage": "",
+"show": true,
+"show_error": "",
+"widget_class": "w3-button w3-theme-d4 w3-bar-item",
+"widget_style": "width:6em;"
+}
+}
 ]
 ]
 }
@@ -14779,26 +14804,20 @@
 },
 "test": {
 "ident": 5409,
-"brief": "Responder to call test funtions",
+"brief": "Checks for get_field1",
 "RespondPage": {
-"class": "AllowStore",
+"class": "FieldStoreSubmit",
 "original_args": {
-"allowed_callers": [],
-"alternate_ident": "home",
-"fail_ident": "general_json",
+"fail_ident": 5402,
 "submit_list": [
 "inputtables",
 "inputtable1",
 "test"
 ],
-"submit_option": true,
-"target_ident": "general_json",
-"validate_fail_ident": null,
-"validate_option": false
+"target_ident": "general_json"
 },
 "original_fields": {
-"test1:get_field1": "",
-"test2:get_field1": ""
+"get_field1": ""
 }
 }
 }

@@ -71,13 +71,20 @@ def respond(skicall):
 
 
 def test(skicall):
-    """Chooses which test to run, depending on button pressed
-       The responder calling this has general_json as its target
-       so the PageData values are sent as a JSON call"""
-    if skicall.call_data.get(('test1', 'get_field1')) == 'test1':
+    """Chooses which test to run, depending on button pressed.
+       A FieldStoreSubmit responder checks for the get_field1 field
+       and stores the received data in skicall.submit_dict['received'].
+       The responder has general_json as its target
+       so the PageData values set here are sent as a JSON call"""
+    if 'received' not in skicall.submit_dict:
+        return
+    receiveddict = skicall.submit_dict['received']
+    if receiveddict.get(('test1', 'get_field1')) == 'test1':
         _test1(skicall)
-    elif skicall.call_data.get(('test2', 'get_field1')) == 'test2':
+    elif receiveddict.get(('test2', 'get_field1')) == 'test2':
         _test2(skicall)
+    elif receiveddict.get(('test3', 'get_field1')) == 'test3':
+        _test3(skicall)
 
 
 def _test1(skicall):
@@ -91,4 +98,11 @@ def _test2(skicall):
     "Places style strings into two table cells"
     pd = PageData()
     pd['inputtable1','cell_style'] = [[1,1,"background-color:Red;color:Yellow;"], [2,2,"background-color:Yellow;color:Black;"]]
+    skicall.update(pd)
+
+
+def _test3(skicall):
+    "Places new data into column 2"
+    pd = PageData()
+    pd['inputtable1','col2'] = ["col2 row1 test3", "col2 row2 test3", "col2 row3 test3", "col2 row4 test3"]
     skicall.update(pd)
