@@ -3,8 +3,8 @@
 import os, sys
 
 # for local development by bernie
-sys.path.insert(0, "/home/bernard/git/skipole")
-sys.path.insert(0, "/home/bernard/git/skilift")
+#sys.path.insert(0, "/home/bernard/git/skipole")
+#sys.path.insert(0, "/home/bernard/git/skilift")
 
 from skipole import WSGIApplication, FailPage, GoTo, ValidateError, ServerError, ServeFile, use_submit_list, skis, PageData, SectionData, set_debug, widget_modules
 
@@ -81,4 +81,3 @@ if __name__ == "__main__":
     # note:
     # max_request_body_size has been set to 1000, as this site illustrates widgets only
     # and the upload file widgets could be used to send something very large unless limited
-
