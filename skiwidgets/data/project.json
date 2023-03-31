@@ -15033,7 +15033,7 @@
 "parts": [
 [
 "Text",
-"Below is a Form1 widget, containing an InputTable3 widget and a SubmitButton2 widget. Submitting the table submits all input fields, clicking an arrow link increments or decrements the corresponding field."
+"Below is a Form1 widget, containing an InputTable3 widget and a SubmitButton2 widget. Submitting the table submits all input fields. In this example clicking an arrow link increments or decrements the corresponding field."
 ]
 ]
 }
@@ -15283,6 +15283,464 @@
 "original_fields": {
 "inputtable3:getfield3": "",
 "inputtable3:up_getfield1": ""
+}
+}
+}
+}
+},
+"InputTable4": {
+"ident": 10801,
+"brief": "Folder containing the InputTable4 widget",
+"default_page_name": "index.html",
+"restricted": false,
+"folders": {
+"restricted": {
+"ident": 10803,
+"brief": "Contains templates",
+"default_page_name": "index",
+"restricted": true,
+"folders": {},
+"pages": {
+"allowstore": {
+"ident": 10806,
+"brief": "sets data into call_data",
+"RespondPage": {
+"class": "AllowStore",
+"original_args": {
+"allowed_callers": [
+10805
+],
+"alternate_ident": "home",
+"fail_ident": 10802,
+"submit_list": [
+"inputtables",
+"inputtable4",
+"renew"
+],
+"submit_option": true,
+"target_ident": 10804,
+"validate_fail_ident": null,
+"validate_option": false
+},
+"original_fields": {
+"inputtable4:inputdict": ""
+}
+}
+},
+"index": {
+"ident": 10804,
+"brief": "This page is a template for the inputtables.InputTable4 widget",
+"TemplatePage": {
+"show_backcol": false,
+"last_scroll": true,
+"interval": 0,
+"interval_target": null,
+"catch_to_html": null,
+"lang": "en",
+"backcol": "#ffffff",
+"default_error_widget": [
+"header",
+"top_error"
+]
+},
+"head": [
+"Part",
+{
+"tag_name": "head",
+"brief": "The head section of the page",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"ClosedPart",
+{
+"tag_name": "meta",
+"brief": "The charset meta declaration",
+"show": true,
+"attribs": {
+"charset": "utf-8"
+}
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "meta",
+"brief": "The viewport meta declaration",
+"show": true,
+"attribs": {
+"content": "width=device-width, initial-scale=1",
+"name": "viewport"
+}
+}
+],
+[
+"Part",
+{
+"tag_name": "title",
+"brief": "The page title element",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"InputTable4"
+]
+]
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "link",
+"brief": "css link to w3_css",
+"show": true,
+"attribs": {
+"href": "{w3_css}",
+"rel": "stylesheet",
+"type": "text/css"
+}
+}
+],
+[
+"ClosedPart",
+{
+"tag_name": "link",
+"brief": "css link to w3_theme_ski_css",
+"show": true,
+"attribs": {
+"href": "{w3_theme_ski_css}",
+"rel": "stylesheet",
+"type": "text/css"
+}
+}
+],
+[
+"Part",
+{
+"tag_name": "script",
+"brief": "script link to jquery_core",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"src": "{jquery_core}"
+},
+"parts": []
+}
+],
+[
+"Part",
+{
+"tag_name": "script",
+"brief": "script link to skipole_js",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"src": "{skipole_js}"
+},
+"parts": []
+}
+]
+]
+}
+],
+"body": [
+"Part",
+{
+"tag_name": "body",
+"brief": "The body section of the page",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-theme"
+},
+"parts": [
+[
+"Part",
+{
+"tag_name": "div",
+"brief": "containing div",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-container"
+},
+"parts": [
+[
+"SectionPlaceHolder",
+{
+"brief": "title, description and top_error",
+"section_name": "header",
+"placename": "header",
+"multiplier": 0,
+"mtag": "div",
+"show": true
+}
+],
+[
+"Part",
+{
+"tag_name": "div",
+"brief": "div holding form widget",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-container"
+},
+"parts": [
+[
+"Part",
+{
+"tag_name": "p",
+"brief": "Paragraph describing the page contents",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"Below is a Form1 widget, containing an InputTable4 widget and a SubmitButton2 widget. Submitting the table submits the hidden input fields. In this example clicking an arrow link increments or decrements the corresponding row entry and hidden fields."
+]
+]
+}
+],
+[
+"Widget",
+{
+"class": "inputforms.Form1",
+"name": "form1",
+"brief": "A Form1 widget",
+"fields": {
+"action": "10805",
+"clear_error": false,
+"container_class": "",
+"enctype": "",
+"error_class": "",
+"hidden_field1": "",
+"hidden_field2": "",
+"hidden_field3": "",
+"hidden_field4": "",
+"show": true,
+"show_error": "",
+"widget_class": "w3-section",
+"widget_style": ""
+},
+"container_0": [
+[
+"Widget",
+{
+"class": "inputtables.InputTable4",
+"name": "inputtable4",
+"brief": "Illustrates the inputtable4 widget",
+"fields": {
+"cell_style": [],
+"col1": [],
+"col1_class": "",
+"col2": [],
+"col2_class": "",
+"col3": [],
+"col3_class": "w3-theme-light",
+"col4_class": "w3-right-align",
+"col4_style": "width:1px; white-space: nowrap;",
+"down_class": "w3-button w3-padding-small w3-small w3-theme-dark",
+"down_getfield1": [],
+"down_getfield2": [],
+"down_hide": [],
+"down_json_ident": "10808",
+"down_link_ident": "no_javascript",
+"down_style": "",
+"header_class": "w3-theme-d3",
+"inputdict": {},
+"row_classes": [],
+"show": true,
+"title1": "Maximum",
+"title2": "Minimum",
+"title3": "Value",
+"title4": "",
+"up_class": "w3-button w3-padding-small w3-small w3-theme-dark",
+"up_getfield1": [],
+"up_getfield2": [],
+"up_hide": [],
+"up_json_ident": "10807",
+"up_link_ident": "no_javascript",
+"up_style": "margin-right:2em;",
+"widget_class": "w3-table w3-theme-d1 w3-border w3-bordered",
+"widget_style": "margin-left:auto;width:60%;margin-right:auto;"
+}
+}
+],
+[
+"Part",
+{
+"tag_name": "div",
+"brief": "Create spacing for the button",
+"show": true,
+"hide_if_empty": false,
+"attribs": {
+"class": "w3-section"
+},
+"parts": [
+[
+"ClosedWidget",
+{
+"class": "inputforms.SubmitButton2",
+"name": "submitbutton2",
+"brief": "Submit button in form1",
+"fields": {
+"button_text": "Submit",
+"show": true,
+"widget_class": "w3-button w3-theme-d4",
+"widget_style": "margin-left:40%;width:8em;margin-right:auto;"
+}
+}
+]
+]
+}
+]
+]
+}
+],
+[
+"Part",
+{
+"tag_name": "p",
+"brief": "Describes result",
+"show": true,
+"hide_if_empty": false,
+"parts": [
+[
+"Text",
+"On Submit being pressed, the results are shown here:"
+]
+]
+}
+],
+[
+"Widget",
+{
+"class": "lists.UList1",
+"name": "result",
+"brief": "Shows the four input fields on submission",
+"fields": {
+"contents": [],
+"even_class": "w3-bar-item",
+"highlight_class": "",
+"odd_class": "w3-bar-item",
+"set_highlight": false,
+"show": false,
+"widget_class": "w3-bar",
+"widget_style": ""
+}
+}
+],
+[
+"SectionPlaceHolder",
+{
+"brief": "Section which shows the code",
+"section_name": "codefile",
+"placename": "codefile",
+"multiplier": 0,
+"mtag": "div",
+"show": true
+}
+]
+]
+}
+]
+]
+}
+]
+]
+}
+]
+}
+}
+}
+},
+"pages": {
+"down": {
+"ident": 10808,
+"brief": "Down arrow pressed",
+"RespondPage": {
+"class": "AllowStore",
+"original_args": {
+"allowed_callers": [],
+"alternate_ident": "home",
+"fail_ident": "general_json",
+"submit_list": [
+"inputtables",
+"inputtable4",
+"down"
+],
+"submit_option": true,
+"target_ident": "general_json",
+"validate_fail_ident": null,
+"validate_option": false
+},
+"original_fields": {
+"inputtable4:down_getfield1": ""
+}
+}
+},
+"index.html": {
+"ident": 10802,
+"brief": "Sets up title and widget description",
+"RespondPage": {
+"class": "SubmitData",
+"original_args": {
+"allowed_callers": [],
+"fail_ident": "home",
+"submit_list": [
+"inputtables",
+"inputtable4",
+"index"
+],
+"target_ident": 10804
+},
+"original_fields": {}
+}
+},
+"responce": {
+"ident": 10805,
+"brief": "Responce to a Form1 submission",
+"RespondPage": {
+"class": "GetDictionaryDefaults",
+"original_args": {
+"allowed_callers": [
+10804
+],
+"fail_ident": 10802,
+"submit_list": [
+"inputtables",
+"inputtable4",
+"respond"
+],
+"target_ident": 10806,
+"widgfield": "inputtable4:inputdict"
+},
+"original_fields": {}
+}
+},
+"up": {
+"ident": 10807,
+"brief": "Up arrow pressed",
+"RespondPage": {
+"class": "AllowStore",
+"original_args": {
+"allowed_callers": [],
+"alternate_ident": "home",
+"fail_ident": "general_json",
+"submit_list": [
+"inputtables",
+"inputtable4",
+"up"
+],
+"submit_option": true,
+"target_ident": "general_json",
+"validate_fail_ident": null,
+"validate_option": false
+},
+"original_fields": {
+"inputtable4:up_getfield1": ""
 }
 }
 }
