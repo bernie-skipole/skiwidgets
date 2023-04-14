@@ -63,7 +63,7 @@
   "widgets.inputtables.InputTable1": "A three column table of two text columns and a text input column. Without a form or submit button, typically included within a form.",
   "widgets.inputtables.InputTable3": "A table of four columns, two being text strings, one a text input field, the fourth being a cell with up and down arrow links",
   "widgets.inputtables.InputTable4": "A table of four columns, three being text strings, the fourth being a cell with up and down arrow links and a hidden field",
-  "widgets.inputtables.InputTable5": "A div containing rows of forms. Each form has label, text input field, two buttons and four hidden fields.",
+  "widgets.inputtables.InputTable5": "A div of four columns, the first just being label text, the second being text input fields, the third and fourth being submit buttons. Each row of the table is a form, the form action ident is the same for all forms and each form has four hidden fields.\r\nAs well as the input text field each form submits button and value, so which of the two buttons is pressed can be identified.",
   "widgets.inputtables.module": "Tables with input fields.",
   "widgets.inputtext.Password1": "A password input field only, no form, label or submit button. For insertion into a form widget container.",
   "widgets.inputtext.Password2": "Defines a div containing a hidden error paragraph followed by a password input field (no form or submit button). A label to the left of the input field can have a class and content set.",

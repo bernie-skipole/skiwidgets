@@ -2,6 +2,9 @@ import os
 
 from skipole import FailPage, GoTo, ValidateError, ServerError, ServeFile, PageData, SectionData
 
+# Normally table data would be taken from a file or database or other source of data.
+TABLECOL = ["one", "two", "three", "four"]
+
 
 def index(skicall):
     "Called by a SubmitData responder, and sets up the page"
@@ -28,27 +31,43 @@ def index(skicall):
         codesection['pretext', 'pre_text'] = f.read()
     skicall.update(codesection)
 
-    # illustrate the table by accepting data from the inputs, and using it to populate col1
     pd = PageData()
-    # label column is static
-    pd['inputtable5','col_label'] = ["one", "two", "three", "four"]
-    pd['inputtable5','col_input'] = ["one", "two", "three", "four"]
+    pd['inputtable5','col_label'] = TABLECOL
+    pd['inputtable5','col_input'] = TABLECOL
+    # The hidden field is used to check which row has been submitted
+    pd['inputtable5','hidden_field1'] = TABLECOL
     skicall.update(pd)
 
 
 def respond(skicall):
     "Responds to a table button being pressed"
+
+    if ('inputtable5','hidden_field1') not in skicall.call_data:
+        raise FailPage(message="Invalid submission received")
+
+    try:
+        # the hidden field should return a string from TABLECOL which
+        # has index position equal to the row of the table
+        row = TABLECOL.index(skicall.call_data['inputtable5','hidden_field1'])
+    except:
+        raise FailPage(message="Invalid submission received")
+
     pd = PageData()
-    if ('inputtable5','col_input') in skicall.call_data:
-        result = skicall.call_data['inputtable5','col_input']
-        submit1 = skicall.call_data.get(('inputtable5','button_text1'))
-        submit2 = skicall.call_data.get(('inputtable5','button_text2'))
-        if submit1 == "Submit1":
-            pd['result', 'para_text'] = f"Received: Submit1 pressed - data: {result}"
-        elif submit2 == "Submit2":
-            pd['result', 'para_text'] = f"Received: Submit2 pressed - data: {result}"
-        skicall.update(pd)
-        
+    result = skicall.call_data['inputtable5','col_input']
+    submit1 = skicall.call_data.get(('inputtable5','button_text1'))
+    submit2 = skicall.call_data.get(('inputtable5','button_text2'))
+    if submit1:
+        pd['result', 'para_text'] = f"Received: Row {row} {submit1} pressed - data: {result}"
+    elif submit2:
+        pd['result', 'para_text'] = f"Received: Row {row} {submit2} pressed - data: {result}"
+    else:
+        raise FailPage(message="Invalid submission received")
 
+    if 2 < len(result) < 6 :
+        pd['inputtable5','set_input_accepted'] = {row:True}
+        pd['inputtable5','set_input_errored'] = {row:False}
+    else:
+        pd['inputtable5','set_input_accepted'] = {row:False}
+        pd['inputtable5','set_input_errored'] = {row:True}
 
-
+    skicall.update(pd)
