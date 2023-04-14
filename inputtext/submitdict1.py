@@ -2,6 +2,8 @@ import os
 
 from skipole import FailPage, GoTo, ValidateError, ServerError, ServeFile, PageData, SectionData
 
+DATA = {"one":1, "two":2, "three":3, "four":4}
+
 
 def index(skicall):
     "Called by a SubmitData responder, and sets up the page"
@@ -10,9 +12,9 @@ def index(skicall):
     # HeadText widget with name 'title' and a TextBlockPara widget with name 'widgetdesc'
     # It also has a ButtonLink2 widget with name 'tomodule'
     headersection = SectionData('header')
-    headersection['title', 'large_text'] = 'Password2'
+    headersection['title', 'large_text'] = 'SubmitDict1'
     # A textblock contains the widget description
-    ref = "widgets.inputtext.Password2"
+    ref = "widgets.inputtext.SubmitDict1"
     headersection['widgetdesc','textblock_ref'] = ref
     headersection['widgetdesc','text_refnotfound'] = f'Textblock reference {ref} not found'
     # link to this widgets module page
@@ -28,26 +30,22 @@ def index(skicall):
         codesection['pretext', 'pre_text'] = f.read()
     skicall.update(codesection)
 
+    # populate the submitdict1 widget
+    pd = PageData()
+    data = DATA.copy()
+    # if the data has been updated by a call to respond, update the dictionary here
+    if ('submitdict1', 'input_dict') in skicall.call_data:
+        data.update(skicall.call_data['submitdict1', 'input_dict'])
+    pd['submitdict1', 'input_dict'] = data
+    skicall.update(pd)
+
 
 def respond(skicall):
-    """Responds to submission from password2 which is contained in form1
+    """Responds to submission from submitdict1.
        The AllowStore responder calling this function has as its target the
        SubmitData responder which calls the above index function. So the
        returned HTML page has both the sections completed and those widgets
        set here completed"""
 
-    if ('password2', 'input_text') not in skicall.call_data:
+    if ('submitdict1', 'input_dict') not in skicall.call_data:
         raise FailPage(message="No submission received")
-
-    pd = PageData()
-    # And check the password2 field
-    if skicall.call_data['password2', 'input_text'] == "password":
-        # and set the field to geen, to show input has been accepted
-        pd['password2', 'set_input_accepted'] = True
-        pd['result','para_text'] = "Correct password received!"
-    else:
-        # bad password, set the field to red, and display error
-        pd['password2', 'set_input_errored'] = True
-        pd['password2', 'show_error'] = "Invalid password"
-        pd['result','para_text'] = "Incorrect text received : " + skicall.call_data['password2', 'input_text']
-    skicall.update(pd)
