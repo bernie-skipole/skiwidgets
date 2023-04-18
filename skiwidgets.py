@@ -59,6 +59,7 @@ application.add_project(skis_application, url=f'/{PROJECT}/lib')
 
 if __name__ == "__main__":
 
+    # set_debug should be True to display the info widgets
     set_debug(True)
     host = "127.0.0.1"
     # host = "0.0.0.0"

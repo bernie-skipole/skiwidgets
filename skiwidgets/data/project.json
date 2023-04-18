@@ -16273,7 +16273,7 @@
 "parts": [
 [
 "Text",
-"Below is a Form1 widget, containing a Password1 widget and a SubmitButton2 widget. Type 'password' for an OK response, any other text for a fail response."
+"Below is a Form1 widget, containing a Password1 widget and a SubmitButton2 widget. Type 'password' for an OK response, any other text for a fail response. A validator will fail any input less than four characters long."
 ]
 ]
 }
@@ -16331,6 +16331,17 @@
 "size": "20",
 "widget_class": "",
 "widget_style": ""
+},
+"validators": {
+"input_text": [
+{
+"class": "basic.MinLength",
+"message": "Invalid (too short)",
+"val_args": {
+"minlength": "4"
+}
+}
+]
 }
 }
 ],
@@ -16429,8 +16440,8 @@
 ],
 "submit_option": true,
 "target_ident": 5902,
-"validate_fail_ident": null,
-"validate_option": false
+"validate_fail_ident": 5902,
+"validate_option": true
 },
 "original_fields": {
 "password1:input_text": ""
@@ -17019,8 +17030,8 @@
 "validators": {
 "input_dict": [
 {
-"class": "basic.IntMinMax",
-"message": "Integers only!",
+"class": "basic.StrictIntMinMax",
+"message": "Invalid - between 0 and 100 only.",
 "val_args": {
 "maxval": "100",
 "minval": "0"
