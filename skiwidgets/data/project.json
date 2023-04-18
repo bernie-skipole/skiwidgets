@@ -17030,8 +17030,8 @@
 "validators": {
 "input_dict": [
 {
-"class": "basic.StrictIntMinMax",
-"message": "Invalid - between 0 and 100 only.",
+"class": "basic.IntMinMax",
+"message": "Integers only!",
 "val_args": {
 "maxval": "100",
 "minval": "0"
