@@ -16996,7 +16996,7 @@
 "parts": [
 [
 "Text",
-"Below is a SubmitDict1 widget, a validator limits the inputs to integers between 0 and 100."
+"Below is a SubmitDict1 widget, a validator limits the inputs to integers between -100 and 100."
 ]
 ]
 }
@@ -17034,7 +17034,7 @@
 "message": "Integers only!",
 "val_args": {
 "maxval": "100",
-"minval": "0"
+"minval": "-100"
 }
 }
 ]
