@@ -45,7 +45,20 @@ def respond(skicall):
     if ('submittextinput1', 'input_text') not in skicall.call_data:
         raise FailPage(message="No submission received")
 
-    # populate the result widget
+    # populate the result widget, and set input field to green
+    # and clear any errors currently being displayed
     pd = PageData()
+    pd.ClearAllErrors = True
+    pd['submittextinput1', 'set_input_accepted'] = True
     pd['result', 'para_text'] = f"Text received: {skicall.call_data['submittextinput1', 'input_text']}"
+    skicall.update(pd)
+
+
+def fail(skicall):
+    """This is called by a SubmitData responder, which is the error responder
+       called by the validator if a failure occurs.
+       The target is general_json, this adds a red background to the input field"""
+    pd = PageData()
+    pd['submittextinput1', 'set_input_errored'] = True
+    pd['result', 'para_text'] = "Invalid submission!"
     skicall.update(pd)

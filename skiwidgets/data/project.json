@@ -3,7 +3,7 @@
 "default_language": "en",
 "brief": "Site illustrating skipole widgets",
 "version": "0.0.1",
-"skipole": "5.6.1",
+"skipole": "5.6.2",
 "specialpages": {
 "audiofile": 6,
 "favicon": 3002,
@@ -17139,6 +17139,24 @@
 "restricted": true,
 "folders": {},
 "pages": {
+"fail": {
+"ident": 11206,
+"brief": "Calls fail function on error",
+"RespondPage": {
+"class": "SubmitData",
+"original_args": {
+"allowed_callers": [],
+"fail_ident": "home",
+"submit_list": [
+"inputtext",
+"submittextinput1",
+"fail"
+],
+"target_ident": "general_json"
+},
+"original_fields": {}
+}
+},
 "index": {
 "ident": 11204,
 "brief": "This page is a template for the inputtext.SubmitTextInput1 widget",
@@ -17310,7 +17328,7 @@
 "parts": [
 [
 "Text",
-"Below is a SubmitTextInput1 widget, a validator limits the text input length to 10 characters.\r\nThe hidden fields have been set with text values to illustrate them."
+"Below is a SubmitTextInput1 widget, a validator limits the text input length to 10 characters and a second validator rejects empty submission.\r\nThe hidden fields have been set with text values to illustrate them."
 ]
 ]
 }
@@ -17375,16 +17393,32 @@
 ],
 "hidden_field4": [
 {
-"class": "basic.NotEmpty"
+"class": "basic.NoOperation"
 }
 ],
 "input_text": [
 {
 "class": "basic.MaxLength",
 "message": "Only 10 characters or less allowed",
+"displaywidget": [
+"",
+"submittextinput1",
+"",
+""
+],
 "val_args": {
 "maxlength": "10"
 }
+},
+{
+"class": "basic.NotEmpty",
+"message": "Empty field rejected by validator",
+"displaywidget": [
+"",
+"submittextinput1",
+"",
+""
+]
 }
 ]
 }
@@ -17457,7 +17491,7 @@
 11204
 ],
 "alternate_ident": "home",
-"fail_ident": 11202,
+"fail_ident": 11206,
 "submit_list": [
 "inputtext",
 "submittextinput1",
@@ -17465,7 +17499,7 @@
 ],
 "submit_option": true,
 "target_ident": "general_json",
-"validate_fail_ident": 11202,
+"validate_fail_ident": 11206,
 "validate_option": true
 },
 "original_fields": {
