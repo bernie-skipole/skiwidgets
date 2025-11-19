@@ -1,4 +1,7 @@
 # skiwidgets
+
+Project closed and archived
+
 Illustrates widgets for the skipole framework
 
 Further info can be found at
